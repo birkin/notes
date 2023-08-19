@@ -1,6 +1,8 @@
 +++
 title = "debouncing explained"
 date = 2023-08-16
+[taxonomies]
+tagz=[ "chatgpt", "code"  ]
 +++
 
 I found this cool, both the good explanation, and the function and concept... I was reading some documentation on a feature of [Zola](https://www.getzola.org/) (a static-site-generator) that auto-creates an [elasticlunr](http://elasticlunr.com/) search index, The docs note that though the index is auto-created, Zola doesn't supply any javascript to actually use it, but the docs show an [example js file](https://github.com/getzola/zola/blob/master/docs/static/search.js) that uses the index.
