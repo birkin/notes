@@ -1,0 +1,11 @@
+{% extends "index.html" %}
+
+{% block title %}<title>Duniter | {{taxonomy.name}}</title>{% endblock title %}
+
+{% block content %}
+<main id="accueil" class="w3-container w3-content page w3-padding-64">
+    {%- for term in terms -%}
+    <a href="{{term.permalink}}"> {{term.name}} </a><br>
+    {%- endfor -%}
+</main>
+{% endblock content %}
