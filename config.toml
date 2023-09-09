@@ -1,6 +1,8 @@
 # The URL the site will be built for
 base_url = "https://bspace.us/"
 
+theme = "DeepThought"
+
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
 
@@ -23,3 +25,30 @@ highlight_code = true
 
 [extra]
 # Put all your custom variables here
+
+## DeepThought theme specific options start -------------------------
+
+katex.enabled = true
+katex.auto_render = true
+
+chart.enabled = true
+mermaid.enabled = true
+galleria.enabled = true
+
+navbar_items = [
+ { code = "en", nav_items = [
+  { url = "$BASE_URL/", name = "Home" },
+  { url = "$BASE_URL/posts", name = "Posts" },
+  { url = "$BASE_URL/docs", name = "Docs" },
+  { url = "$BASE_URL/tags", name = "Tags" },
+  { url = "$BASE_URL/categories", name = "Categories" },
+ ]},
+]
+
+[extra.author]
+name = "DeepThought"
+
+[extra.social]
+email = "<email_id>"
+
+## DeepThought theme specific options end ---------------------------
