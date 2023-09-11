@@ -1,6 +1,6 @@
 +++
-title = "List of blog posts"
+title = "Posts"
+description = "Blog posts accumulated over the time."
 sort_by = "date"
-template = "index.html"
-page_template = "page.html"
+paginate_by = 5
 +++
