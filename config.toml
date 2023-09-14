@@ -11,7 +11,7 @@ build_search_index = true
 
 # taxonomies
 taxonomies = [
-    { name = "tagz", feed = true, render = true },
+    { name = "tags", feed = true, render = true },
 ]
 
 [search]
