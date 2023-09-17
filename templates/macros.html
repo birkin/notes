@@ -1,3 +1,10 @@
+{# 
+Note: 
+The only difference between this file and the one in the default theme 
+is the page_publish_metadata() macro. I can't use the normal ovverride-block 
+technique, though, because these macros don't use blocks.
+#}
+
 {% macro social_links(social_config) %}
 <p>
   {% if social_config.facebook %}
