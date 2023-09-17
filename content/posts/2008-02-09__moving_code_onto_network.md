@@ -1,7 +1,9 @@
 +++
 title = "Moving code onto the network"
 date = 2008-02-09
-description = "An account of benefits of moving code from project-level classes and functions into a web-service."
+description = "Benefits of moving code from project-level classes and functions into a web-service."
+authors = ["bjd2"]
+
 [taxonomies]
 tags=[ "service-oriented-architecture" ]
 +++
