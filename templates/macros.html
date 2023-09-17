@@ -203,10 +203,15 @@
 
 {% macro page_publish_metadata(page) %}
 <span class="icon-text has-text-grey">
-  <span class="icon">
-    <i class="fas fa-user"></i>
-  </span>
-  <span>{{ page.authors }} published on</span>
+  {% if page.authors %}
+    <span>published by</span>
+    <span class="icon">
+      <i class="fas fa-user"></i>
+    </span>
+  {% endif %}
+  {% for auth in page.authors %}
+    <span>"{{ auth }}"{% if not loop.last %} and&nbsp;{% endif %}</span>
+  {% endfor %}
   <span class="icon">
     <i class="far fa-calendar-alt"></i>
   </span>
