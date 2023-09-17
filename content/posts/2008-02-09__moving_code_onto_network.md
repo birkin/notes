@@ -2,7 +2,7 @@
 title = "Moving code onto the network"
 date = 2008-02-09
 description = "Benefits of moving code from project-level classes and functions into a web-service."
-authors = ["bjd2"]
+authors = []
 
 [taxonomies]
 tags=[ "service-oriented-architecture" ]
