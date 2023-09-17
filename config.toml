@@ -69,7 +69,7 @@ navbar_items = [
 ]
 
 [extra.author]
-name = "DeepThought"
+name = "author-name"  # global
 
 [extra.social]
 email = "<birkin.diana@gmail.com>"
