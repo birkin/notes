@@ -1,7 +1,7 @@
 +++
-title = "Moving code onto the network"
+title = "moving code onto the network"
 date = 2008-02-09
-description = "Benefits of moving code from project-level classes and functions into a web-service."
+description = "benefits of moving code from project-level classes and functions into a web-service"
 authors = []
 
 [taxonomies]
