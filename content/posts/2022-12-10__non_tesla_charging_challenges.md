@@ -5,8 +5,12 @@ description = "so sad that I can no longer recommend a non-Tesla EV"
 authors = []
 
 [taxonomies]
-tags=[ "language" ]
+tags=[ "EVs" ]
 +++
+
+_Update: the gloom is lifting! [Read why!](@/posts/2023-06-11__ok_again_to_buy_non-teslas.md)_
+
+---
 
 I had a Chevy Bolt from 2018 through 2021 that I _loved_. It was a requirement of the lease that I had to return it at the end of the lease; I'd have bought it otherwise.
 
