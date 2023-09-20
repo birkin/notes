@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - EVs</title>
+    <link href="https://bspace.us/tags/evs/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://bspace.us"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-06-11T00:00:00+00:00</updated>
+    <id>https://bspace.us/tags/evs/atom.xml</id>
+    <entry xml:lang="en">
+        <title>go forth and buy (some) non-tesla EVs!</title>
+        <published>2023-06-11T00:00:00+00:00</published>
+        <updated>2023-06-11T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://bspace.us/posts/ok-again-to-buy-non-teslas/" type="text/html"/>
+        <id>https://bspace.us/posts/ok-again-to-buy-non-teslas/</id>
+        
+        <content type="html">&lt;p&gt;&lt;em&gt;(Update: &lt;a href=&quot;https:&#x2F;&#x2F;electrek.co&#x2F;2023&#x2F;06&#x2F;11&#x2F;automakers-tesla-nacs-connector&#x2F;&quot;&gt;more automakers&lt;&#x2F;a&gt; have announced they&#x27;ll adopt NACS!)&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;the-good-news&quot;&gt;the good news&lt;&#x2F;h3&gt;
+&lt;p&gt;With the announcement by General Motors this past Thursday that it will adopt the North American Charging Standard (NACS) fast-charger -- giving it access to many of Tesla&#x27;s fast-chargers -- I can officially once again whole-heartedly evangelize non-Tesla EVs! (From Ford &amp;amp; GM; Ford announced the same two weeks ago.)&lt;&#x2F;p&gt;
+&lt;p&gt;Just few months ago I had said I was terribly disappointed that I could &lt;a href=&quot;https:&#x2F;&#x2F;bspace.us&#x2F;posts&#x2F;non-tesla-charging-challenges&#x2F;&quot;&gt;no longer recommend&lt;&#x2F;a&gt; buying a non-Tesla EV if...&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;it was going to be one&#x27;s only car, and... &lt;&#x2F;li&gt;
+&lt;li&gt;one wanted to be able to even occasionally take long trips&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;The reason for my dampened non-Tesla EV enthusiasm was two-fold:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;The non-Tesla fast-charging network, though slowly growing, has &lt;em&gt;real&lt;&#x2F;em&gt; reliability issues (&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=wN-Xo4mMrrY&quot;&gt;link-1&lt;&#x2F;a&gt;,  &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=K5Du81G4qHs&quot;&gt;link-2&lt;&#x2F;a&gt;). (This is in contrast to Tesla&#x27;s fast-charging network, which is extremely reliable.)&lt;&#x2F;li&gt;
+&lt;li&gt;The number of fantastic non-Tesla EVs has significantly increased, greatly exacerbating the frequency of terrible fast-charging experiences for non-Tesla EVs.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;background&quot;&gt;background&lt;&#x2F;h3&gt;
+&lt;p&gt;The non-Tesla fast-charging system is comprised of a bunch of different companies not directly related to the main auto-companies. It uses a fast-charge plug and standard called CCS-1; Tesla&#x27;s fast-charge plug and standard, NACS, is different. For a while, Tesla tried to get its fast-charger adopted to be a standard, but was unsuccessful. &lt;&#x2F;p&gt;
+&lt;p&gt;Last Fall Tesla released its fast-charger as an open standard -- with no takers. Though Tesla claimed it was open to other companies using its fast-chargers, most observers assessed that other auto-companies didn&#x27;t want to be seen as in any way supporting upstart Tesla that has so disrupted the business-model of the traditional automakers. Second, many were suspicious that Tesla was serious. It&#x27;s a &lt;em&gt;huge&lt;&#x2F;em&gt; competitive advantage for Tesla &lt;em&gt;not&lt;&#x2F;em&gt; to allow others to use its network. &lt;&#x2F;p&gt;
+&lt;p&gt;But apparently Tesla was serious. Further, in addition to allowing Ford and GM to use its fast-chargers, it committed to fully opening its fast-charger-APIs to allow Ford and GM to completely integrate all fast-charger-availability and payment-processing through Ford&#x27;s and GM&#x27;s apps (not the Tesla app). Tesla fans aren&#x27;t convinced that this is good for Tesla as a company, because even though Tesla will make money from charging for electricity, it&#x27;ll completely lose a major competitive sales advantage (this post is an example of that). Still, the vast majority of Telsa fans are excited about this, because it will help advance EV adoption -- a core Tesla mission.&lt;&#x2F;p&gt;
+&lt;p&gt;Already some of the big third-party charging companies have stated that they&#x27;ll add NACS cables to their chargers. Most analysts believe it&#x27;s just a matter of time before remaining auto-companies selling EVs in the U.S. make similar announcements. (Tesla makes up some two-thirds of the U.S. EV market; Tesla, Ford and GM together make up about three-fourths.)&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;the-import&quot;&gt;the import&lt;&#x2F;h3&gt;
+&lt;p&gt;The reason this is so important is that Tesla&#x27;s fast-charging stations are &lt;em&gt;super-reliable&lt;&#x2F;em&gt;. That means...&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;folk with non-Teslas will no longer have charging-anxiety on long trips&lt;&#x2F;li&gt;
+&lt;li&gt;non-Tesla charging networks will have to dramatically improve their reliability once the non-Tesla owners see how reliable charging can be at the Tesla fast-charging stations&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;The wonderful icing on the cake is that the Tesla-NACS charger-plug is &lt;em&gt;much&lt;&#x2F;em&gt;, &lt;em&gt;much&lt;&#x2F;em&gt; better than the non-Tesla-CCS charger-plug. This is acknowledged even by folk who dislike Tesla. Look at this &lt;a href=&quot;https:&#x2F;&#x2F;electrek.co&#x2F;wp-content&#x2F;uploads&#x2F;sites&#x2F;3&#x2F;2022&#x2F;11&#x2F;Tesla-North-American-Charging-Standard-NACS.jpg&quot;&gt;comparison-picture&lt;&#x2F;a&gt; from the &lt;a href=&quot;https:&#x2F;&#x2F;electrek.co&#x2F;2023&#x2F;06&#x2F;08&#x2F;gm-announces-adopt-tesla-nacs-connector&#x2F;&quot;&gt;Electrek&lt;&#x2F;a&gt; website. The NACS plug (in black) is smaller and significantly easier to handle, and the receiver port in the car works for &lt;em&gt;both&lt;&#x2F;em&gt; fast-charging and at-home-slow-charging.&lt;&#x2F;p&gt;
+&lt;p&gt;This is a real win for consumers and for the adoption of EVs.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>non-Tesla charging challenges</title>
+        <published>2022-12-10T00:00:00+00:00</published>
+        <updated>2022-12-10T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://bspace.us/posts/non-tesla-charging-challenges/" type="text/html"/>
+        <id>https://bspace.us/posts/non-tesla-charging-challenges/</id>
+        
+        <content type="html">&lt;p&gt;&lt;em&gt;Update: the gloom is lifting! &lt;a href=&quot;https:&#x2F;&#x2F;bspace.us&#x2F;posts&#x2F;ok-again-to-buy-non-teslas&#x2F;&quot;&gt;Read why!&lt;&#x2F;a&gt;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;I had a Chevy Bolt from 2018 through 2021 that I &lt;em&gt;loved&lt;&#x2F;em&gt;. It was a requirement of the lease that I had to return it at the end of the lease; I&#x27;d have bought it otherwise.&lt;&#x2F;p&gt;
+&lt;p&gt;During the time I had it, I took three very long trips (750-1,000 miles round-trip) to see what that was like. And I  took many other shorter long trips that required DC fast-charging (often referred to as &amp;quot;level-3-charging&amp;quot;) --  as opposed to slower AC home-charging using the equivalent of an electric-dryer outlet (often referred to as &amp;quot;level-2-charging&amp;quot;).&lt;&#x2F;p&gt;
+&lt;p&gt;The Bolt is known to fast-charge &lt;em&gt;very&lt;&#x2F;em&gt; slowly. But it has great range, and is super-efficient (so it makes the most of every kilowatt it gets). I loved those trips. BUT... I went into those trips with a sense of adventure: I knew, from reading accounts of fast-charging non-Teslas, that I had to treat those trips like an airplane-pilot charting a trip. I had a backup-charging-plan, and at least some awareness of a back-up to the back-up plan. And I built-in lots of extra travel-time for possible charging issues. &lt;&#x2F;p&gt;
+&lt;p&gt;There were often slower EV-Go fast-charging stations that were my back-up-plan to the main higher-speed Electrify-America (EA) fast-charging stations I usually used. At many EA stations, half the chargers wouldn&#x27;t work at all, or would only work with multiple attempts. But that generally wasn&#x27;t an issue, because there were rarely any other EVs there.&lt;&#x2F;p&gt;
+&lt;p&gt;Now, however, there are many &lt;em&gt;terrific&lt;&#x2F;em&gt; non-Teslas being sold -- the Ford Mustang Mach-E, the Ford Lightning pickup, the VW ID-4, and the Hyundai Ioniq-5 being a few -- but that means that the lack of EA reliability has become &lt;em&gt;much&lt;&#x2F;em&gt; more of an issue as more cars vie for working fast-chargers. Here&#x27;s a &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=K5Du81G4qHs&quot;&gt;recent youtube video&lt;&#x2F;a&gt; that gives a sense of the kinds of charging issues that folk are experiencing.&lt;&#x2F;p&gt;
+&lt;p&gt;I replaced my Bolt with a Tesla Model 3. I love the car -- but there are definitely things about the Bolt that I miss. But Tesla fast-charging on long trips is &lt;em&gt;unbelievably&lt;&#x2F;em&gt; better. &lt;&#x2F;p&gt;
+&lt;p&gt;I can get in my Tesla, in Rhode Island, and push the voice-button and say &amp;quot;Directions to Chicago&amp;quot;. The car knows how full my &amp;quot;tank&amp;quot; is, and routes me to a convenient fast-charging station on my way. As I get close, the car automatically prepares the battery to accept a fast-charge. The smallest charging-station I&#x27;ve ever seen had 8 chargers; most have a dozen or more. I pull up, unhook the charging-cable-plug, press a button on the plug that opens my car&#x27;s charge-port, and plug it in. That&#x27;s it[*]. It charges, fast. And most crucially, I simply don&#x27;t have to even think about it not working (I think I&#x27;ve had only one or two times where I had to move over and use another cable, out of many hundreds of fast-charges). The importance of that reliability cannot be overstated: it is just not a concern. Contrast that experience with the youtube video above.&lt;&#x2F;p&gt;
+&lt;p&gt;My EV evangelism is by no means Tesla specific. But I&#x27;m very sad to say that I can no longer recommend a non-Tesla EV to anyone if:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;it&#x27;s going to be your only car, and...&lt;&#x2F;li&gt;
+&lt;li&gt;if you want to be able to even occasionally take long trips&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;(If it&#x27;s a second-car, or you&#x27;ll just be using it for normal daily life, my all-brands EV evangelism stands. You charge at home, and start of each day with a full battery.)&lt;&#x2F;p&gt;
+&lt;p&gt;I just honestly wouldn&#x27;t want my loved ones to have to go through the current all-too-common anxiety of getting a needed fast-charge along the highway in a non-Tesla. I really hope the current publicity around terrible charging experiences helps push companies to prioritize reliability. An increased &lt;em&gt;number&lt;&#x2F;em&gt; of chargers will address range-anxiety, but if they don&#x27;t work &lt;em&gt;reliably&lt;&#x2F;em&gt;, real charging-anxiety and understandable frustration will result, harming EV-adoption.&lt;&#x2F;p&gt;
+&lt;p&gt;In the future, I&#x27;m sure we&#x27;ll look back on these days like the proverbial elders that talked of walking miles to school through snowstorms, but for now the hassles are real and terribly sad.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;[*] Re fast-charging, &amp;quot;What about payment?&amp;quot; you may wonder. The fast-chargers automatically use the credit-card associated with your car.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

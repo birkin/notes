@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="#ffffff" name="theme-color" />
+  <meta content="#da532c" name="msapplication-TileColor" />
+
+  
+  
+  
+  
+  
+
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/themes/folio/galleria.folio.min.css" integrity="sha384-+rY0QD+LRnTOquDMzGa9lXU6jIwdiQuwCJQ2cdcW0qeP/0UbjQCZlXnRsUMA+9pH" crossorigin="anonymous">
+  
+
+  
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.1/css/academicons.min.css" integrity="sha384-FIue+PI4SsI9XfHCz8dBLg33b0c1fMJgNU3X//L26FYbGnlSEfWmNT7zgWc2N9b6" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link href="https://bspace.us/deep-thought.css" rel="stylesheet" />
+  
+  
+
+  <title>
+    
+ | Vendor API Manifesto
+
+  </title>
+
+  
+  
+  
+
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js" integrity="sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx" crossorigin="anonymous"></script>
+
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/mathtex-script-type.min.js" integrity="sha384-jiBVvJ8NGGj5n7kJaiWwWp9AjC+Yh8rhZY3GtAX8yU28azcLgoRo4oukO87g7zDT" crossorigin="anonymous"></script>
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+  
+  
+</head>
+
+<body class="has-background-white">
+  <nav aria-label="section navigation" class="navbar is-light" role="navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item is-size-5 has-text-weight-bold" href="https:&#x2F;&#x2F;bspace.us"></a>
+        <a aria-expanded="false" aria-label="menu" class="navbar-burger burger" data-target="navMenu" role="button">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div class="navbar-menu" id="navMenu">
+        <div class="navbar-end has-text-centered">
+          
+          
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;bspace.us&#x2F;">
+            Home
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;bspace.us&#x2F;posts">
+            Posts
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;bspace.us&#x2F;tags">
+            Tags
+          </a>
+          
+          
+          
+          <a class="navbar-item" id="nav-search" title="Search" data-target="#search-modal">
+            <span class="icon">
+              <i class="fas fa-search"></i>
+            </span>
+          </a>
+          <a class="navbar-item" id="dark-mode" title="Switch to dark theme">
+            <span class="icon">
+              <i class="fas fa-adjust"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  
+  
+
+  
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-8 is-offset-2">
+        <article class="box">
+          <h1 class="title">
+            Vendor API Manifesto
+          </h1>
+          <p class="subtitle">all vendor products should offer APIs -- period</p>
+          <div class="columns is-multiline is-gapless">
+            <div class="column is-8">
+              
+<span class="icon-text has-text-grey">
+  
+  
+  <span class="icon">
+    <i class="far fa-calendar-alt"></i>
+  </span>
+  <span><time datetime="2008-03-03">March 03, 2008</time></span>
+</span>
+
+            </div>
+            <div class="column is-4 has-text-right-desktop">
+              
+<span class="icon-text has-text-grey">
+  <span class="icon">
+    <i class="far fa-clock"></i>
+  </span>
+  <span>4 min,</span>
+  <span class="icon">
+    <i class="fas fa-pencil-alt"></i>
+  </span>
+  <span>696 words</span>
+</span>
+
+            </div>
+            <div class="column">
+              
+            </div>
+            <div class="column has-text-right-desktop">
+              
+              
+<p>
+  Tags:
+  
+  <a class="has-text-info-dark has-text-weight-semibold" href="https://bspace.us/tags/apis/">
+    <span class="icon-text">
+      <span class="icon">
+        <i class="fas fa-tag"></i>
+      </span>
+      <span>APIs</span>
+    </span>
+  </a>
+  
+</p>
+
+              
+            </div>
+          </div>
+          <div class="content mt-2">
+            <p><em>(I wrote this early in the Fall of 2007 and circulated it to folk in the Library who were attending meetings at which vendors were advertising their wares.)</em> </p>
+<hr />
+<p>Software products are created, understandably, primarily to meet existing needs. There are varied bodies of thought as to how much a software product should be designed to meet 'future possible needs'.</p>
+<p>At certain points in recent history, it may have been reasonable to design the sole interface to a system assuming that the user of the interface would be a person using a web-browser.</p>
+<p>Though APIs (application programming interface) have been around for ages, the trend toward programmers wanting to access internal and external systems via APIs has accelerated tremendously over the last few years.[*] As a programmer for a creative web-services department in a creative Library, I'm part of this trend. Our team's need to be able to programmatically access systems has increased dramatically. Fortunately, a few vendors such as Ex Libris understand this and have built possibilities for programmatic access into their products. But many closed systems remain.</p>
+<p>To managers and directors making purchasing decisions, I urge that a <em>top-level</em> purchasing consideration be whether the vendor's product offers an API to the information it provides (in addition to any built-in web interface). The simple reason is that a web presentation of information is designed for a single purpose: for a user to interact with the system via a browser. An API allows the system's data to be accessed in any way we see fit, now or in the future.</p>
+<p>A concrete example for any reader not familiar with the notion of an API...</p>
+<p>Our team is currently developing a system to simplify the process of obtaining a book through interlibrary-loan services. In order to do this we have been able to automate the process of searching a consortial web-catalog for an item, and requesting that item. But the only method of doing this involves creating a program which essentially mimics a browser, automatically simulating clicked buttons and links and reading the resulting HTML of the consortial catalog's web interface.</p>
+<p>This works, but is terribly fragile: if the design of a web-page changes, our program may no longer work until it is reconfigured to understand the new design.</p>
+<p>What we absolutely need (in addition to the existing web interface) is a catalog-service (the API) which would allow a defined http request to be sent to a URL that will allow a search to be performed, or an item to be requested, etc. (That http request would come from a program our team has written -- instead of from a user sitting at a browser.) Each request to this API would return predictable documented structured information (XML is one standard; there are others). Our team's program would then be able to automatically process this information.</p>
+<p>It is worth emphasizing that I am not asking for a 'whole new program' from the catalog vendor. A system's existing internal program logic that produces the information for the regular web data-stream is applicable to production of the alternate API data-stream. Yes, it takes thought and work to create a good and secure API and document it -- but an API, essentially, presents the same data as a web interface, in a simpler format. The mind-shift in offering an API is often larger than the work-shift.</p>
+<p>Finally, about interacting with vendors regarding this issue... Vendor sales people aren't the developers, and it sounds like I am asking for something that vendor developers would be more knowledgeable about. But I've seen different vendor sales representatives at workshops and conferences, and the representatives for products that provide APIs have universally very clearly understood the importance of this issue. Thus if a product representative does not seem to understand this important feature, I would have significant concerns with the product.</p>
+<hr />
+<p>Notes...</p>
+<p>[*] Key aspects of this trend are articulated in the seminal article <a href="http://www.oreillynet.com/pub/a/oreilly/tim/news/2005/09/30/what-is-web-20.html">&quot;What Is Web 2.0 --
+Design Patterns and Business Models for the Next Generation of Software&quot;</a> by Tim O'Reilly.</p>
+
+          </div>
+        </article>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+  
+  <section class="modal" id="search-modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Search</p>
+      </header>
+      <section class="modal-card-body">
+        <div class="field mb-2">
+          <div class="control">
+            <input class="input" id="search" placeholder="Search this website." type="search" />
+          </div>
+        </div>
+        <div class="search-results">
+          <div class="search-results__items"></div>
+        </div>
+      </section>
+    </div>
+    <button aria-label="close" class="modal-close is-large"></button>
+  </section>
+  
+
+
+  
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <nav class="level">
+              
+          <div class="level-item has-text-centered">
+            <a class="button is-black is-outlined" href="https:&#x2F;&#x2F;bspace.us&#x2F;posts&#x2F;moving-code-onto-network&#x2F;">
+              <span class="icon mr-2">
+                <i class="fas fa-arrow-circle-left"></i>
+              </span>
+              moving code onto the network
+            </a>
+          </div>
+           
+          <div class="level-item has-text-centered">
+            <a class="button is-black is-outlined" href="https:&#x2F;&#x2F;bspace.us&#x2F;posts&#x2F;weighted-randomization&#x2F;">
+              weighted randomization<span class="icon ml-2">
+                <i class="fas fa-arrow-circle-right"></i>
+              </span>
+            </a>
+          </div>
+          
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  
+
+
+
+  
+  <footer class="footer py-4">
+    <div class="content has-text-centered">
+      <p style="font-size: 0.8em; font-style: italic;">(powered by the
+        <a href="https://www.getzola.org/" target="_blank">Zola</a> static-site-generator and the
+        <a href="https://www.getzola.org/themes/deepthought/" target="_blank">DeepThought</a> theme)
+      </p>
+    </div>
+  </footer>
+  
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/galleria.min.js" integrity="sha384-QSfwGT8/EU536DKdtyP2D6SLlh8zBaZ0cVkwfrwhqzIU9VCfJT00CLVP5t+HAiYg" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/themes/folio/galleria.folio.min.js" integrity="sha384-DwpKI+deZB267+hPKwiOIc5Y2GKsVL0mR6hgz7GgIu7AgAMYqJwcJKY1YBNfhWcY" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@8.13.5/dist/mermaid.min.js" integrity="sha384-0yWn54pSGtfKCU+skfA69l25VsCw+MZt4LQov3xNRoS7YkAMrFokGgSBnAWSK4pv" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.xkcd@1.1.13/dist/chart.xkcd.min.js" integrity="sha384-xC3h1+IHXK8seA+8KfT79Z4e0GPsznjXBoMa5nd8ooWKplPyXx92NOmljWxLC/cs" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://bspace.us/elasticlunr.min.js"></script>
+  <script src="https://bspace.us/search_index.en.js"></script><script src="https://bspace.us/js/site.js"></script>
+
+  
+
+
+
+
+
+  
+  
+</body>
+
+</html>

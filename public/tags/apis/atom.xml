@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - APIs</title>
+    <link href="https://bspace.us/tags/apis/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://bspace.us"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2008-03-03T00:00:00+00:00</updated>
+    <id>https://bspace.us/tags/apis/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Vendor API Manifesto</title>
+        <published>2008-03-03T00:00:00+00:00</published>
+        <updated>2008-03-03T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://bspace.us/posts/vendor-api-manifesto/" type="text/html"/>
+        <id>https://bspace.us/posts/vendor-api-manifesto/</id>
+        
+        <content type="html">&lt;p&gt;&lt;em&gt;(I wrote this early in the Fall of 2007 and circulated it to folk in the Library who were attending meetings at which vendors were advertising their wares.)&lt;&#x2F;em&gt; &lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;Software products are created, understandably, primarily to meet existing needs. There are varied bodies of thought as to how much a software product should be designed to meet &#x27;future possible needs&#x27;.&lt;&#x2F;p&gt;
+&lt;p&gt;At certain points in recent history, it may have been reasonable to design the sole interface to a system assuming that the user of the interface would be a person using a web-browser.&lt;&#x2F;p&gt;
+&lt;p&gt;Though APIs (application programming interface) have been around for ages, the trend toward programmers wanting to access internal and external systems via APIs has accelerated tremendously over the last few years.[*] As a programmer for a creative web-services department in a creative Library, I&#x27;m part of this trend. Our team&#x27;s need to be able to programmatically access systems has increased dramatically. Fortunately, a few vendors such as Ex Libris understand this and have built possibilities for programmatic access into their products. But many closed systems remain.&lt;&#x2F;p&gt;
+&lt;p&gt;To managers and directors making purchasing decisions, I urge that a &lt;em&gt;top-level&lt;&#x2F;em&gt; purchasing consideration be whether the vendor&#x27;s product offers an API to the information it provides (in addition to any built-in web interface). The simple reason is that a web presentation of information is designed for a single purpose: for a user to interact with the system via a browser. An API allows the system&#x27;s data to be accessed in any way we see fit, now or in the future.&lt;&#x2F;p&gt;
+&lt;p&gt;A concrete example for any reader not familiar with the notion of an API...&lt;&#x2F;p&gt;
+&lt;p&gt;Our team is currently developing a system to simplify the process of obtaining a book through interlibrary-loan services. In order to do this we have been able to automate the process of searching a consortial web-catalog for an item, and requesting that item. But the only method of doing this involves creating a program which essentially mimics a browser, automatically simulating clicked buttons and links and reading the resulting HTML of the consortial catalog&#x27;s web interface.&lt;&#x2F;p&gt;
+&lt;p&gt;This works, but is terribly fragile: if the design of a web-page changes, our program may no longer work until it is reconfigured to understand the new design.&lt;&#x2F;p&gt;
+&lt;p&gt;What we absolutely need (in addition to the existing web interface) is a catalog-service (the API) which would allow a defined http request to be sent to a URL that will allow a search to be performed, or an item to be requested, etc. (That http request would come from a program our team has written -- instead of from a user sitting at a browser.) Each request to this API would return predictable documented structured information (XML is one standard; there are others). Our team&#x27;s program would then be able to automatically process this information.&lt;&#x2F;p&gt;
+&lt;p&gt;It is worth emphasizing that I am not asking for a &#x27;whole new program&#x27; from the catalog vendor. A system&#x27;s existing internal program logic that produces the information for the regular web data-stream is applicable to production of the alternate API data-stream. Yes, it takes thought and work to create a good and secure API and document it -- but an API, essentially, presents the same data as a web interface, in a simpler format. The mind-shift in offering an API is often larger than the work-shift.&lt;&#x2F;p&gt;
+&lt;p&gt;Finally, about interacting with vendors regarding this issue... Vendor sales people aren&#x27;t the developers, and it sounds like I am asking for something that vendor developers would be more knowledgeable about. But I&#x27;ve seen different vendor sales representatives at workshops and conferences, and the representatives for products that provide APIs have universally very clearly understood the importance of this issue. Thus if a product representative does not seem to understand this important feature, I would have significant concerns with the product.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;Notes...&lt;&#x2F;p&gt;
+&lt;p&gt;[*] Key aspects of this trend are articulated in the seminal article &lt;a href=&quot;http:&#x2F;&#x2F;www.oreillynet.com&#x2F;pub&#x2F;a&#x2F;oreilly&#x2F;tim&#x2F;news&#x2F;2005&#x2F;09&#x2F;30&#x2F;what-is-web-20.html&quot;&gt;&amp;quot;What Is Web 2.0 --
+Design Patterns and Business Models for the Next Generation of Software&amp;quot;&lt;&#x2F;a&gt; by Tim O&#x27;Reilly.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>moving code onto the network</title>
+        <published>2008-02-09T00:00:00+00:00</published>
+        <updated>2008-02-09T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://bspace.us/posts/moving-code-onto-network/" type="text/html"/>
+        <id>https://bspace.us/posts/moving-code-onto-network/</id>
+        
+        <content type="html">&lt;p&gt;In 2004, while in my masters program, deeply immersed in java object-oriented programming, I saw the potential benefits of code re-use that classes offer. I envisioned over time building up libraries of class-objects; by accessing them in future projects, I expected to be more and more productive.&lt;&#x2F;p&gt;
+&lt;p&gt;Code-reuse never quite worked out that way, though. What I&#x27;ve tended to do for new projects has been to copy a similar class from a previous project, paste it into the new project, weed out unnecessary attributes and methods, and add new code. In a way this makes sense: though I lose out on &#x27;pure&#x27; code-reuse, I gain by having all code for a project together. That&#x27;s nice for version-control and portability, and isolation of concerns in that I don&#x27;t have to worry that a change in a class in one project will have unintended consequences in another project.&lt;&#x2F;p&gt;
+&lt;p&gt;But reading a while back about service-oriented-architecture, and shortly thereafter having a need to code a couple of lines in python that I had just coded in php a day or two earlier -- the benefits of moving code into RESTful web-services, that is: moving it onto the network, became apparent.&lt;&#x2F;p&gt;
+&lt;p&gt;I do that all the time now. Just last week I had a need to convert between 10 and 13-digit isbns -- for the second time in a recent project, so rather than coding the conversion directly in the program at hand I put it into a webservice.&lt;&#x2F;p&gt;
+&lt;p&gt;In this shift, I&#x27;ve finally realized that goal of code reuse, while still being able to maintain the version-control and isolation of concerns benefits of focusing on my specific project at hand.&lt;&#x2F;p&gt;
+&lt;p&gt;The book &#x27;RESTful Web Services&#x27; by Richardson and Ruby, while a bit dense, offers good insights on creating web-services (example: versioning). At some point, I&#x27;d like to come up with standards for Brown Library (and&#x2F;or campus-wide) web-services. Examples: specifying versioning in the url, a documention url in the returned data, and a url in that documentation of all APIs&#x2F;web-services the department offers.&lt;&#x2F;p&gt;
+&lt;p&gt;For now, though, the simple shift toward moving code out of individual projects and onto the network has been rewarding.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>
