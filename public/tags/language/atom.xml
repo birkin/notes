@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title> - language</title>
-    <link href="https://bspace.us/tags/language/atom.xml" rel="self" type="application/atom+xml"/>
-    <link href="https://bspace.us"/>
+    <link href="http://bspace.us/tags/language/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="http://bspace.us"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2017-12-12T00:00:00+00:00</updated>
-    <id>https://bspace.us/tags/language/atom.xml</id>
+    <id>http://bspace.us/tags/language/atom.xml</id>
     <entry xml:lang="en">
         <title>trying to speak icelandic</title>
         <published>2017-12-12T00:00:00+00:00</published>
@@ -13,8 +13,8 @@
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://bspace.us/posts/trying-to-speak-icelandic/" type="text/html"/>
-        <id>https://bspace.us/posts/trying-to-speak-icelandic/</id>
+        <link rel="alternate" href="http://bspace.us/posts/trying-to-speak-icelandic/" type="text/html"/>
+        <id>http://bspace.us/posts/trying-to-speak-icelandic/</id>
         
         <content type="html">&lt;p&gt;I and a good friend recently travelled for a week in Iceland. The landscapes, glaciers, caves, natural hot-springs, and waterfalls that Iceland is known for were, truly, incredible. But some of my fondest memories were of my interactions with Icelanders while trying out my very limited Icelandic.&lt;&#x2F;p&gt;
 &lt;p&gt;I&#x27;ve travelled in Italy, and have experienced Italians welcoming, and warmly embracing, my attempts to speak Italian -- but the shock and happiness of Icelanders took me by surprise.&lt;&#x2F;p&gt;

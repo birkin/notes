@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title> - algorithms</title>
-    <link href="https://bspace.us/tags/algorithms/atom.xml" rel="self" type="application/atom+xml"/>
-    <link href="https://bspace.us"/>
+    <link href="http://bspace.us/tags/algorithms/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="http://bspace.us"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2008-04-06T00:00:00+00:00</updated>
-    <id>https://bspace.us/tags/algorithms/atom.xml</id>
+    <id>http://bspace.us/tags/algorithms/atom.xml</id>
     <entry xml:lang="en">
         <title>weighted randomization</title>
         <published>2008-04-06T00:00:00+00:00</published>
@@ -13,8 +13,8 @@
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://bspace.us/posts/weighted-randomization/" type="text/html"/>
-        <id>https://bspace.us/posts/weighted-randomization/</id>
+        <link rel="alternate" href="http://bspace.us/posts/weighted-randomization/" type="text/html"/>
+        <id>http://bspace.us/posts/weighted-randomization/</id>
         
         <content type="html">&lt;p&gt;Many years ago one of my children hit a wall with Math in elementary school. He had always been bright, and quick to pick things up, so this was something of a surprise to him as well as to me. His class was in the early stages of learning multiplication, and it turned out that he had initially been able to add numbers in his head quickly enough that he hadn&#x27;t needed to memorize the times-tables. This worked fine for him with lower numbers like 5x2, but began to break down pretty quickly with higher numbers like 9x7 and especially 23x76.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;flashcard-app&quot;&gt;Flashcard app&lt;&#x2F;h3&gt;

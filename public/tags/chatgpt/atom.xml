@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title> - chatgpt</title>
-    <link href="https://bspace.us/tags/chatgpt/atom.xml" rel="self" type="application/atom+xml"/>
-    <link href="https://bspace.us"/>
+    <link href="http://bspace.us/tags/chatgpt/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="http://bspace.us"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2023-08-16T00:00:00+00:00</updated>
-    <id>https://bspace.us/tags/chatgpt/atom.xml</id>
+    <id>http://bspace.us/tags/chatgpt/atom.xml</id>
     <entry xml:lang="en">
         <title>debouncing explained</title>
         <published>2023-08-16T00:00:00+00:00</published>
@@ -13,8 +13,8 @@
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://bspace.us/posts/debouncing-explained/" type="text/html"/>
-        <id>https://bspace.us/posts/debouncing-explained/</id>
+        <link rel="alternate" href="http://bspace.us/posts/debouncing-explained/" type="text/html"/>
+        <id>http://bspace.us/posts/debouncing-explained/</id>
         
         <content type="html">&lt;p&gt;I found this cool, both the good explanation, and the function and concept... I was reading some documentation on a feature of &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;&quot;&gt;Zola&lt;&#x2F;a&gt; (a static-site-generator) that auto-creates an &lt;a href=&quot;http:&#x2F;&#x2F;elasticlunr.com&#x2F;&quot;&gt;elasticlunr&lt;&#x2F;a&gt; search index, The docs note that though the index is auto-created, Zola doesn&#x27;t supply any javascript to actually use it, but the docs show an &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;docs&#x2F;static&#x2F;search.js&quot;&gt;example js file&lt;&#x2F;a&gt; that uses the index.&lt;&#x2F;p&gt;
 &lt;p&gt;Looking at that example file, I was curious about what one function was doing...&lt;&#x2F;p&gt;

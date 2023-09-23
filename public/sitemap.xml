@@ -1,81 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://bspace.us/</loc>
+        <loc>http://bspace.us/</loc>
     </url>
     <url>
-        <loc>https://bspace.us/posts/</loc>
+        <loc>http://bspace.us/posts/</loc>
     </url>
     <url>
-        <loc>https://bspace.us/posts/debouncing-explained/</loc>
+        <loc>http://bspace.us/posts/debouncing-explained/</loc>
         <lastmod>2023-08-16</lastmod>
     </url>
     <url>
-        <loc>https://bspace.us/posts/moving-code-onto-network/</loc>
+        <loc>http://bspace.us/posts/moving-code-onto-network/</loc>
         <lastmod>2008-02-09</lastmod>
     </url>
     <url>
-        <loc>https://bspace.us/posts/non-tesla-charging-challenges/</loc>
+        <loc>http://bspace.us/posts/non-tesla-charging-challenges/</loc>
         <lastmod>2022-12-10</lastmod>
     </url>
     <url>
-        <loc>https://bspace.us/posts/ok-again-to-buy-non-teslas/</loc>
+        <loc>http://bspace.us/posts/ok-again-to-buy-non-teslas/</loc>
         <lastmod>2023-06-11</lastmod>
     </url>
     <url>
-        <loc>https://bspace.us/posts/page/1/</loc>
+        <loc>http://bspace.us/posts/page/1/</loc>
     </url>
     <url>
-        <loc>https://bspace.us/posts/page/2/</loc>
+        <loc>http://bspace.us/posts/page/2/</loc>
     </url>
     <url>
-        <loc>https://bspace.us/posts/trying-to-speak-icelandic/</loc>
+        <loc>http://bspace.us/posts/trying-to-speak-icelandic/</loc>
         <lastmod>2017-12-12</lastmod>
     </url>
     <url>
-        <loc>https://bspace.us/posts/user-context/</loc>
+        <loc>http://bspace.us/posts/user-context/</loc>
         <lastmod>2007-12-06</lastmod>
     </url>
     <url>
-        <loc>https://bspace.us/posts/vendor-api-manifesto/</loc>
+        <loc>http://bspace.us/posts/vendor-api-manifesto/</loc>
         <lastmod>2008-03-03</lastmod>
     </url>
     <url>
-        <loc>https://bspace.us/posts/weighted-randomization/</loc>
+        <loc>http://bspace.us/posts/weighted-randomization/</loc>
         <lastmod>2008-04-06</lastmod>
     </url>
     <url>
-        <loc>https://bspace.us/posts/youth-and-library-technology/</loc>
+        <loc>http://bspace.us/posts/youth-and-library-technology/</loc>
         <lastmod>2016-12-21</lastmod>
     </url>
     <url>
-        <loc>https://bspace.us/tags/</loc>
+        <loc>http://bspace.us/tags/</loc>
     </url>
     <url>
-        <loc>https://bspace.us/tags/algorithms/</loc>
+        <loc>http://bspace.us/tags/algorithms/</loc>
     </url>
     <url>
-        <loc>https://bspace.us/tags/apis/</loc>
+        <loc>http://bspace.us/tags/apis/</loc>
     </url>
     <url>
-        <loc>https://bspace.us/tags/chatgpt/</loc>
+        <loc>http://bspace.us/tags/chatgpt/</loc>
     </url>
     <url>
-        <loc>https://bspace.us/tags/code/</loc>
+        <loc>http://bspace.us/tags/code/</loc>
     </url>
     <url>
-        <loc>https://bspace.us/tags/evs/</loc>
+        <loc>http://bspace.us/tags/evs/</loc>
     </url>
     <url>
-        <loc>https://bspace.us/tags/language/</loc>
+        <loc>http://bspace.us/tags/language/</loc>
     </url>
     <url>
-        <loc>https://bspace.us/tags/outreach/</loc>
+        <loc>http://bspace.us/tags/outreach/</loc>
     </url>
     <url>
-        <loc>https://bspace.us/tags/service-oriented-architecture/</loc>
+        <loc>http://bspace.us/tags/service-oriented-architecture/</loc>
     </url>
     <url>
-        <loc>https://bspace.us/tags/user-context/</loc>
+        <loc>http://bspace.us/tags/user-context/</loc>
     </url>
 </urlset>
