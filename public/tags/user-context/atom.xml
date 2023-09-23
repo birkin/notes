@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title> - user-context</title>
-    <link href="http://bspace.us/tags/user-context/atom.xml" rel="self" type="application/atom+xml"/>
-    <link href="http://bspace.us"/>
+    <link href="https://bspace.us/tags/user-context/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://bspace.us"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2007-12-06T00:00:00+00:00</updated>
-    <id>http://bspace.us/tags/user-context/atom.xml</id>
+    <id>https://bspace.us/tags/user-context/atom.xml</id>
     <entry xml:lang="en">
         <title>user-context</title>
         <published>2007-12-06T00:00:00+00:00</published>
@@ -13,8 +13,8 @@
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="http://bspace.us/posts/user-context/" type="text/html"/>
-        <id>http://bspace.us/posts/user-context/</id>
+        <link rel="alternate" href="https://bspace.us/posts/user-context/" type="text/html"/>
+        <id>https://bspace.us/posts/user-context/</id>
         
         <content type="html">&lt;p&gt;I recently organized a meeting to brainstorm about what kinds of cool library things we could do if we knew more about a user&#x27;s context. I also put up a &lt;a href=&quot;http:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20100711222621&#x2F;https:&#x2F;&#x2F;wiki.brown.edu&#x2F;confluence&#x2F;display&#x2F;library&#x2F;User-context+brainstorming&quot;&gt;wiki-page&lt;&#x2F;a&gt; for the brainstorming process.&lt;&#x2F;p&gt;
 &lt;p&gt;This stems from a requirement for a project: I had to be able to access a particular barcode related to a user. Turned out the only way of getting at this barcode was to first get another piece of information, and then use that first piece of information to call an API that returns a bunch of info about a user, including the barcode. Fine; did that; got the barcode and used it for a tunneler I built. I then went to the &lt;a href=&quot;http:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20130113222506&#x2F;http:&#x2F;&#x2F;access2007.uvic.ca&#x2F;?p=32&quot;&gt;Access 2007 conference&lt;&#x2F;a&gt;, a wonderful library programming&#x2F;technology conference, where, among other terrific presentations, I heard Mark Leggot speak[*] about the repository &lt;a href=&quot;http:&#x2F;&#x2F;loomware.typepad.com&#x2F;docs&#x2F;Repository_Redux_PubVersion.pdf&quot;&gt;presentation-PDF&lt;&#x2F;a&gt; he set up at the University of Prince Edward Island (UPEI). He mentioned the importance of understanding a user&#x27;s &#x27;context&#x27;. Something clicked, and the general implications of what our team had achieved by being able to tie a user&#x27;s log-in to this API-info about the user became clear.&lt;&#x2F;p&gt;

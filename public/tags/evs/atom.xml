@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title> - EVs</title>
-    <link href="http://bspace.us/tags/evs/atom.xml" rel="self" type="application/atom+xml"/>
-    <link href="http://bspace.us"/>
+    <link href="https://bspace.us/tags/evs/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://bspace.us"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2023-06-11T00:00:00+00:00</updated>
-    <id>http://bspace.us/tags/evs/atom.xml</id>
+    <id>https://bspace.us/tags/evs/atom.xml</id>
     <entry xml:lang="en">
         <title>go forth and buy (some) non-tesla EVs!</title>
         <published>2023-06-11T00:00:00+00:00</published>
@@ -13,14 +13,14 @@
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="http://bspace.us/posts/ok-again-to-buy-non-teslas/" type="text/html"/>
-        <id>http://bspace.us/posts/ok-again-to-buy-non-teslas/</id>
+        <link rel="alternate" href="https://bspace.us/posts/ok-again-to-buy-non-teslas/" type="text/html"/>
+        <id>https://bspace.us/posts/ok-again-to-buy-non-teslas/</id>
         
         <content type="html">&lt;p&gt;&lt;em&gt;(Update: &lt;a href=&quot;https:&#x2F;&#x2F;electrek.co&#x2F;2023&#x2F;06&#x2F;11&#x2F;automakers-tesla-nacs-connector&#x2F;&quot;&gt;more automakers&lt;&#x2F;a&gt; have announced they&#x27;ll adopt NACS!)&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
 &lt;hr &#x2F;&gt;
 &lt;h3 id=&quot;the-good-news&quot;&gt;the good news&lt;&#x2F;h3&gt;
 &lt;p&gt;With the announcement by General Motors this past Thursday that it will adopt the North American Charging Standard (NACS) fast-charger -- giving it access to many of Tesla&#x27;s fast-chargers -- I can officially once again whole-heartedly evangelize non-Tesla EVs! (From Ford &amp;amp; GM; Ford announced the same two weeks ago.)&lt;&#x2F;p&gt;
-&lt;p&gt;Just few months ago I had said I was terribly disappointed that I could &lt;a href=&quot;http:&#x2F;&#x2F;bspace.us&#x2F;posts&#x2F;non-tesla-charging-challenges&#x2F;&quot;&gt;no longer recommend&lt;&#x2F;a&gt; buying a non-Tesla EV if...&lt;&#x2F;p&gt;
+&lt;p&gt;Just few months ago I had said I was terribly disappointed that I could &lt;a href=&quot;https:&#x2F;&#x2F;bspace.us&#x2F;posts&#x2F;non-tesla-charging-challenges&#x2F;&quot;&gt;no longer recommend&lt;&#x2F;a&gt; buying a non-Tesla EV if...&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;it was going to be one&#x27;s only car, and... &lt;&#x2F;li&gt;
 &lt;li&gt;one wanted to be able to even occasionally take long trips&lt;&#x2F;li&gt;
@@ -53,10 +53,10 @@
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="http://bspace.us/posts/non-tesla-charging-challenges/" type="text/html"/>
-        <id>http://bspace.us/posts/non-tesla-charging-challenges/</id>
+        <link rel="alternate" href="https://bspace.us/posts/non-tesla-charging-challenges/" type="text/html"/>
+        <id>https://bspace.us/posts/non-tesla-charging-challenges/</id>
         
-        <content type="html">&lt;p&gt;&lt;em&gt;Update: the gloom is lifting! &lt;a href=&quot;http:&#x2F;&#x2F;bspace.us&#x2F;posts&#x2F;ok-again-to-buy-non-teslas&#x2F;&quot;&gt;Read why!&lt;&#x2F;a&gt;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+        <content type="html">&lt;p&gt;&lt;em&gt;Update: the gloom is lifting! &lt;a href=&quot;https:&#x2F;&#x2F;bspace.us&#x2F;posts&#x2F;ok-again-to-buy-non-teslas&#x2F;&quot;&gt;Read why!&lt;&#x2F;a&gt;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
 &lt;hr &#x2F;&gt;
 &lt;p&gt;I had a Chevy Bolt from 2018 through 2021 that I &lt;em&gt;loved&lt;&#x2F;em&gt;. It was a requirement of the lease that I had to return it at the end of the lease; I&#x27;d have bought it otherwise.&lt;&#x2F;p&gt;
 &lt;p&gt;During the time I had it, I took three very long trips (750-1,000 miles round-trip) to see what that was like. And I  took many other shorter long trips that required DC fast-charging (often referred to as &amp;quot;level-3-charging&amp;quot;) --  as opposed to slower AC home-charging using the equivalent of an electric-dryer outlet (often referred to as &amp;quot;level-2-charging&amp;quot;).&lt;&#x2F;p&gt;

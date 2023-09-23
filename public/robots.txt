@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: http://bspace.us/sitemap.xml
+Sitemap: https://bspace.us/sitemap.xml
