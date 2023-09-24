@@ -1,5 +1,5 @@
 +++
-title = "unicode trickiness"
+title = "unicode normalization"
 date = 2022-01-28
 description = "paraphasing Montoya: 'I do not think this word is what you think it is.'"
 authors = []
