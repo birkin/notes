@@ -5,7 +5,7 @@ description = "useful for local development"
 authors = []
 
 [taxonomies]
-tags=[ "ssh_tunneling", "talk" ]
+tags=[ "ssh_tunneling", "presentation" ]
 +++
 
 ---
