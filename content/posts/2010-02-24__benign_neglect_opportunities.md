@@ -5,7 +5,7 @@ description = "notes from a great talk by Cathy Marshall"
 authors = []
 
 [taxonomies]
-tags=[ "idea", "presentation" ]
+tags=[ "idea", "presentation", "repository" ]
 +++
 
 [Cathy Marshall](https://en.wikipedia.org/wiki/Cathy_Marshall_(hypertext_developer)) of Microsoft Research gave a keynote at the wonderful [code4lib 2010 conference](http://code4lib.org/conference/2010/) that provided a useful nudge to my thinking about repository layers.    
