@@ -45,7 +45,7 @@ The wonderful icing on the cake is that the Tesla-NACS charger-plug is _much_, _
 
 This is a real win for consumers and for the adoption of EVs.
 
-[automakers]: <https://electrek.co/2023/06/11/automakers-tesla-nacs-connector/>
+[automakers]: <https://electrek.co/guides/north-american-charging-standard-nacs/>
 
 [reliability_1]: <https://www.youtube.com/watch?v=wN-Xo4mMrrY>
 [reliability_2]: <https://www.youtube.com/watch?v=K5Du81G4qHs>
