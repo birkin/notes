@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="#ffffff" name="theme-color" />
+  <meta content="#da532c" name="msapplication-TileColor" />
+
+  
+  
+  
+  
+  
+
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/themes/folio/galleria.folio.min.css" integrity="sha384-+rY0QD+LRnTOquDMzGa9lXU6jIwdiQuwCJQ2cdcW0qeP/0UbjQCZlXnRsUMA+9pH" crossorigin="anonymous">
+  
+
+  
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.1/css/academicons.min.css" integrity="sha384-FIue+PI4SsI9XfHCz8dBLg33b0c1fMJgNU3X//L26FYbGnlSEfWmNT7zgWc2N9b6" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link href="https://bspace.us/deep-thought.css" rel="stylesheet" />
+  
+  
+
+  <title>
+    
+ | ssh tunneling notes
+
+  </title>
+
+  
+  
+  
+
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js" integrity="sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx" crossorigin="anonymous"></script>
+
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/mathtex-script-type.min.js" integrity="sha384-jiBVvJ8NGGj5n7kJaiWwWp9AjC+Yh8rhZY3GtAX8yU28azcLgoRo4oukO87g7zDT" crossorigin="anonymous"></script>
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+  
+  
+</head>
+
+<body class="has-background-white">
+  <nav aria-label="section navigation" class="navbar is-light" role="navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item is-size-5 has-text-weight-bold" href="https:&#x2F;&#x2F;bspace.us"></a>
+        <a aria-expanded="false" aria-label="menu" class="navbar-burger burger" data-target="navMenu" role="button">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div class="navbar-menu" id="navMenu">
+        <div class="navbar-end has-text-centered">
+          
+          
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;bspace.us&#x2F;">
+            Home
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;bspace.us&#x2F;posts">
+            Posts
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;bspace.us&#x2F;tags">
+            Tags
+          </a>
+          
+          
+          
+          <a class="navbar-item" id="nav-search" title="Search" data-target="#search-modal">
+            <span class="icon">
+              <i class="fas fa-search"></i>
+            </span>
+          </a>
+          <a class="navbar-item" id="dark-mode" title="Switch to dark theme">
+            <span class="icon">
+              <i class="fas fa-adjust"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  
+  
+
+  
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-8 is-offset-2">
+        <article class="box">
+          <h1 class="title">
+            ssh tunneling notes
+          </h1>
+          <p class="subtitle">useful for local development</p>
+          <div class="columns is-multiline is-gapless">
+            <div class="column is-8">
+              
+<span class="icon-text has-text-grey">
+  
+  
+  <span class="icon">
+    <i class="far fa-calendar-alt"></i>
+  </span>
+  <span><time datetime="2006-02-02">February 02, 2006</time></span>
+</span>
+
+            </div>
+            <div class="column is-4 has-text-right-desktop">
+              
+<span class="icon-text has-text-grey">
+  <span class="icon">
+    <i class="far fa-clock"></i>
+  </span>
+  <span>6 min,</span>
+  <span class="icon">
+    <i class="fas fa-pencil-alt"></i>
+  </span>
+  <span>1106 words</span>
+</span>
+
+            </div>
+            <div class="column">
+              
+            </div>
+            <div class="column has-text-right-desktop">
+              
+              
+<p>
+  Tags:
+  
+  <a class="has-text-info-dark has-text-weight-semibold" href="https://bspace.us/tags/ssh-tunneling/">
+    <span class="icon-text">
+      <span class="icon">
+        <i class="fas fa-tag"></i>
+      </span>
+      <span>ssh_tunneling</span>
+    </span>
+  </a>
+  
+  <a class="has-text-info-dark has-text-weight-semibold" href="https://bspace.us/tags/presentation/">
+    <span class="icon-text">
+      <span class="icon">
+        <i class="fas fa-tag"></i>
+      </span>
+      <span>presentation</span>
+    </span>
+  </a>
+  
+</p>
+
+              
+            </div>
+          </div>
+          <div class="content mt-2">
+            <hr />
+<p><em>This was first posted in 2006, to a no-longer-accessible wiki, to accompany a &quot;Brown Internet Programming Group&quot; talk I gave.</em></p>
+<hr />
+<h3 id="the-problem">The problem</h3>
+<p>The situation: My preferred way of working is to program, on my laptop, code that often must communicate with a database running on a remote server. What are good ways of handling this?
+In the past I used two different approaches.</p>
+<ul>
+<li>Run a parallel database.
+<ul>
+<li>Pros: good when lots of database development/reconfiguration is required. No separate connection file is needed.</li>
+<li>Cons: testing may lead to need to spend effort keeping database structures and sometimes data in sync.</li>
+</ul>
+</li>
+<li>Access the remote database by programming the connection-code to determine which host its running on. If running on my laptop, the connection-code would locate the database at an internet address; if running on the same server as the database, the connection-code would locate the database at the localhost address.
+<ul>
+<li>Pros: Only need to deal with one database.</li>
+<li>Cons: Non-localhost connectivity may be disabled for security reasons. If others work on the same code, the differing connection-code to detect multiple hosts can be a hassle and can reveal internet passwords. Care must be taken since the password may be transmitted over a non-secure connection.</li>
+</ul>
+</li>
+</ul>
+<p><em>Solution:</em> Another programmer showed me how he solves this issue via ssh-tunneling. It's a wonderful solution.</p>
+<h3 id="overview">Overview</h3>
+<p>Background info to keep in mind: Common client-server internet connections generally generally do not require specification of originating ports (the computers can pick a port), but do require specification of destination ports.</p>
+<p>Example: my browser wants to access a web-page. My browser may send out the http request from any of a range of ports, but will specifically access the server's IP address at port 80, where the web-server is listening.</p>
+<p>In ssh-tunneling, the client computer is set up to 'listen' for incoming data on a specified port at the 127.0.0.1 localhost IP address -- and to 'forward' that data, via a pre-established ssh connection, to a specific port at the server's IP address. This terminology may be a bit confusing, because the 'client' -- say, the local development laptop -- is 'listening', which a 'server' normally does. In this case, think of the server as a remote database-server.</p>
+<p>What this means for my database situation is that I set up my laptop to listen for incoming data at '127.0.0.1:3306' and to forward that data to 'somehost.services.brown.edu:3306'. All I have to do in my connection code is specify that it attempt to connect to the database at '127.0.0.1:3306'.</p>
+<p>The beauty of this is two-fold...</p>
+<p>First, the same connection code can run on my laptop and on the server with no modification at all. Example of php connection code...</p>
+<pre data-lang="php" style="background-color:#2b303b;color:#c0c5ce;" class="language-php "><code class="language-php" data-lang="php"><span style="color:#ab7967;">&lt;?php
+</span><span>    </span><span style="color:#96b5b4;">mysql_connect</span><span>(\&quot;</span><span style="color:#a3be8c;">127.0.0.1:3306</span><span style="color:#96b5b4;">\&quot;</span><span style="color:#a3be8c;">, </span><span style="color:#96b5b4;">\&quot;</span><span style="color:#a3be8c;">username</span><span style="color:#96b5b4;">\&quot;</span><span style="color:#a3be8c;">, </span><span style="color:#96b5b4;">\&quot;</span><span style="color:#a3be8c;">password</span><span style="color:#96b5b4;">\&quot;</span><span style="color:#a3be8c;">) or die (</span><span style="color:#96b5b4;">\&quot;</span><span style="color:#a3be8c;">Sorry, cannot connect to server</span><span style="color:#96b5b4;">\&quot;</span><span style="color:#a3be8c;">);
+</span><span style="color:#a3be8c;">    mysql_select_db(</span><span style="color:#96b5b4;">\&quot;</span><span style="color:#a3be8c;">databasename</span><span style="color:#96b5b4;">\&quot;</span><span style="color:#a3be8c;">) or die (</span><span style="color:#96b5b4;">\&quot;</span><span style="color:#a3be8c;">Sorry, cannnot connect to database</span><span style="color:#96b5b4;">\&quot;</span><span style="color:#a3be8c;">);
+</span><span style="color:#a3be8c;">?&gt;
+</span></code></pre>
+<p>Second, because the 'set up' is using SSH as the fowarding mechanism, all data is transferred securely.</p>
+<p>Note that there are many different ways of tunneling; this page focuses on one: 'local client' to 'remote service' (in this case, a remote database server).</p>
+<h3 id="setting-up-the-tunnel">Setting up the tunnel</h3>
+<h4 id="unices">Unices</h4>
+<p>On Linux, Unix, and the Mac, setting up a tunnel is as easy as issuing one command in a terminal window:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>ssh -N -L 3306:somehost.services.brown.edu:3306 myaccount@somehost.services.brown.edu
+</span></code></pre>
+<p>Even if you're going to use a GUI client to set up the tunnel, examine the details of this command to get an understanding of what's going on:</p>
+<ul>
+<li>The ssh part is the normal secure-shell command.</li>
+<li>The -N flag specifies that commands flowing over this connection won't be executed on the remote computer, just forwarded.</li>
+<li>The -L flag specifies the details of the 'localPort:remoteHost:remotePort' section that follows this flag. It means that the local computer should listen for incoming connections on the specified localPort, and forward them over the ssh connection to the remote computer at the remotePort.</li>
+<li>The 'myaccount@somehost.services.brown.edu' sets up the ssh connection. This prompts me to enter my account-password on the remote computer 'somehost'.</li>
+</ul>
+<h4 id="mac-fugu">Mac: Fugu</h4>
+<p>Fugu is an open-source ssh client that supports ssh tunneling.</p>
+<p>To set up a tunnel in fugu:</p>
+<ul>
+<li>Select 'SSH' -&gt; 'New SSH Tunnel'</li>
+<li>Enter 'somehost.services.brown.edu' in the 'Create Tunnel to' textbox'.</li>
+<li>Enter '3306' in the 'Service or Port' textbox (think of this as the 'Remote Port').</li>
+<li>Enter '3306' in the 'Local Port' textbox.</li>
+<li>Enter 'somehost.services.brown.edu' in the 'Remote Host' textbox.
+<ul>
+<li>I'm not sure of the distinction between the two 'host' textboxes, but entering info this way works.</li>
+</ul>
+</li>
+<li>Enter your username in the 'Username' textbox.</li>
+<li>Enter '22' in the 'Port' textbox (think of this as the 'SSH Port').</li>
+</ul>
+<h4 id="windows-putty">Windows: Putty</h4>
+<p><a href="http://software.brown.edu/dist/w-putty.html">Putty</a> is a free Brown-offered ssh client that supports tunneling.</p>
+<ul>
+<li>Open 'putty.exe' file. The 'PuTTy Configuration' window appears.</li>
+<li>Click once on 'Category' -&gt; 'Session'.</li>
+<li>On the right-side of the window enter 'somehost.services.brown.edu' in the 'Host Name (or IP address)' textbox.</li>
+<li>Enter '22' in the 'Port' textbox.</li>
+<li>Select 'SSH' for the 'Protocol'.</li>
+<li>Click once on 'Category' -&gt; 'SSH' -&gt; 'Tunnels'.</li>
+<li>Enter '3306' in the 'Source port' textbox.</li>
+<li>Enter 'somehost.services.brown.edu:3306' in the 'Destination' textbox.</li>
+<li>Select the 'Remote' radio-button under the 'Destination' textbox.</li>
+<li>Click the 'Add' button.</li>
+<li>Click the 'Open' button. The putty terminal window opens.</li>
+<li>When prompted by 'login as', enter your username and hit return.</li>
+<li>When prompted by for your password, enter it and hit return.</li>
+<li>That's it; the tunnel is established.</li>
+</ul>
+<h3 id="more-tunnel-fun">More tunnel fun</h3>
+<h4 id="web">Web</h4>
+<p>The idea...</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>ssh -N -L 5005:123.123.123.123:80 myaccount@123.123.123.123
+</span></code></pre>
+<p>To implement this in Fugu or Putty, just switch the IP address, use '5005' for the 'Local Port' (Fugu) or 'Source Port' (Putty), and use '80' for the 'Service or Port' (Fugu) or the port following the host+colon in the 'Category' -&gt; 'SSH' -&gt; 'Tunnels' 'Destination' textbox (Putty).</p>
+<p>You can then access a web page on the 123.123.123.123 server using an http://127.0.0.1:5005 address instead of the normal http://123.123.123.123 address.</p>
+<p>Note that the 5005 'localPort' can really be any unused port above 1000. The only reason I keep the 'localPort' and 'remoteHostPort' the same in the database example is so my database connection code is the same and works the same on my development laptop and the actual database server.</p>
+<h4 id="other">Other</h4>
+<p>Note that these techniques can be applied in a wide variety of situations. </p>
+<ul>
+<li>I've switched over to tunneled connections from Eclipse, my programming IDE, to my Subversion repositories. </li>
+<li>Brown email is encrypted over the network, but if you have a home account that's not, you can check it from a coffee-shop unencrypted wireless network using ssh-tunneling.</li>
+</ul>
+
+          </div>
+        </article>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+  
+  <section class="modal" id="search-modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Search</p>
+      </header>
+      <section class="modal-card-body">
+        <div class="field mb-2">
+          <div class="control">
+            <input class="input" id="search" placeholder="Search this website." type="search" />
+          </div>
+        </div>
+        <div class="search-results">
+          <div class="search-results__items"></div>
+        </div>
+      </section>
+    </div>
+    <button aria-label="close" class="modal-close is-large"></button>
+  </section>
+  
+
+
+  
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <nav class="level">
+               
+          <div class="level-item has-text-centered">
+            <a class="button is-black is-outlined" href="https:&#x2F;&#x2F;bspace.us&#x2F;posts&#x2F;vendor-api-manifesto&#x2F;">
+              Vendor API Manifesto<span class="icon ml-2">
+                <i class="fas fa-arrow-circle-right"></i>
+              </span>
+            </a>
+          </div>
+          
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  
+
+
+
+  
+  <footer class="footer py-4">
+    <div class="content has-text-centered">
+      <p style="font-size: 0.8em; font-style: italic;">(powered by the
+        <a href="https://www.getzola.org/" target="_blank">Zola</a> static-site-generator and the
+        <a href="https://www.getzola.org/themes/deepthought/" target="_blank">DeepThought</a> theme)
+      </p>
+    </div>
+  </footer>
+  
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/galleria.min.js" integrity="sha384-QSfwGT8/EU536DKdtyP2D6SLlh8zBaZ0cVkwfrwhqzIU9VCfJT00CLVP5t+HAiYg" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/themes/folio/galleria.folio.min.js" integrity="sha384-DwpKI+deZB267+hPKwiOIc5Y2GKsVL0mR6hgz7GgIu7AgAMYqJwcJKY1YBNfhWcY" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@8.13.5/dist/mermaid.min.js" integrity="sha384-0yWn54pSGtfKCU+skfA69l25VsCw+MZt4LQov3xNRoS7YkAMrFokGgSBnAWSK4pv" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.xkcd@1.1.13/dist/chart.xkcd.min.js" integrity="sha384-xC3h1+IHXK8seA+8KfT79Z4e0GPsznjXBoMa5nd8ooWKplPyXx92NOmljWxLC/cs" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://bspace.us/elasticlunr.min.js"></script>
+  <script src="https://bspace.us/search_index.en.js"></script><script src="https://bspace.us/js/site.js"></script>
+
+  
+
+
+
+
+
+  
+  
+</body>
+
+</html>

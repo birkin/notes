@@ -7,8 +7,24 @@
         <loc>https://bspace.us/posts/</loc>
     </url>
     <url>
+        <loc>https://bspace.us/posts/campus-api-ideas/</loc>
+        <lastmod>2008-02-16</lastmod>
+    </url>
+    <url>
         <loc>https://bspace.us/posts/debouncing-explained/</loc>
         <lastmod>2023-08-16</lastmod>
+    </url>
+    <url>
+        <loc>https://bspace.us/posts/discovery-tools-standards-trends/</loc>
+        <lastmod>2008-04-01</lastmod>
+    </url>
+    <url>
+        <loc>https://bspace.us/posts/i-love-hate-python-docstrings-for-testing/</loc>
+        <lastmod>2023-08-30</lastmod>
+    </url>
+    <url>
+        <loc>https://bspace.us/posts/installing-wireshark/</loc>
+        <lastmod>2008-03-08</lastmod>
     </url>
     <url>
         <loc>https://bspace.us/posts/moving-code-onto-network/</loc>
@@ -29,16 +45,27 @@
         <loc>https://bspace.us/posts/page/2/</loc>
     </url>
     <url>
+        <loc>https://bspace.us/posts/page/3/</loc>
+    </url>
+    <url>
+        <loc>https://bspace.us/posts/ssh-tunneling-notes/</loc>
+        <lastmod>2006-02-02</lastmod>
+    </url>
+    <url>
+        <loc>https://bspace.us/posts/statement/</loc>
+        <lastmod>2008-02-16</lastmod>
+    </url>
+    <url>
         <loc>https://bspace.us/posts/trying-to-speak-icelandic/</loc>
         <lastmod>2017-12-12</lastmod>
     </url>
     <url>
         <loc>https://bspace.us/posts/user-context/</loc>
-        <lastmod>2007-12-06</lastmod>
+        <lastmod>2008-01-26</lastmod>
     </url>
     <url>
         <loc>https://bspace.us/posts/vendor-api-manifesto/</loc>
-        <lastmod>2008-03-03</lastmod>
+        <lastmod>2007-12-06</lastmod>
     </url>
     <url>
         <loc>https://bspace.us/posts/weighted-randomization/</loc>
@@ -64,7 +91,16 @@
         <loc>https://bspace.us/tags/code/</loc>
     </url>
     <url>
+        <loc>https://bspace.us/tags/conference/</loc>
+    </url>
+    <url>
+        <loc>https://bspace.us/tags/discovery/</loc>
+    </url>
+    <url>
         <loc>https://bspace.us/tags/evs/</loc>
+    </url>
+    <url>
+        <loc>https://bspace.us/tags/install/</loc>
     </url>
     <url>
         <loc>https://bspace.us/tags/language/</loc>
@@ -73,7 +109,22 @@
         <loc>https://bspace.us/tags/outreach/</loc>
     </url>
     <url>
+        <loc>https://bspace.us/tags/presentation/</loc>
+    </url>
+    <url>
+        <loc>https://bspace.us/tags/remembrance/</loc>
+    </url>
+    <url>
         <loc>https://bspace.us/tags/service-oriented-architecture/</loc>
+    </url>
+    <url>
+        <loc>https://bspace.us/tags/ssh-tunneling/</loc>
+    </url>
+    <url>
+        <loc>https://bspace.us/tags/testing/</loc>
+    </url>
+    <url>
+        <loc>https://bspace.us/tags/tool/</loc>
     </url>
     <url>
         <loc>https://bspace.us/tags/user-context/</loc>
