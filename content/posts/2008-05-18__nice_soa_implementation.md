@@ -16,10 +16,12 @@ I have a programmer friend who works for a large corporation who is familiar wit
 
 Over the past year+ I've created well over a dozen or so SOA web-services for different projects. But I recently implemented one I put some best-practice effort into that'll be a model for my future SOA work. Some links:
 
-* <http://library.brown.edu/services/language_translator/>
-* <http://library.brown.edu/services/language_translator/api_v1/code_eng/>
-* <http://library.brown.edu/services/language_translator/api_v1/all/>
-* <http://library.brown.edu/services/language_translator/list/>
+_[2023 update -- the march of progress has resulted in the retirement of these services, so no active links. Sorry!]_
+
+`http://library.brown.edu/services/language_translator/`
+`http://library.brown.edu/services/language_translator/api_v1/code_eng/`
+`http://library.brown.edu/services/language_translator/api_v1/all/`
+`http://library.brown.edu/services/language_translator/list/`
 
 What I like about this one...
 
