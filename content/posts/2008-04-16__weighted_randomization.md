@@ -1,6 +1,6 @@
 +++
 title = "weighted randomization"
-date = 2008-04-06
+date = 2008-04-16
 description = "how randomization can improve user-experience"
 authors = []
 
