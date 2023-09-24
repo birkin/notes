@@ -4,8 +4,24 @@
     <link href="https://bspace.us/tags/tool/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="https://bspace.us"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2008-03-08T00:00:00+00:00</updated>
+    <updated>2023-04-17T00:00:00+00:00</updated>
     <id>https://bspace.us/tags/tool/atom.xml</id>
+    <entry xml:lang="en">
+        <title>django 4.2 LTS template</title>
+        <published>2023-04-17T00:00:00+00:00</published>
+        <updated>2023-04-17T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://bspace.us/posts/django-42-lts/" type="text/html"/>
+        <id>https://bspace.us/posts/django-42-lts/</id>
+        
+        <content type="html">&lt;p&gt;Django released a new long-term-support version. &lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;birkin&#x2F;django_template_42_project&quot;&gt;This repo&lt;&#x2F;a&gt; serves as a template for new projects. &lt;&#x2F;p&gt;
+&lt;p&gt;It contains &lt;code&gt;error_check()&lt;&#x2F;code&gt; and &lt;code&gt;version()&lt;&#x2F;code&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;birkin&#x2F;django_template_42_project&#x2F;blob&#x2F;166a0393f1c311433fd2738404635364c6202135&#x2F;x_app&#x2F;views.py#L29-L55&quot;&gt;view functions&lt;&#x2F;a&gt;. The first makes it easy to test that admins will be emailed on errors. The second helpfully shows the branch and commit in-use (as well as exercises logging).  &lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>installing wireshark</title>
         <published>2008-03-08T00:00:00+00:00</published>
@@ -624,6 +640,114 @@
 &lt;li&gt;
 &lt;p&gt;Life is good!&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>ssh tunneling notes</title>
+        <published>2006-02-02T00:00:00+00:00</published>
+        <updated>2006-02-02T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://bspace.us/posts/ssh-tunneling-notes/" type="text/html"/>
+        <id>https://bspace.us/posts/ssh-tunneling-notes/</id>
+        
+        <content type="html">&lt;hr &#x2F;&gt;
+&lt;p&gt;&lt;em&gt;This was first posted in 2006, to a no-longer-accessible wiki, to accompany a &amp;quot;Brown Internet Programming Group&amp;quot; talk I gave.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;the-problem&quot;&gt;The problem&lt;&#x2F;h3&gt;
+&lt;p&gt;The situation: My preferred way of working is to program, on my laptop, code that often must communicate with a database running on a remote server. What are good ways of handling this?
+In the past I used two different approaches.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Run a parallel database.
+&lt;ul&gt;
+&lt;li&gt;Pros: good when lots of database development&#x2F;reconfiguration is required. No separate connection file is needed.&lt;&#x2F;li&gt;
+&lt;li&gt;Cons: testing may lead to need to spend effort keeping database structures and sometimes data in sync.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Access the remote database by programming the connection-code to determine which host its running on. If running on my laptop, the connection-code would locate the database at an internet address; if running on the same server as the database, the connection-code would locate the database at the localhost address.
+&lt;ul&gt;
+&lt;li&gt;Pros: Only need to deal with one database.&lt;&#x2F;li&gt;
+&lt;li&gt;Cons: Non-localhost connectivity may be disabled for security reasons. If others work on the same code, the differing connection-code to detect multiple hosts can be a hassle and can reveal internet passwords. Care must be taken since the password may be transmitted over a non-secure connection.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;em&gt;Solution:&lt;&#x2F;em&gt; Another programmer showed me how he solves this issue via ssh-tunneling. It&#x27;s a wonderful solution.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;overview&quot;&gt;Overview&lt;&#x2F;h3&gt;
+&lt;p&gt;Background info to keep in mind: Common client-server internet connections generally generally do not require specification of originating ports (the computers can pick a port), but do require specification of destination ports.&lt;&#x2F;p&gt;
+&lt;p&gt;Example: my browser wants to access a web-page. My browser may send out the http request from any of a range of ports, but will specifically access the server&#x27;s IP address at port 80, where the web-server is listening.&lt;&#x2F;p&gt;
+&lt;p&gt;In ssh-tunneling, the client computer is set up to &#x27;listen&#x27; for incoming data on a specified port at the 127.0.0.1 localhost IP address -- and to &#x27;forward&#x27; that data, via a pre-established ssh connection, to a specific port at the server&#x27;s IP address. This terminology may be a bit confusing, because the &#x27;client&#x27; -- say, the local development laptop -- is &#x27;listening&#x27;, which a &#x27;server&#x27; normally does. In this case, think of the server as a remote database-server.&lt;&#x2F;p&gt;
+&lt;p&gt;What this means for my database situation is that I set up my laptop to listen for incoming data at &#x27;127.0.0.1:3306&#x27; and to forward that data to &#x27;somehost.services.brown.edu:3306&#x27;. All I have to do in my connection code is specify that it attempt to connect to the database at &#x27;127.0.0.1:3306&#x27;.&lt;&#x2F;p&gt;
+&lt;p&gt;The beauty of this is two-fold...&lt;&#x2F;p&gt;
+&lt;p&gt;First, the same connection code can run on my laptop and on the server with no modification at all. Example of php connection code...&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;php&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-php &quot;&gt;&lt;code class=&quot;language-php&quot; data-lang=&quot;php&quot;&gt;&lt;span style=&quot;color:#ab7967;&quot;&gt;&amp;lt;?php
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;mysql_connect&lt;&#x2F;span&gt;&lt;span&gt;(\&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;127.0.0.1:3306&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;username&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;password&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;) or die (&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Sorry, cannot connect to server&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;);
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;    mysql_select_db(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;databasename&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;) or die (&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Sorry, cannnot connect to database&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;);
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;?&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Second, because the &#x27;set up&#x27; is using SSH as the fowarding mechanism, all data is transferred securely.&lt;&#x2F;p&gt;
+&lt;p&gt;Note that there are many different ways of tunneling; this page focuses on one: &#x27;local client&#x27; to &#x27;remote service&#x27; (in this case, a remote database server).&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;setting-up-the-tunnel&quot;&gt;Setting up the tunnel&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;unices&quot;&gt;Unices&lt;&#x2F;h4&gt;
+&lt;p&gt;On Linux, Unix, and the Mac, setting up a tunnel is as easy as issuing one command in a terminal window:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;ssh -N -L 3306:somehost.services.brown.edu:3306 myaccount@somehost.services.brown.edu
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Even if you&#x27;re going to use a GUI client to set up the tunnel, examine the details of this command to get an understanding of what&#x27;s going on:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;The ssh part is the normal secure-shell command.&lt;&#x2F;li&gt;
+&lt;li&gt;The -N flag specifies that commands flowing over this connection won&#x27;t be executed on the remote computer, just forwarded.&lt;&#x2F;li&gt;
+&lt;li&gt;The -L flag specifies the details of the &#x27;localPort:remoteHost:remotePort&#x27; section that follows this flag. It means that the local computer should listen for incoming connections on the specified localPort, and forward them over the ssh connection to the remote computer at the remotePort.&lt;&#x2F;li&gt;
+&lt;li&gt;The &#x27;myaccount@somehost.services.brown.edu&#x27; sets up the ssh connection. This prompts me to enter my account-password on the remote computer &#x27;somehost&#x27;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;mac-fugu&quot;&gt;Mac: Fugu&lt;&#x2F;h4&gt;
+&lt;p&gt;Fugu is an open-source ssh client that supports ssh tunneling.&lt;&#x2F;p&gt;
+&lt;p&gt;To set up a tunnel in fugu:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Select &#x27;SSH&#x27; -&amp;gt; &#x27;New SSH Tunnel&#x27;&lt;&#x2F;li&gt;
+&lt;li&gt;Enter &#x27;somehost.services.brown.edu&#x27; in the &#x27;Create Tunnel to&#x27; textbox&#x27;.&lt;&#x2F;li&gt;
+&lt;li&gt;Enter &#x27;3306&#x27; in the &#x27;Service or Port&#x27; textbox (think of this as the &#x27;Remote Port&#x27;).&lt;&#x2F;li&gt;
+&lt;li&gt;Enter &#x27;3306&#x27; in the &#x27;Local Port&#x27; textbox.&lt;&#x2F;li&gt;
+&lt;li&gt;Enter &#x27;somehost.services.brown.edu&#x27; in the &#x27;Remote Host&#x27; textbox.
+&lt;ul&gt;
+&lt;li&gt;I&#x27;m not sure of the distinction between the two &#x27;host&#x27; textboxes, but entering info this way works.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Enter your username in the &#x27;Username&#x27; textbox.&lt;&#x2F;li&gt;
+&lt;li&gt;Enter &#x27;22&#x27; in the &#x27;Port&#x27; textbox (think of this as the &#x27;SSH Port&#x27;).&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;windows-putty&quot;&gt;Windows: Putty&lt;&#x2F;h4&gt;
+&lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;software.brown.edu&#x2F;dist&#x2F;w-putty.html&quot;&gt;Putty&lt;&#x2F;a&gt; is a free Brown-offered ssh client that supports tunneling.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Open &#x27;putty.exe&#x27; file. The &#x27;PuTTy Configuration&#x27; window appears.&lt;&#x2F;li&gt;
+&lt;li&gt;Click once on &#x27;Category&#x27; -&amp;gt; &#x27;Session&#x27;.&lt;&#x2F;li&gt;
+&lt;li&gt;On the right-side of the window enter &#x27;somehost.services.brown.edu&#x27; in the &#x27;Host Name (or IP address)&#x27; textbox.&lt;&#x2F;li&gt;
+&lt;li&gt;Enter &#x27;22&#x27; in the &#x27;Port&#x27; textbox.&lt;&#x2F;li&gt;
+&lt;li&gt;Select &#x27;SSH&#x27; for the &#x27;Protocol&#x27;.&lt;&#x2F;li&gt;
+&lt;li&gt;Click once on &#x27;Category&#x27; -&amp;gt; &#x27;SSH&#x27; -&amp;gt; &#x27;Tunnels&#x27;.&lt;&#x2F;li&gt;
+&lt;li&gt;Enter &#x27;3306&#x27; in the &#x27;Source port&#x27; textbox.&lt;&#x2F;li&gt;
+&lt;li&gt;Enter &#x27;somehost.services.brown.edu:3306&#x27; in the &#x27;Destination&#x27; textbox.&lt;&#x2F;li&gt;
+&lt;li&gt;Select the &#x27;Remote&#x27; radio-button under the &#x27;Destination&#x27; textbox.&lt;&#x2F;li&gt;
+&lt;li&gt;Click the &#x27;Add&#x27; button.&lt;&#x2F;li&gt;
+&lt;li&gt;Click the &#x27;Open&#x27; button. The putty terminal window opens.&lt;&#x2F;li&gt;
+&lt;li&gt;When prompted by &#x27;login as&#x27;, enter your username and hit return.&lt;&#x2F;li&gt;
+&lt;li&gt;When prompted by for your password, enter it and hit return.&lt;&#x2F;li&gt;
+&lt;li&gt;That&#x27;s it; the tunnel is established.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;more-tunnel-fun&quot;&gt;More tunnel fun&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;web&quot;&gt;Web&lt;&#x2F;h4&gt;
+&lt;p&gt;The idea...&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;ssh -N -L 5005:123.123.123.123:80 myaccount@123.123.123.123
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;To implement this in Fugu or Putty, just switch the IP address, use &#x27;5005&#x27; for the &#x27;Local Port&#x27; (Fugu) or &#x27;Source Port&#x27; (Putty), and use &#x27;80&#x27; for the &#x27;Service or Port&#x27; (Fugu) or the port following the host+colon in the &#x27;Category&#x27; -&amp;gt; &#x27;SSH&#x27; -&amp;gt; &#x27;Tunnels&#x27; &#x27;Destination&#x27; textbox (Putty).&lt;&#x2F;p&gt;
+&lt;p&gt;You can then access a web page on the 123.123.123.123 server using an http:&#x2F;&#x2F;127.0.0.1:5005 address instead of the normal http:&#x2F;&#x2F;123.123.123.123 address.&lt;&#x2F;p&gt;
+&lt;p&gt;Note that the 5005 &#x27;localPort&#x27; can really be any unused port above 1000. The only reason I keep the &#x27;localPort&#x27; and &#x27;remoteHostPort&#x27; the same in the database example is so my database connection code is the same and works the same on my development laptop and the actual database server.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;other&quot;&gt;Other&lt;&#x2F;h4&gt;
+&lt;p&gt;Note that these techniques can be applied in a wide variety of situations. &lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;I&#x27;ve switched over to tunneled connections from Eclipse, my programming IDE, to my Subversion repositories. &lt;&#x2F;li&gt;
+&lt;li&gt;Brown email is encrypted over the network, but if you have a home account that&#x27;s not, you can check it from a coffee-shop unencrypted wireless network using ssh-tunneling.&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </content>
         

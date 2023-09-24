@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - django</title>
+    <link href="https://bspace.us/tags/django/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://bspace.us"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-04-17T00:00:00+00:00</updated>
+    <id>https://bspace.us/tags/django/atom.xml</id>
+    <entry xml:lang="en">
+        <title>django 4.2 LTS template</title>
+        <published>2023-04-17T00:00:00+00:00</published>
+        <updated>2023-04-17T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://bspace.us/posts/django-42-lts/" type="text/html"/>
+        <id>https://bspace.us/posts/django-42-lts/</id>
+        
+        <content type="html">&lt;p&gt;Django released a new long-term-support version. &lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;birkin&#x2F;django_template_42_project&quot;&gt;This repo&lt;&#x2F;a&gt; serves as a template for new projects. &lt;&#x2F;p&gt;
+&lt;p&gt;It contains &lt;code&gt;error_check()&lt;&#x2F;code&gt; and &lt;code&gt;version()&lt;&#x2F;code&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;birkin&#x2F;django_template_42_project&#x2F;blob&#x2F;166a0393f1c311433fd2738404635364c6202135&#x2F;x_app&#x2F;views.py#L29-L55&quot;&gt;view functions&lt;&#x2F;a&gt;. The first makes it easy to test that admins will be emailed on errors. The second helpfully shows the branch and commit in-use (as well as exercises logging).  &lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>validating django params</title>
+        <published>2022-09-22T00:00:00+00:00</published>
+        <updated>2022-09-22T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://bspace.us/posts/querydict-params/" type="text/html"/>
+        <id>https://bspace.us/posts/querydict-params/</id>
+        
+        <content type="html">&lt;h2 id=&quot;expected-a-get-got-a-post&quot;&gt;expected a GET; got a POST&lt;&#x2F;h2&gt;
+&lt;p&gt;Some surprises while working on a recent &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;birkin&#x2F;solr_proxy_project&quot;&gt;project&lt;&#x2F;a&gt;...&lt;&#x2F;p&gt;
+&lt;p&gt;I was creating a simple proxy-webapp to receive GETs, check the params against an allow-list, and pass on the cleaned params to query solr, returning json.&lt;&#x2F;p&gt;
+&lt;p&gt;So my code &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;birkin&#x2F;solr_proxy_project&#x2F;blob&#x2F;17ba0b68d2754b793c853fcf3a8507f55cef153f&#x2F;solr_proxy_app&#x2F;views.py#L48&quot;&gt;began&lt;&#x2F;a&gt; by looking at the querystring.&lt;&#x2F;p&gt;
+&lt;p&gt;Once I had everything working, and had checked a bunch of querystrings against it, I pointed the webapp calling solr to my proxy-webapp, and it didn&#x27;t work.&lt;&#x2F;p&gt;
+&lt;p&gt;Debugging took some time, because I was verifying what I knew, rather than being open to what I didn&#x27;t know. I verified the params for the solr calls, ran them against my proxy-webapp, and it looked like it &lt;em&gt;should&lt;&#x2F;em&gt; have been working. Turns out that the project calling solr was using an old library, &lt;a href=&quot;https:&#x2F;&#x2F;pypi.org&#x2F;project&#x2F;solrpy&#x2F;&quot;&gt;solrpy&lt;&#x2F;a&gt;, which builds the select-data via POSTing form-like params to solr (using xml IIRC). Solr handles that just fine, but my proxy didn&#x27;t, so I had to deal with the POST.&lt;&#x2F;p&gt;
+&lt;p&gt;If I had to do this from the beginning, I&#x27;d start by looking at the params whether from a POST or GET, and should refactor to do that, but I had the code written (with tests), to expect a querystring, and to validate the params in the querystring, etc..., and was feeling a time-pressure, so I figured I&#x27;d just convert the POST params to a querystring and pass that querystring to the pre-existing code.&lt;&#x2F;p&gt;
+&lt;p&gt;Did that, and then, when pointing the webapp to my proxy-webapp, &lt;em&gt;most&lt;&#x2F;em&gt; things worked, but not all.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;querydict-dict&quot;&gt;querydict ≠ dict&lt;&#x2F;h2&gt;
+&lt;p&gt;That round of debugging also took some time, because whereas the original solr calls were all being made by python code, the solr calls that weren&#x27;t working were being made by various javascript calls to a webapp-api (to avoid cross-site domain issues). Turns out the calls coming from javascript had lots of same-param fields. Here&#x27;s an example:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;q=*:*+AND+display_status:approved&amp;amp;facet.field=type&amp;amp;facet.field=physical_type&amp;amp;facet.field=language&amp;amp;facet.field=religion&amp;amp;facet.field=material&amp;amp;facet.field=placeMenu&amp;amp;indent=on&amp;amp;fl=type&amp;amp;start=0&amp;amp;rows=0&amp;amp;facet=on&amp;amp;wt=json
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;...there are six &lt;code&gt;facet.field&lt;&#x2F;code&gt; keys there.&lt;&#x2F;p&gt;
+&lt;p&gt;My original convert-POST-to-GET code was treating the post-params as a regular dict (oops), and so was only passing one value to solr (since regular dicts don&#x27;t allow multiple identical keys). I wanted to update the Django QueryDict (a Django dict-like structure that allows multiple identical keys) -- to validate the par, but the original django Querydict wasn&#x27;t mutable, so I couldn&#x27;t simply remove non-legit params.&lt;&#x2F;p&gt;
+&lt;p&gt;So I made a copy (probably not in the most efficient way), and iterated through the original incoming Querydict&#x27;s keys -- but actually updated the copy&#x27;s params. Then, with the copy validated, I could return it urlencode() it and return it.&lt;&#x2F;p&gt;
+&lt;p&gt;My &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;birkin&#x2F;solr_proxy_project&#x2F;blob&#x2F;17ba0b68d2754b793c853fcf3a8507f55cef153f&#x2F;solr_proxy_app&#x2F;lib&#x2F;validator.py#L57&quot;&gt;implementation&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

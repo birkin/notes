@@ -27,7 +27,7 @@
 
   <title>
     
- | non-Tesla charging challenges
+ | approaches to testing
 
   </title>
 
@@ -101,9 +101,9 @@
       <div class="column is-8 is-offset-2">
         <article class="box">
           <h1 class="title">
-            non-Tesla charging challenges
+            approaches to testing
           </h1>
-          <p class="subtitle">so sad that I can no longer recommend a non-Tesla EV</p>
+          <p class="subtitle">acknowledging the pros and cons of approaches to testing</p>
           <div class="columns is-multiline is-gapless">
             <div class="column is-8">
               
@@ -113,7 +113,7 @@
   <span class="icon">
     <i class="far fa-calendar-alt"></i>
   </span>
-  <span><time datetime="2022-12-10">December 10, 2022</time></span>
+  <span><time datetime="2021-09-17">September 17, 2021</time></span>
 </span>
 
             </div>
@@ -127,7 +127,7 @@
   <span class="icon">
     <i class="fas fa-pencil-alt"></i>
   </span>
-  <span>759 words</span>
+  <span>725 words</span>
 </span>
 
             </div>
@@ -140,12 +140,21 @@
 <p>
   Tags:
   
-  <a class="has-text-info-dark has-text-weight-semibold" href="https://bspace.us/tags/evs/">
+  <a class="has-text-info-dark has-text-weight-semibold" href="https://bspace.us/tags/software-development/">
     <span class="icon-text">
       <span class="icon">
         <i class="fas fa-tag"></i>
       </span>
-      <span>EVs</span>
+      <span>software-development</span>
+    </span>
+  </a>
+  
+  <a class="has-text-info-dark has-text-weight-semibold" href="https://bspace.us/tags/testing/">
+    <span class="icon-text">
+      <span class="icon">
+        <i class="fas fa-tag"></i>
+      </span>
+      <span>testing</span>
     </span>
   </a>
   
@@ -155,25 +164,25 @@
             </div>
           </div>
           <div class="content mt-2">
-            <p><em>Update: the gloom is lifting! <a href="https://bspace.us/posts/ok-again-to-buy-non-teslas/">Read why!</a></em></p>
+            <p><em>The evolution of testing -- what's lost and gained?</em></p>
 <hr />
-<p>I had a Chevy Bolt from 2018 through 2021 that I <em>loved</em>. It was a requirement of the lease that I had to return it at the end of the lease; I'd have bought it otherwise.</p>
-<p>During the time I had it, I took three very long trips (750-1,000 miles round-trip) to see what that was like. And I  took many other shorter long trips that required DC fast-charging (often referred to as &quot;level-3-charging&quot;) --  as opposed to slower AC home-charging using the equivalent of an electric-dryer outlet (often referred to as &quot;level-2-charging&quot;).</p>
-<p>The Bolt is known to fast-charge <em>very</em> slowly. But it has great range, and is super-efficient (so it makes the most of every kilowatt it gets). I loved those trips. BUT... I went into those trips with a sense of adventure: I knew, from reading accounts of fast-charging non-Teslas, that I had to treat those trips like an airplane-pilot charting a trip. I had a backup-charging-plan, and at least some awareness of a back-up to the back-up plan. And I built-in lots of extra travel-time for possible charging issues. </p>
-<p>There were often slower EV-Go fast-charging stations that were my back-up-plan to the main higher-speed Electrify-America (EA) fast-charging stations I usually used. At many EA stations, half the chargers wouldn't work at all, or would only work with multiple attempts. But that generally wasn't an issue, because there were rarely any other EVs there.</p>
-<p>Now, however, there are many <em>terrific</em> non-Teslas being sold -- the Ford Mustang Mach-E, the Ford Lightning pickup, the VW ID-4, and the Hyundai Ioniq-5 being a few -- but that means that the lack of EA reliability has become <em>much</em> more of an issue as more cars vie for working fast-chargers. Here's a <a href="https://www.youtube.com/watch?v=K5Du81G4qHs">recent youtube video</a> that gives a sense of the kinds of charging issues that folk are experiencing.</p>
-<p>I replaced my Bolt with a Tesla Model 3. I love the car -- but there are definitely things about the Bolt that I miss. But Tesla fast-charging on long trips is <em>unbelievably</em> better. </p>
-<p>I can get in my Tesla, in Rhode Island, and push the voice-button and say &quot;Directions to Chicago&quot;. The car knows how full my &quot;tank&quot; is, and routes me to a convenient fast-charging station on my way. As I get close, the car automatically prepares the battery to accept a fast-charge. The smallest charging-station I've ever seen had 8 chargers; most have a dozen or more. I pull up, unhook the charging-cable-plug, press a button on the plug that opens my car's charge-port, and plug it in. That's it[*]. It charges, fast. And most crucially, I simply don't have to even think about it not working (I think I've had only one or two times where I had to move over and use another cable, out of many hundreds of fast-charges). The importance of that reliability cannot be overstated: it is just not a concern. Contrast that experience with the youtube video above.</p>
-<p>My EV evangelism is by no means Tesla specific. But I'm very sad to say that I can no longer recommend a non-Tesla EV to anyone if:</p>
-<ul>
-<li>it's going to be your only car, and...</li>
-<li>if you want to be able to even occasionally take long trips</li>
-</ul>
-<p>(If it's a second-car, or you'll just be using it for normal daily life, my all-brands EV evangelism stands. You charge at home, and start of each day with a full battery.)</p>
-<p>I just honestly wouldn't want my loved ones to have to go through the current all-too-common anxiety of getting a needed fast-charge along the highway in a non-Tesla. I really hope the current publicity around terrible charging experiences helps push companies to prioritize reliability. An increased <em>number</em> of chargers will address range-anxiety, but if they don't work <em>reliably</em>, real charging-anxiety and understandable frustration will result, harming EV-adoption.</p>
-<p>In the future, I'm sure we'll look back on these days like the proverbial elders that talked of walking miles to school through snowstorms, but for now the hassles are real and terribly sad.</p>
-<hr />
-<p>[*] Re fast-charging, &quot;What about payment?&quot; you may wonder. The fast-chargers automatically use the credit-card associated with your car.</p>
+<p>I have a project in which I'm parsing data.</p>
+<p>One useful principle of testing is to have a discrete piece of functionality tested. And the most direct way to do that for parsing is to pass in source-data, and specify a clear assertion. </p>
+<h2 id="simple-and-direct">simple and direct</h2>
+<p>I began that way: </p>
+<p><a href="https://github.com/Brown-University-Library/parse_alma_annex_requests_code/blob/8109bdbf6b9ff3dd609d8d2c5c7775d72ad3de10/tests.py#L156">Here's</a> the beginning of Parser testing.</p>
+<p><a href="https://github.com/Brown-University-Library/parse_alma_annex_requests_code/blob/8109bdbf6b9ff3dd609d8d2c5c7775d72ad3de10/tests.py#L241-L246">Here's</a> the first iteration of parsing a patron note -- although the test was originally called, simply <code>test_parse_patron_note()</code>.</p>
+<p>That happened to be for a physical item; shortly thereafter I needed to parse the note for a digital item. <a href="https://github.com/Brown-University-Library/parse_alma_annex_requests_code/blob/8109bdbf6b9ff3dd609d8d2c5c7775d72ad3de10/tests.py#L248-L253">Here</a> is the iteration that tested for that. </p>
+<p>Implementing that second test, I renamed the first example to show that the test was for a physical item, and named the second test to show that it was testing a digital item. I could have passed just the specific item-xml or item-xml-object to each test. In some ways that would have been simpler and &quot;purer&quot;. But the real data for this project comes in a file containing multiple kinds of items, and I was going to be using the items for different kinds of tests (not just notes), so I figured I'd have one main test-file that would contain a variety of items to use for the tests. (Though this does add a slight dependency to the test -- file loading -- and dependences are frowned upon.)</p>
+<p>In the two examples shown so far, I chose, from the <a href="https://github.com/Brown-University-Library/parse_alma_annex_requests_code/blob/8109bdbf6b9ff3dd609d8d2c5c7775d72ad3de10/test_dirs/static_source/BUL_ANNEX-sample.xml">source-data</a> being tested, the <a href="https://github.com/Brown-University-Library/parse_alma_annex_requests_code/blob/8109bdbf6b9ff3dd609d8d2c5c7775d72ad3de10/tests.py#L244">first list item</a> for the physical-note test, and the <a href="https://github.com/Brown-University-Library/parse_alma_annex_requests_code/blob/8109bdbf6b9ff3dd609d8d2c5c7775d72ad3de10/tests.py#L251">sixth list item</a> for the digital-note test.</p>
+<p>This is all reasonably forthright. The nice thing about this is that, coming back to this code in future weeks or months, and running the tests, I'd see from the terminal output, when running the test-suite, the explicit <code>test_parse_patron_note_physical()</code> and <code>test_parse_patron_note_digital()</code> tests. That's really useful when revisiting code.</p>
+<p>But the more edge-cases that arise, the benefits of this explicitness quickly, for me, feel outweighed by the duplication. I could have half-a-dozen explicit tests for parsing just the notes field for physical items, another half-dozen for digital items, and have lots of very specific tests for all the other parsing.</p>
+<h2 id="scalable">scalable</h2>
+<p>In this and other projects, in this situation, I've moved to a different pattern: a <a href="https://github.com/Brown-University-Library/parse_alma_annex_requests_code/blob/8109bdbf6b9ff3dd609d8d2c5c7775d72ad3de10/tests.py#L221-L239">single test</a> for parsing the target field (in this case the note). This single test first loads up an array of items, an array of expectations, and then iterates through the array, so the single test in this case is actually testing eight variations.</p>
+<p>This has some real advantages -- it's very scalable, since adding a new source-data item simply involves adding an expectation to this note, and the other parsed fields. I might be adding the new item because I'm aware of an edge-case for parsing, say, the item-barcode, and by having to also list the note expectation, I might end up catching some error I hadn't been aware of.</p>
+<p>BUT... there is loss with the gain. I need to view the comments (or the source-data) to see/remember that I'm parsing physical vs digital items. (Might there be another digital item that I forgot to indicate via a comment?) And I'm not going to see those comments in the test-output. </p>
+<p>I just remembered long ago implementing something like this with an additional field in the array. Instead of just handing two-elements in each loop iteration (the source-item-data, and the expectation) -- I also had a comment that was printed, too. That would restore some of the useful specificity of output -- and on a failure, allow me to target, more quickly, the location of the error.</p>
+<p>This example of gain/loss refactoring is a miniscule one -- but it reveals aspects of the decision-making in programming that I love.</p>
 
           </div>
         </article>
@@ -216,17 +225,17 @@
         <nav class="level">
               
           <div class="level-item has-text-centered">
-            <a class="button is-black is-outlined" href="https:&#x2F;&#x2F;bspace.us&#x2F;posts&#x2F;querydict-params&#x2F;">
+            <a class="button is-black is-outlined" href="https:&#x2F;&#x2F;bspace.us&#x2F;posts&#x2F;trying-to-speak-icelandic&#x2F;">
               <span class="icon mr-2">
                 <i class="fas fa-arrow-circle-left"></i>
               </span>
-              validating django params
+              trying to speak icelandic
             </a>
           </div>
            
           <div class="level-item has-text-centered">
-            <a class="button is-black is-outlined" href="https:&#x2F;&#x2F;bspace.us&#x2F;posts&#x2F;unicode-urls&#x2F;">
-              unicode urls<span class="icon ml-2">
+            <a class="button is-black is-outlined" href="https:&#x2F;&#x2F;bspace.us&#x2F;posts&#x2F;unicode-normalization&#x2F;">
+              unicode normalization<span class="icon ml-2">
                 <i class="fas fa-arrow-circle-right"></i>
               </span>
             </a>
