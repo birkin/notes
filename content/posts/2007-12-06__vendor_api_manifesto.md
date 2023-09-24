@@ -1,6 +1,6 @@
 +++
 title = "Vendor API Manifesto"
-date = 2008-03-03
+date = 2007-12-06
 description = "all vendor products should offer APIs -- period"
 authors = []
 
