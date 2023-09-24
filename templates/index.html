@@ -1,0 +1,32 @@
+{##
+{% extends "DeepThought/templates/base.html" %}
+##}
+
+{% extends "base.html" %}
+
+{% block content %}
+<section class="section">
+  <div class="container">
+    <div class="has-text-centered">
+      <!-- <p>HELLO-WORLD-1</p> -->
+      <h1 class="title is-2">{{ section.title }}</h1>
+      <p class="subtitle is-4">{{ section.description }}</p>
+      {% if config.extra.author.avatar %}
+      <p class="has-text-centered">HELLO-WORLD-A</p>
+      <figure class="image is-flex is-justify-content-center is-align-items-center">
+        <p class="has-text-centered">HELLO-WORLD-B</p>
+        <img class="is-rounded" src="{{ config.extra.author.avatar }}" style="max-width: 192px" />
+      </figure>
+      {% endif %}
+      {{ macros:: social_links( social_config=config.extra.social) }}
+    </div>
+    <!-- <div class="content"> -->
+    <div class="content; has-text-centered">
+      <br>  
+      <!-- <p class="has-text-centered">HELLO-WORLD-2</p> -->
+      {{ section.content | safe }}
+      <!-- <p class="has-text-centered">HELLO-WORLD-3</p> -->
+    </div>
+  </div>
+</section>
+{% endblock %}
