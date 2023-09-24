@@ -1,6 +1,6 @@
 +++
 title = "user-context"
-date = 2007-12-06
+date = 2008-01-26
 description = "customizing the user experience based on user context"
 authors = []
 
