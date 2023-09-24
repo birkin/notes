@@ -1,7 +1,7 @@
 +++
-title = "updating young mindsets: technology in the library"
+title = "high-schoolers: technology in the library"
 date = 2016-12-21
-description = "a few dozens to hundreds of middle and high-schoolers now have some awareness that Libraries are worth considering for working with technology in a variety of creative, dynamic, and rewarding ways."
+description = "letting high-schoolers know that Libraries offer creative, dynamic, and rewarding technology careers"
 authors = []
 
 [taxonomies]
