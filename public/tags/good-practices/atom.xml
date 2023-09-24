@@ -4,12 +4,12 @@
     <link href="https://bspace.us/tags/good-practices/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="https://bspace.us"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2006-02-02T00:00:00+00:00</updated>
+    <updated>2008-05-18T00:00:00+00:00</updated>
     <id>https://bspace.us/tags/good-practices/atom.xml</id>
     <entry xml:lang="en">
         <title>nice lightweight SOA implementation</title>
-        <published>2006-02-02T00:00:00+00:00</published>
-        <updated>2006-02-02T00:00:00+00:00</updated>
+        <published>2008-05-18T00:00:00+00:00</published>
+        <updated>2008-05-18T00:00:00+00:00</updated>
         <author>
           <name>Unknown</name>
         </author>
@@ -20,12 +20,11 @@
 &lt;p&gt;To review, briefly and roughly: SOA promotes decoupled services. For example, a Fahrenheit-to-Celsius converter would likely be implemented as a web-service, instead of as a function&#x2F;method embedded&#x2F;tied into some bigger program. The benefits of this are multiple: 1) The service can be written in any programming language, and accessed by other services written in different languages. 2) SOA makes the idealized promise of code-reuse a reality.&lt;&#x2F;p&gt;
 &lt;p&gt;I have a programmer friend who works for a large corporation who is familiar with implementing SOA using industrial-scale best-practices; I&#x27;m familiar with implementing it in a lightweight, seat-of-the-pants fashion.&lt;&#x2F;p&gt;
 &lt;p&gt;Over the past year+ I&#x27;ve created well over a dozen or so SOA web-services for different projects. But I recently implemented one I put some best-practice effort into that&#x27;ll be a model for my future SOA work. Some links:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;library.brown.edu&#x2F;services&#x2F;language_translator&#x2F;&quot;&gt;http:&#x2F;&#x2F;library.brown.edu&#x2F;services&#x2F;language_translator&#x2F;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;library.brown.edu&#x2F;services&#x2F;language_translator&#x2F;api_v1&#x2F;code_eng&#x2F;&quot;&gt;http:&#x2F;&#x2F;library.brown.edu&#x2F;services&#x2F;language_translator&#x2F;api_v1&#x2F;code_eng&#x2F;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;library.brown.edu&#x2F;services&#x2F;language_translator&#x2F;api_v1&#x2F;all&#x2F;&quot;&gt;http:&#x2F;&#x2F;library.brown.edu&#x2F;services&#x2F;language_translator&#x2F;api_v1&#x2F;all&#x2F;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;library.brown.edu&#x2F;services&#x2F;language_translator&#x2F;list&#x2F;&quot;&gt;http:&#x2F;&#x2F;library.brown.edu&#x2F;services&#x2F;language_translator&#x2F;list&#x2F;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;em&gt;[2023 update -- the march of progress has resulted in the retirement of these services, so no active links. Sorry!]&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;http:&#x2F;&#x2F;library.brown.edu&#x2F;services&#x2F;language_translator&#x2F;&lt;&#x2F;code&gt;
+&lt;code&gt;http:&#x2F;&#x2F;library.brown.edu&#x2F;services&#x2F;language_translator&#x2F;api_v1&#x2F;code_eng&#x2F;&lt;&#x2F;code&gt;
+&lt;code&gt;http:&#x2F;&#x2F;library.brown.edu&#x2F;services&#x2F;language_translator&#x2F;api_v1&#x2F;all&#x2F;&lt;&#x2F;code&gt;
+&lt;code&gt;http:&#x2F;&#x2F;library.brown.edu&#x2F;services&#x2F;language_translator&#x2F;list&#x2F;&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;What I like about this one...&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;

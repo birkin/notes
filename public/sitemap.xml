@@ -11,8 +11,20 @@
         <lastmod>2021-09-17</lastmod>
     </url>
     <url>
+        <loc>https://bspace.us/posts/benign-neglect-opportunities/</loc>
+        <lastmod>2010-02-24</lastmod>
+    </url>
+    <url>
+        <loc>https://bspace.us/posts/birth-tips/</loc>
+        <lastmod>2010-01-24</lastmod>
+    </url>
+    <url>
         <loc>https://bspace.us/posts/campus-api-ideas/</loc>
         <lastmod>2008-02-16</lastmod>
+    </url>
+    <url>
+        <loc>https://bspace.us/posts/dashboard-initiative/</loc>
+        <lastmod>2009-09-22</lastmod>
     </url>
     <url>
         <loc>https://bspace.us/posts/debouncing-explained/</loc>
@@ -27,6 +39,10 @@
         <lastmod>2023-04-17</lastmod>
     </url>
     <url>
+        <loc>https://bspace.us/posts/django-templates/</loc>
+        <lastmod>2008-04-06</lastmod>
+    </url>
+    <url>
         <loc>https://bspace.us/posts/i-love-hate-python-docstrings-for-testing/</loc>
         <lastmod>2023-08-30</lastmod>
     </url>
@@ -37,6 +53,10 @@
     <url>
         <loc>https://bspace.us/posts/moving-code-onto-network/</loc>
         <lastmod>2008-02-09</lastmod>
+    </url>
+    <url>
+        <loc>https://bspace.us/posts/nice-soa-implementation/</loc>
+        <lastmod>2008-05-18</lastmod>
     </url>
     <url>
         <loc>https://bspace.us/posts/non-tesla-charging-challenges/</loc>
@@ -62,6 +82,9 @@
         <loc>https://bspace.us/posts/page/5/</loc>
     </url>
     <url>
+        <loc>https://bspace.us/posts/page/6/</loc>
+    </url>
+    <url>
         <loc>https://bspace.us/posts/polyphasic-sleep/</loc>
         <lastmod>2006-06-10</lastmod>
     </url>
@@ -70,12 +93,24 @@
         <lastmod>2022-09-22</lastmod>
     </url>
     <url>
+        <loc>https://bspace.us/posts/recursion/</loc>
+        <lastmod>2008-10-26</lastmod>
+    </url>
+    <url>
+        <loc>https://bspace.us/posts/shib-and-fedora/</loc>
+        <lastmod>2010-01-16</lastmod>
+    </url>
+    <url>
         <loc>https://bspace.us/posts/ssh-tunneling-notes/</loc>
         <lastmod>2006-02-02</lastmod>
     </url>
     <url>
         <loc>https://bspace.us/posts/statement/</loc>
         <lastmod>2008-02-16</lastmod>
+    </url>
+    <url>
+        <loc>https://bspace.us/posts/the-wave-and-repository/</loc>
+        <lastmod>2009-11-11</lastmod>
     </url>
     <url>
         <loc>https://bspace.us/posts/trying-to-speak-icelandic/</loc>
@@ -99,7 +134,7 @@
     </url>
     <url>
         <loc>https://bspace.us/posts/weighted-randomization/</loc>
-        <lastmod>2008-04-06</lastmod>
+        <lastmod>2008-04-16</lastmod>
     </url>
     <url>
         <loc>https://bspace.us/posts/youth-and-library-technology/</loc>
@@ -110,6 +145,9 @@
     </url>
     <url>
         <loc>https://bspace.us/tags/algorithms/</loc>
+    </url>
+    <url>
+        <loc>https://bspace.us/tags/analytics/</loc>
     </url>
     <url>
         <loc>https://bspace.us/tags/apis/</loc>
@@ -136,6 +174,15 @@
         <loc>https://bspace.us/tags/good-practice/</loc>
     </url>
     <url>
+        <loc>https://bspace.us/tags/good-practices/</loc>
+    </url>
+    <url>
+        <loc>https://bspace.us/tags/idea/</loc>
+    </url>
+    <url>
+        <loc>https://bspace.us/tags/ideas/</loc>
+    </url>
+    <url>
         <loc>https://bspace.us/tags/install/</loc>
     </url>
     <url>
@@ -148,7 +195,13 @@
         <loc>https://bspace.us/tags/presentation/</loc>
     </url>
     <url>
+        <loc>https://bspace.us/tags/project/</loc>
+    </url>
+    <url>
         <loc>https://bspace.us/tags/remembrance/</loc>
+    </url>
+    <url>
+        <loc>https://bspace.us/tags/repository/</loc>
     </url>
     <url>
         <loc>https://bspace.us/tags/self-improvement/</loc>
@@ -164,6 +217,9 @@
     </url>
     <url>
         <loc>https://bspace.us/tags/testing/</loc>
+    </url>
+    <url>
+        <loc>https://bspace.us/tags/tips/</loc>
     </url>
     <url>
         <loc>https://bspace.us/tags/tool/</loc>

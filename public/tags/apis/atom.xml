@@ -4,8 +4,55 @@
     <link href="https://bspace.us/tags/apis/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="https://bspace.us"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2008-02-16T00:00:00+00:00</updated>
+    <updated>2008-05-18T00:00:00+00:00</updated>
     <id>https://bspace.us/tags/apis/atom.xml</id>
+    <entry xml:lang="en">
+        <title>nice lightweight SOA implementation</title>
+        <published>2008-05-18T00:00:00+00:00</published>
+        <updated>2008-05-18T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://bspace.us/posts/nice-soa-implementation/" type="text/html"/>
+        <id>https://bspace.us/posts/nice-soa-implementation/</id>
+        
+        <content type="html">&lt;p&gt;I&#x27;ve evangelized &lt;a href=&quot;http:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Service-oriented_architecture&quot;&gt;service-oriented architecture&lt;&#x2F;a&gt; (SOA) &lt;a href=&quot;https:&#x2F;&#x2F;bspace.us&#x2F;posts&#x2F;moving-code-onto-network&#x2F;&quot;&gt;before&lt;&#x2F;a&gt;. &lt;&#x2F;p&gt;
+&lt;p&gt;To review, briefly and roughly: SOA promotes decoupled services. For example, a Fahrenheit-to-Celsius converter would likely be implemented as a web-service, instead of as a function&#x2F;method embedded&#x2F;tied into some bigger program. The benefits of this are multiple: 1) The service can be written in any programming language, and accessed by other services written in different languages. 2) SOA makes the idealized promise of code-reuse a reality.&lt;&#x2F;p&gt;
+&lt;p&gt;I have a programmer friend who works for a large corporation who is familiar with implementing SOA using industrial-scale best-practices; I&#x27;m familiar with implementing it in a lightweight, seat-of-the-pants fashion.&lt;&#x2F;p&gt;
+&lt;p&gt;Over the past year+ I&#x27;ve created well over a dozen or so SOA web-services for different projects. But I recently implemented one I put some best-practice effort into that&#x27;ll be a model for my future SOA work. Some links:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;[2023 update -- the march of progress has resulted in the retirement of these services, so no active links. Sorry!]&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;http:&#x2F;&#x2F;library.brown.edu&#x2F;services&#x2F;language_translator&#x2F;&lt;&#x2F;code&gt;
+&lt;code&gt;http:&#x2F;&#x2F;library.brown.edu&#x2F;services&#x2F;language_translator&#x2F;api_v1&#x2F;code_eng&#x2F;&lt;&#x2F;code&gt;
+&lt;code&gt;http:&#x2F;&#x2F;library.brown.edu&#x2F;services&#x2F;language_translator&#x2F;api_v1&#x2F;all&#x2F;&lt;&#x2F;code&gt;
+&lt;code&gt;http:&#x2F;&#x2F;library.brown.edu&#x2F;services&#x2F;language_translator&#x2F;list&#x2F;&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;What I like about this one...&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;The api urls offer &#x27;discovery&#x27; via embedding, in the built-in returned data, contact and documentation information. Having just one of these pieces of info would be great; having both is particularly nice because web urls and staff change over time. Why is this useful? If someone is looking at the code that calls this service 5 years from now, and if I&#x27;m not around, the documentation will provide info on some extra features of the service that otherwise wouldn&#x27;t be apparent if, say, the web-service just returned the word &#x27;English&#x27;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;The api urls are &#x27;hackable&#x27;, another way of enhancing discovery. One can intuitively try entering a code other than &#x27;enk&#x27; to see what comes up (like &#x27;&lt;a href=&quot;http:&#x2F;&#x2F;library.brown.edu&#x2F;services&#x2F;language_translator&#x2F;api_v1&#x2F;code_tlh&#x2F;&quot;&gt;tlh&lt;&#x2F;a&gt;&#x27;). Also, reasonably appropriate things happen if one lops off increasing sections of the url (in this case, redirects to documentation pages).&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;The api urls are versioned. Key:value pairs can be added to this api -- but the existing key:value pairs must never be changed. The reason is that post-release, I don&#x27;t know who&#x27;s using it for what, thus I have to assume any changes could break someone&#x27;s app. So if I want to change the label &#x27;response&#x27; to &#x27;language&#x27;, and deliver it in xml, I can leave the existing one as is, and label the new one &#x27;api_v2&#x27;.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;All these urls utilize server-caching. This is an implementation rather than a design feature, but worth mentioning. &lt;a href=&quot;http:&#x2F;&#x2F;www.djangoproject.com&#x2F;&quot;&gt;Django&lt;&#x2F;a&gt; offers a flexible and easy-to-use &lt;a href=&quot;http:&#x2F;&#x2F;www.djangoproject.com&#x2F;documentation&#x2F;cache&#x2F;&quot;&gt;caching feature&lt;&#x2F;a&gt;; I have it set so that the list and api urls only have to hit the database once a day, no matter how many times the urls are hit. Further, django&#x27;s caching is intelligent: its response includes &#x27;Cache-Control&#x27;, &#x27;Etag&#x27;, and &#x27;Expires&#x27; http-headers so that a browser or well-designed code &lt;em&gt;doesn&#x27;t even have to call the web-service again&lt;&#x2F;em&gt; to redisplay the data. Nice. This would be particularly important and useful for something like RSS feeds. &lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Good info...&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;A terrific, hands-on review-resource on http-headers: The &lt;a href=&quot;http:&#x2F;&#x2F;www.diveintopython.org&#x2F;http_web_services&#x2F;index.html&quot;&gt;web-services chapter&lt;&#x2F;a&gt; of Mark Pilgrims &#x27;Dive Into Python&#x27; &lt;a href=&quot;http:&#x2F;&#x2F;www.diveintopython.org&#x2F;index.html&quot;&gt;website&lt;&#x2F;a&gt; &amp;amp; &lt;a href=&quot;http:&#x2F;&#x2F;www.worldcat.org&#x2F;oclc&#x2F;56366433&quot;&gt;book&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Many of the features of this language_translator web-service were informed by the &lt;a href=&quot;http:&#x2F;&#x2F;www.worldcat.org&#x2F;oclc&#x2F;82671871&quot;&gt;book&lt;&#x2F;a&gt; &#x27;RESTful Web Services&#x27;, by Richardson &amp;amp; Ruby. Some parts are a bit dense, but it&#x27;s chock-full of terrific detailed info and food for thought. I came across it after having written a half-dozen or so SOA web-services, each one a little different and better, and it directly addressed many issues I had begun to think about or saw referenced via web-research.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;em&gt;[Acknowledgements to Peter Murray&#x27;s&lt;&#x2F;em&gt; &lt;a href=&quot;http:&#x2F;&#x2F;dltj.org&#x2F;article&#x2F;defining-soa-by-analogy&#x2F;&quot;&gt;&lt;em&gt;article&lt;&#x2F;em&gt;&lt;&#x2F;a&gt; &lt;em&gt;and Richard Akerman&#x27;s Access_2006&lt;&#x2F;em&gt; &lt;a href=&quot;http:&#x2F;&#x2F;scilib.typepad.com&#x2F;science_library_pad&#x2F;access2006&#x2F;&quot;&gt;&lt;em&gt;presentation&lt;&#x2F;em&gt;&lt;&#x2F;a&gt; &lt;em&gt;that first inspired my SOA thinking.]&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>practical campus APIs &amp; feeds</title>
         <published>2008-02-16T00:00:00+00:00</published>

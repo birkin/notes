@@ -23,6 +23,50 @@
         
     </entry>
     <entry xml:lang="en">
+        <title>recursion</title>
+        <published>2008-10-26T00:00:00+00:00</published>
+        <updated>2008-10-26T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://bspace.us/posts/recursion/" type="text/html"/>
+        <id>https://bspace.us/posts/recursion/</id>
+        
+        <content type="html">&lt;p&gt;After writing the code below recently, I searched out a few cohorts at work to share the joy, but it was late and no one was around...&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;  def makeHierarchicalFolderList( folder_object_list, return_list=[], indent=&amp;#39;&amp;#39; ):    
+&lt;&#x2F;span&gt;&lt;span&gt;       &amp;#39;&amp;#39;&amp;#39;    
+&lt;&#x2F;span&gt;&lt;span&gt;       - Called by: views.uploader3()    
+&lt;&#x2F;span&gt;&lt;span&gt;       - Purpose: to create a list of community-folders (for upload form) with indents indicating hierarchical relationship. Will likely be replaced by better user-interface.    
+&lt;&#x2F;span&gt;&lt;span&gt;       &amp;#39;&amp;#39;&amp;#39;    
+&lt;&#x2F;span&gt;&lt;span&gt;                               
+&lt;&#x2F;span&gt;&lt;span&gt;       for folder in folder_object_list:    
+&lt;&#x2F;span&gt;&lt;span&gt;            folder.name = &amp;#39;%s%s&amp;#39; % ( indent, folder.name )    
+&lt;&#x2F;span&gt;&lt;span&gt;            return_list.append( folder )    
+&lt;&#x2F;span&gt;&lt;span&gt;                
+&lt;&#x2F;span&gt;&lt;span&gt;            # check for children    
+&lt;&#x2F;span&gt;&lt;span&gt;            children_count = folder.communityfolder_set.all().count()    
+&lt;&#x2F;span&gt;&lt;span&gt;                
+&lt;&#x2F;span&gt;&lt;span&gt;            # handle check-results    
+&lt;&#x2F;span&gt;&lt;span&gt;            if children_count == 0:    
+&lt;&#x2F;span&gt;&lt;span&gt;                 pass    
+&lt;&#x2F;span&gt;&lt;span&gt;            else:    
+&lt;&#x2F;span&gt;&lt;span&gt;                 children_object_list = folder.communityfolder_set.all()    
+&lt;&#x2F;span&gt;&lt;span&gt;                 indent = indent + &amp;#39;-&amp;#39;    
+&lt;&#x2F;span&gt;&lt;span&gt;                 makeHierarchicalFolderList( children_object_list, return_list, indent=indent )    
+&lt;&#x2F;span&gt;&lt;span&gt;                 indent = indent[1:] # since we&amp;#39;re at the end of a processing chain, remove the indent    
+&lt;&#x2F;span&gt;&lt;span&gt;                     
+&lt;&#x2F;span&gt;&lt;span&gt;       return return_list    
+&lt;&#x2F;span&gt;&lt;span&gt;                
+&lt;&#x2F;span&gt;&lt;span&gt;       # end def makeHierarchicalCommunityFolderList()    
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;What enthused me so was the line a few up from the bottom, where I call the very function in which this line resides. This is called recursion. There&#x27;s a wonderful slightly mysterious inverted mobius-strip-like quality to recursion, except that if done right, processing doesn&#x27;t continue on forever.&lt;&#x2F;p&gt;
+&lt;p&gt;The code above neatly meets the needs of a project I&#x27;m working on: to prepare a hierarchical listing of folders. Not shown is an initial step in which a query is made for a user-specific list of &#x27;top-level&#x27; folders -- that is, folders which do not have a parent folder. For each folder in this list, the folder is first appended to a sort of global list-of-folders-to-return. Then a check is made to see if the folder has any children. If so, those child-folders are selected, and passed to the function itself. So for each top-level folder, a processing-chain begins that might be very, very long, or might be very short. But each processing-chain does terminate, shifting to examine the next sibling folder, and, when there are no more sibling-folders in the lowest-level generation, shifting back upward a generation to examine and process the next sibling-folder.&lt;&#x2F;p&gt;
+&lt;p&gt;I use recursion infrequently enough that it sort of gets buried in my toolbox. I forget about it and from habit reach for other tools first that often do the looping job well-enough. Utilizing looping-logic is a fundamental part of programming. Where a built-in looping structure doesn&#x27;t directly solve looping needs, I most often use a Controller-pattern solution to a looping challenge. That is, I&#x27;ll have a controller block of code prepare a list of items that need to be looped through, and perhaps set some variables to hold the results of processing, and then call a separate function that handles the actual looping. Sometimes for more complex situations the called looping code can itself call another separate block of looping code. So it is possible to handle some situations, for which recursion might be ideal, with other techniques. But not all situations -- when my usual looping implementation begins feeling overly complex, that&#x27;s often a sign to root around and dust off the recursion tool.&lt;&#x2F;p&gt;
+&lt;p&gt;Despite some left-over 1960&#x27;s geek-stereotypes about programming being a boring left-brain process, there can be elegance and deep beauty in programming. There are numerous ways to approach and solve a challenge, any of which may work &#x27;well-enough&#x27;. Good programmers strive for solutions that are simplest and clearest, and when the right technique lends itself to beautifully simple code, one feels like an artist.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
         <title>installing wireshark</title>
         <published>2008-03-08T00:00:00+00:00</published>
         <updated>2008-03-08T00:00:00+00:00</updated>
