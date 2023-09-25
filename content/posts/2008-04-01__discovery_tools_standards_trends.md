@@ -5,7 +5,7 @@ description = "report on the March 2008 NISO discovery forum."
 authors = []
 
 [taxonomies]
-tags=[ "conference", "discovery", "presentation" ]
+tags=[ "conferences", "discovery", "presentations" ]
 +++
 
 *[Got a nice little blog-recognition email a couple weeks ago by a reader asking if I would write up a report on this NISO conference for possible inclusion in a newsletter. Here's the web-version.]*

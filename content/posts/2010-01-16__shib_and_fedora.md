@@ -5,7 +5,7 @@ description = "a proposed Fedora authorization solution"
 authors = []
 
 [taxonomies]
-tags=[ "idea", "repository" ]
+tags=[ "authentication", "ideas", "repositories" ]
 +++
 
 _[2023 update -- our repository architecture has changed significantly (I'll post about it sometime), so this post (like so many old tech-posts) is for posterity. 🙂 ]_

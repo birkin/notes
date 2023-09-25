@@ -5,7 +5,7 @@ description = "network-analyzer"
 authors = []
 
 [taxonomies]
-tags=[ "install", "tool" ]
+tags=[ "installs", "tools" ]
 +++
 
 _[2023 update -- all this is ancient history. As of today, the standard Mac package-installer is [Homebrew](https://brew.sh/)]_

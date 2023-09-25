@@ -5,7 +5,7 @@ description = "three birth tips from a 50-year-old guy"
 authors = []
 
 [taxonomies]
-tags=[ "tips" ]
+tags=[ "remembrances", "tips" ]
 +++
 
 That title sounds a bit odd, doesn't it.  🙂 

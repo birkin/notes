@@ -5,7 +5,7 @@ description = "paraphasing Montoya: 'I do not think this word is what you think 
 authors = []
 
 [taxonomies]
-tags=[ "unicode", "good-practice" ]
+tags=[ "unicode", "good-practices" ]
 +++
 
 ## The problem...
