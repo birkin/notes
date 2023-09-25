@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - remembrance</title>
+    <link href="https://bspace.us/tags/remembrance/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://bspace.us"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2008-02-16T00:00:00+00:00</updated>
+    <id>https://bspace.us/tags/remembrance/atom.xml</id>
+    <entry xml:lang="en">
+        <title>statement</title>
+        <published>2008-02-16T00:00:00+00:00</published>
+        <updated>2008-02-16T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://bspace.us/posts/statement/" type="text/html"/>
+        <id>https://bspace.us/posts/statement/</id>
+        
+        <content type="html">&lt;p&gt;I just today ran a disk-search on some text and saw an old &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;AppleWorks&quot;&gt;ClarisWorks&lt;&#x2F;a&gt;-format file named &amp;quot;statement&amp;quot; that, curious, I opened. It&#x27;s a statement that was part of my application to the &lt;em&gt;Masters of Science in Internet Engineering&lt;&#x2F;em&gt; program of &amp;quot;The Person&#x27;s School of Marlboro College&amp;quot;[*], the graduate school of Marlboro College. The eighth paragraph, where I conveyed a sense of what I would like to do in the future, struck me; I hadn&#x27;t remembered writing it. Interesting how life works out...&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;&lt;em&gt;For over fifteen years I have been captivated by the way in which computers have created possibilities for people to work together. In the 1980s I attached a 300-baud modem to my first Mac, and discovered a world of local bulletin-board systems as well as a national service called GEnie. Though GEnie used a text interface, it hosted a game which allowed members to engage in aerial combat via downloaded software. I was fascinated by this union of a graphical front-end to underlying networking.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;This interest in computers connecting people led me to create a local BBS I ran for two years which focused on social change issues and introducing non-technical folk to the benefits of email and discussion groups.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;My immersion in the design and logic of BBS-hosting software primed my move from desktop publishing to database programming. I created a discussion area on America Online (the &#x27;FoxBASE&#x2F;Mac Coffeehouse&#x27;) devoted to the exchange of tips and techniques, and learned first-hand how powerful a learning tool a national network can be. It was during this intensive period of dBASE programming, working on a series of complex multi-user systems, that I learned programming constructs (memory variables, loops, conditional branching, etc.) that have proven invaluable to this day. I have since created a few small educational programs using REALbasic, an object-oriented programming environment similar to Visual Basic.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;For years I have dabbled with web-page creation, but my interest in the web has grown significantly as I have begun to experiment with moving beyond static pages.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;My first dynamic web project was the creation of an automated script that twice a day exported data from multiple office databases to text-files, massaged these files in a text-editor, and then uploaded them to a webserver where the new data was displayed via server-side-includes. Exciting, but still not interactive.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;Over the past year, I have begun to learn PHP and MySQL, and have created an initial version of a user-updated web calendar for a youth group I work with. I find this work extremely compelling; my desire to do more work like this is what inspired me to apply to the MSIE program.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;Nearly all of my computer knowledge has been self-taught. While I continue to value learning from books and user-groups, I am eager to return to school, to immerse myself in learning about multiple aspects of Internet-engineering, from packet-transmission to programming and database environments. And I look forward to integrating this knowledge through the Capstone Project.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;I want to work on creative, interesting projects that would utilize this knowledge I will have gained. One vision is to work in a collegial environment such as Brown University in a technology-group setting where I could implement innovative, useful technology initiatives assisting students, faculty, and administrators.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;I have also been mulling over very preliminary ideas for a Capstone Project, ideas evolved from my early appreciation for how the Internet has created new possibilities for people to interact and work together. One example, stemming from an interest in alternative methods of voting and democracy, is to work with a political science professor at Brown to focus on a Rhode Island community to test Internet campaigning and voting (and to integrate into this experiment alternative voting strategies such as the &#x27;single transferrable vote&#x27;).&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;I have a strong interest in policy decision-making and in improving systems. However, my primary goal is to directly build and create systems and solutions. This is why I am excited about applying to the MSIE program, and why I hope to be a part of The Persons School experience this Fall.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;—Birkin James Diana, MSIE applicant for Fall 2003&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;The group I was thinking about was the &lt;em&gt;Scholarly Technology Group (STG)&lt;&#x2F;em&gt; at Brown University. My understanding is that for a long time, it was part of the Brown&#x27;s Computing &amp;amp; Information Services department. I&#x27;d heard it operated in a cool way: it had a limited staff and budget; each year it would allow faculty to submit applications for STG to help bring-to-life a digital faculty web-project.&lt;&#x2F;p&gt;
+&lt;p&gt;It recently became a part of the Brown Library, and I now work with these folk daily. &lt;&#x2F;p&gt;
+&lt;p&gt;Wow.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;&amp;quot;The Persons School&amp;quot;, named after &lt;a href=&quot;https:&#x2F;&#x2F;www.nytimes.com&#x2F;1978&#x2F;01&#x2F;08&#x2F;archives&#x2F;obituary-6-no-title.html&quot;&gt;Henry Z. Persons&lt;&#x2F;a&gt;, was later renamed the &amp;quot;The Marlboro College Graduate Center&amp;quot;. &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Marlboro_College&quot;&gt;Marlboro College&lt;&#x2F;a&gt; has since closed; in 2020 it was incorporated into Emerson College.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>
