@@ -5,7 +5,7 @@ description = "repository architecture thoughts inspired by Google Wave"
 authors = []
 
 [taxonomies]
-tags=[ "ideas", "repositories" ]
+tags=[ "conferences", "ideas", "repositories" ]
 +++
 
 I've been playing with [Google Wave](http://wave.google.com) recently and am deeply impressed.
