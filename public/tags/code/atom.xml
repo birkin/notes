@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - code</title>
+    <link href="https://bspace.us/tags/code/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://bspace.us"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-08-30T00:00:00+00:00</updated>
+    <id>https://bspace.us/tags/code/atom.xml</id>
+    <entry xml:lang="en">
+        <title>docstring-testing: love→hate→forget→rediscover→repeat</title>
+        <published>2023-08-30T00:00:00+00:00</published>
+        <updated>2023-08-30T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://bspace.us/posts/i-love-hate-python-docstrings-for-testing/" type="text/html"/>
+        <id>https://bspace.us/posts/i-love-hate-python-docstrings-for-testing/</id>
+        
+        <content type="html">&lt;p&gt;I have a love-hate relationship with &lt;a href=&quot;https:&#x2F;&#x2F;realpython.com&#x2F;python-doctest&#x2F;&quot;&gt;using python docstrings for testing&lt;&#x2F;a&gt;. They&#x27;re simple, easy-to-use, and provide both usage-documentation and actual unit-test functionality. But whenever I start using them in any serious extensive way, I go back to using regular unit-tests in a file or directory -- because of limitations of docstring-tests. So I haven&#x27;t used them in a while. But for a informal collaborative experimental project, without testing set up, today I wanted to add a few simple tests to a function to confirm that it&#x27;s really doing what we expect. I remembered docstrings for testing, and I&#x27;m once-again in the love-phase.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Brown-University-Library&#x2F;ml_bdr_ota_experiment&#x2F;blob&#x2F;0a9c4f0fc7a3471736a7344b6e441274bf61d2dd&#x2F;data_clean.py#L122&quot;&gt;Here&#x27;s a function&lt;&#x2F;a&gt; in some experimental code a few of us are working on -- to which I added a few docstring-tests. The docstring is everything between the initial and closing &lt;code&gt;&amp;quot;&amp;quot;&amp;quot;&lt;&#x2F;code&gt;. Generally docstrings are just used to comment a function. But they&#x27;re cool for two reasons:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;tools such as Sphinx can be run on code to auto-generate documentation from docstrings. (I never use that.)&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;assertions can be auto-executed as tests. &lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;In this function, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Brown-University-Library&#x2F;ml_bdr_ota_experiment&#x2F;blob&#x2F;0a9c4f0fc7a3471736a7344b6e441274bf61d2dd&#x2F;data_clean.py#L127-L134&quot;&gt;here are the doc-test assertions&lt;&#x2F;a&gt;. If the project had a normal unit-test harness, running tests the regular way would not only run the unit-tests, but also automatically test these assertion-statements. This experimental code has no test-harness set up; there are no unit-test imports. But the docstring tests can still be run like this: &lt;code&gt;% python -m doctest .&#x2F;data_clean.py&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Doing that shows no output if the tests pass (you would see lots of output if running with the &lt;code&gt;-v&lt;&#x2F;code&gt; (verbose) flag). But imagine if the part that reads:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span&gt;    &amp;gt;&amp;gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;stringify_list&lt;&#x2F;span&gt;&lt;span&gt;( &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;42 &lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;42&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;...instead were:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span&gt;    &amp;gt;&amp;gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;stringify_list&lt;&#x2F;span&gt;&lt;span&gt;( &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;42 &lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;blah&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;...then, running the test would yield:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span&gt;**********************************************************************
+&lt;&#x2F;span&gt;&lt;span&gt;File &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;path&#x2F;to&#x2F;ml_OTA_experiment_stuff&#x2F;ml_bdr_ota_experiment&#x2F;.&#x2F;data_clean.py&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;, line &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;133&lt;&#x2F;span&gt;&lt;span&gt;, in data_clean.stringify_list
+&lt;&#x2F;span&gt;&lt;span&gt;Failed example:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;stringify_list&lt;&#x2F;span&gt;&lt;span&gt;( &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;42 &lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;Expected:
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;blah&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;Got:
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;42&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;**********************************************************************
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1 &lt;&#x2F;span&gt;&lt;span&gt;items had failures:
+&lt;&#x2F;span&gt;&lt;span&gt;   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1 &lt;&#x2F;span&gt;&lt;span&gt;of   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;4 &lt;&#x2F;span&gt;&lt;span&gt;in data_clean.stringify_list
+&lt;&#x2F;span&gt;&lt;span&gt;***Test Failed*** &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1 &lt;&#x2F;span&gt;&lt;span&gt;failures.
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Cool -- simple lightweight documentation and testing; very nice!&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>debouncing explained</title>
+        <published>2023-08-16T00:00:00+00:00</published>
+        <updated>2023-08-16T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://bspace.us/posts/debouncing-explained/" type="text/html"/>
+        <id>https://bspace.us/posts/debouncing-explained/</id>
+        
+        <content type="html">&lt;p&gt;I found this cool, both the good explanation, and the function and concept... I was reading some documentation on a feature of &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;&quot;&gt;Zola&lt;&#x2F;a&gt; (a static-site-generator) that auto-creates an &lt;a href=&quot;http:&#x2F;&#x2F;elasticlunr.com&#x2F;&quot;&gt;elasticlunr&lt;&#x2F;a&gt; search index, The docs note that though the index is auto-created, Zola doesn&#x27;t supply any javascript to actually use it, but the docs show an &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;blob&#x2F;master&#x2F;docs&#x2F;static&#x2F;search.js&quot;&gt;example js file&lt;&#x2F;a&gt; that uses the index.&lt;&#x2F;p&gt;
+&lt;p&gt;Looking at that example file, I was curious about what one function was doing...&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;js&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-js &quot;&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;debounce&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;func&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;wait&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;var &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;timeout&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;return function &lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;var &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;context &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;this&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;var &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;args &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;arguments&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;clearTimeout&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;timeout&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;timeout &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;setTimeout&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;timeout &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;null&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;func&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;apply&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;context&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;args&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;    }, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;wait&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;  };
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;...and had &lt;a href=&quot;https:&#x2F;&#x2F;chat.openai.com&#x2F;share&#x2F;3cfc2b7e-9d68-4a99-8ef5-6be3c58ec1a8&quot;&gt;chatgpt explain it&lt;&#x2F;a&gt;. The main explanatory blurb:  &lt;em&gt;&amp;quot;The function provided is a common utility function called debounce. This function is used to limit the rate at which a function gets invoked. It&#x27;s especially useful in scenarios where events might fire more frequently than you&#x27;d want, such as when resizing a window or detecting keystrokes in an input box.&amp;quot;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

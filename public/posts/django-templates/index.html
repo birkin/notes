@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="#ffffff" name="theme-color" />
+  <meta content="#da532c" name="msapplication-TileColor" />
+
+  
+  
+  
+  
+  
+
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/themes/folio/galleria.folio.min.css" integrity="sha384-+rY0QD+LRnTOquDMzGa9lXU6jIwdiQuwCJQ2cdcW0qeP/0UbjQCZlXnRsUMA+9pH" crossorigin="anonymous">
+  
+
+  
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.1/css/academicons.min.css" integrity="sha384-FIue+PI4SsI9XfHCz8dBLg33b0c1fMJgNU3X//L26FYbGnlSEfWmNT7zgWc2N9b6" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link href="https://bspace.us/deep-thought.css" rel="stylesheet" />
+  
+  
+
+  <title>
+    
+ | appreciating django templates
+
+  </title>
+
+  
+  
+  
+
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js" integrity="sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx" crossorigin="anonymous"></script>
+
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/mathtex-script-type.min.js" integrity="sha384-jiBVvJ8NGGj5n7kJaiWwWp9AjC+Yh8rhZY3GtAX8yU28azcLgoRo4oukO87g7zDT" crossorigin="anonymous"></script>
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+  
+  
+</head>
+
+<body class="has-background-white">
+  <nav aria-label="section navigation" class="navbar is-light" role="navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item is-size-5 has-text-weight-bold" href="https:&#x2F;&#x2F;bspace.us"></a>
+        <a aria-expanded="false" aria-label="menu" class="navbar-burger burger" data-target="navMenu" role="button">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div class="navbar-menu" id="navMenu">
+        <div class="navbar-end has-text-centered">
+          
+          
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;bspace.us&#x2F;">
+            Home
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;bspace.us&#x2F;posts">
+            Posts
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;bspace.us&#x2F;tags">
+            Tags
+          </a>
+          
+          
+          
+          <a class="navbar-item" id="nav-search" title="Search" data-target="#search-modal">
+            <span class="icon">
+              <i class="fas fa-search"></i>
+            </span>
+          </a>
+          <a class="navbar-item" id="dark-mode" title="Switch to dark theme">
+            <span class="icon">
+              <i class="fas fa-adjust"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  
+  
+
+  
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-8 is-offset-2">
+        <article class="box">
+          <h1 class="title">
+            appreciating django templates
+          </h1>
+          <p class="subtitle">ode-to-a-template-architecture</p>
+          <div class="columns is-multiline is-gapless">
+            <div class="column is-8">
+              
+<span class="icon-text has-text-grey">
+  
+  
+  <span class="icon">
+    <i class="far fa-calendar-alt"></i>
+  </span>
+  <span><time datetime="2008-04-06">April 06, 2008</time></span>
+</span>
+
+            </div>
+            <div class="column is-4 has-text-right-desktop">
+              
+<span class="icon-text has-text-grey">
+  <span class="icon">
+    <i class="far fa-clock"></i>
+  </span>
+  <span>3 min,</span>
+  <span class="icon">
+    <i class="fas fa-pencil-alt"></i>
+  </span>
+  <span>575 words</span>
+</span>
+
+            </div>
+            <div class="column">
+              
+            </div>
+            <div class="column has-text-right-desktop">
+              
+              
+<p>
+  Tags:
+  
+  <a class="has-text-info-dark has-text-weight-semibold" href="https://bspace.us/tags/django/">
+    <span class="icon-text">
+      <span class="icon">
+        <i class="fas fa-tag"></i>
+      </span>
+      <span>django</span>
+    </span>
+  </a>
+  
+</p>
+
+              
+            </div>
+          </div>
+          <div class="content mt-2">
+            <p>I'm loving <a href="http://www.djangoproject.com/">Django</a> <a href="http://www.djangoproject.com/documentation/templates/">templates</a>.</p>
+<p>In setting up a site for my bookgroup, I used a model for 'Meeting' that has a 'meeting_date' defined as a 'DateTimeField'. For those who haven't yet tasted the Django kool-aid, that's a field that requires both a valid date and a valid time. Made sense to me, since one of the main reasons for the site is to be able to list the location and date &amp; time of upcoming meetings. However, when entering a few old meetings, the spreadsheet I was working from only listed the month and year (November 1997! -- we've been around for a while!).</p>
+<p>There were a couple of ways I could have handled this. What I chose to do was to add two boolean fields: 'fake_date' (meaning 'day') and 'fake_time'. It might have been cleaner to allow we admins to have a year, a month, a date, and a time field -- but I knew going forward the single DateTimeField would work for us and I wanted to build more for the future than the past. So, when entering an old meeting with just a month and year, any date in that month is entered and any time of day, and both fake_date and fake_time are checked.</p>
+<p>The complete DateTime object is passed to the template, and then some logic goes to work:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>{% if meeting.fake_date %}
+</span><span>    &lt;h2&gt;{{ meeting.date_time|date:\&quot;F, Y\&quot;|lower }}&lt;/h2&gt;
+</span><span>{% else %}
+</span><span>    {% if meeting.fake_time %}
+</span><span>        &lt;h2&gt;{{ meeting.date_time|date:\&quot;l, F jS, Y\&quot;|lower }}&lt;/h2&gt;
+</span><span>    {% endif %}
+</span><span>{% endif %}
+</span><span>
+</span><span>{% if not meeting.fake_date and not meeting.fake_time %}
+</span><span>    &lt;h2&gt;{{ meeting.date_time|date:\&quot;l, F jS, Y g:iA\&quot;|lower }}&lt;/h2&gt;
+</span><span>{% endif %}
+</span></code></pre>
+<p>I could have more efficiently handled the 'happy-path' real-date case via nesting, but I find this a bit more readable.</p>
+<p>If the first test matches, the DateTime object info will only show, as an example, 'march 1998'; if the second test matches, the same DateTime object will only show 'march 6, 1998', but not the time.</p>
+<p>This is nice. My introduction to templates was in Java, via JSPs, using expression-language to pass in values from beans. Since pure java code can be embedded in JSPs, I had trained myself to rigidly keep logic out of templates, and in the above situation would have written that logic within a Java class. When I began working more with php, I looked around for a template system. I had heard good things about 'smarty', but it seemed too heavyweight. That, combined with my fierce aversion to template logic, scared me off. I then attended a <em>wonderful</em> presentation on HTML_Template_ITX, was sold whole-hog, and still use that for my php end-user web work. </p>
+<p>What I initially loved about Django's templates is that I didn't have to use any of the logical conditions I show above; it can be used very well very simply. As I've grown more comfortable with Django and python, my philosophical aversion to template-logic has gradually diminished -- as long as it's <em>presentation</em> logic. The situation above is a perfect example: It's very reasonable for the business-logic end of things to pass to the presentation-layer a date. How that date is then formatted (upper or lowercase, whether or not the day or other elements of the date are shown, etc.) is a very reasonable thing for the template to handle. And that the template can also handle the presentation based on certain conditions of the Meeting instance is very, <em>very</em>, nice.</p>
+
+          </div>
+        </article>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+  
+  <section class="modal" id="search-modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Search</p>
+      </header>
+      <section class="modal-card-body">
+        <div class="field mb-2">
+          <div class="control">
+            <input class="input" id="search" placeholder="Search this website." type="search" />
+          </div>
+        </div>
+        <div class="search-results">
+          <div class="search-results__items"></div>
+        </div>
+      </section>
+    </div>
+    <button aria-label="close" class="modal-close is-large"></button>
+  </section>
+  
+
+
+  
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <nav class="level">
+              
+          <div class="level-item has-text-centered">
+            <a class="button is-black is-outlined" href="https:&#x2F;&#x2F;bspace.us&#x2F;posts&#x2F;discovery-tools-standards-trends&#x2F;">
+              <span class="icon mr-2">
+                <i class="fas fa-arrow-circle-left"></i>
+              </span>
+              discovery tools, standards, trends
+            </a>
+          </div>
+           
+          <div class="level-item has-text-centered">
+            <a class="button is-black is-outlined" href="https:&#x2F;&#x2F;bspace.us&#x2F;posts&#x2F;weighted-randomization&#x2F;">
+              weighted randomization<span class="icon ml-2">
+                <i class="fas fa-arrow-circle-right"></i>
+              </span>
+            </a>
+          </div>
+          
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  
+
+
+
+  
+  <footer class="footer py-4">
+    <div class="content has-text-centered">
+      <p style="font-size: 0.8em; font-style: italic;">(powered by the
+        <a href="https://www.getzola.org/" target="_blank">Zola</a> static-site-generator and the
+        <a href="https://www.getzola.org/themes/deepthought/" target="_blank">DeepThought</a> theme)
+      </p>
+    </div>
+  </footer>
+  
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/galleria.min.js" integrity="sha384-QSfwGT8/EU536DKdtyP2D6SLlh8zBaZ0cVkwfrwhqzIU9VCfJT00CLVP5t+HAiYg" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/themes/folio/galleria.folio.min.js" integrity="sha384-DwpKI+deZB267+hPKwiOIc5Y2GKsVL0mR6hgz7GgIu7AgAMYqJwcJKY1YBNfhWcY" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@8.13.5/dist/mermaid.min.js" integrity="sha384-0yWn54pSGtfKCU+skfA69l25VsCw+MZt4LQov3xNRoS7YkAMrFokGgSBnAWSK4pv" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.xkcd@1.1.13/dist/chart.xkcd.min.js" integrity="sha384-xC3h1+IHXK8seA+8KfT79Z4e0GPsznjXBoMa5nd8ooWKplPyXx92NOmljWxLC/cs" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://bspace.us/elasticlunr.min.js"></script>
+  <script src="https://bspace.us/search_index.en.js"></script><script src="https://bspace.us/js/site.js"></script>
+
+  
+
+
+
+
+
+  
+  
+</body>
+
+</html>
