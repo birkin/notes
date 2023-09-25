@@ -5,7 +5,7 @@ description = "suprises working on a solr-proxy"
 authors = []
 
 [taxonomies]
-tags=[ "django", "good-practice" ]
+tags=[ "django", "good-practices" ]
 +++
 
 ## expected a GET; got a POST

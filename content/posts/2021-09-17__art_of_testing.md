@@ -5,7 +5,7 @@ description = "acknowledging the pros and cons of approaches to testing"
 authors = []
 
 [taxonomies]
-tags=[ "software-development", "testing" ]
+tags=[ "good-practices", "software-development", "testing" ]
 +++
 
 _The evolution of testing -- what's lost and gained?_

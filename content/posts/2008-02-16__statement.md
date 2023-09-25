@@ -5,7 +5,7 @@ description = "found my grad-school application statement"
 authors = []
 
 [taxonomies]
-tags = [ "remembrance" ]
+tags = [ "remembrances" ]
 +++
 
 I just today ran a disk-search on some text and saw an old [ClarisWorks](https://en.wikipedia.org/wiki/AppleWorks)-format file named "statement" that, curious, I opened. It's a statement that was part of my application to the _Masters of Science in Internet Engineering_ program of "The Person's School of Marlboro College"[*], the graduate school of Marlboro College. The eighth paragraph, where I conveyed a sense of what I would like to do in the future, struck me; I hadn't remembered writing it. Interesting how life works out...    

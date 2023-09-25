@@ -5,7 +5,7 @@ description = "customizing the user experience based on user context"
 authors = []
 
 [taxonomies]
-tags = [ "user-context" ]
+tags = [ "conferences", "ideas", "user-context" ]
 +++
 
 

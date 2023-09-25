@@ -6,7 +6,7 @@ authors = []
 draft = false
 
 [taxonomies]
-tags=[ "software-development", "tool" ]
+tags=[ "software-development", "techniques" ]
 +++
 
 After writing the code below recently, I searched out a few cohorts at work to share the joy, but it was late and no one was around...    

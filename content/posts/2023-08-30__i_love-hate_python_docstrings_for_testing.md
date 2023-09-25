@@ -7,7 +7,7 @@ authors = []
 draft = false
 
 [taxonomies]
-tags=[ "testing", "code"  ]
+tags=[ "code", "testing" ]
 +++
 
 I have a love-hate relationship with [using python docstrings for testing](https://realpython.com/python-doctest/). They're simple, easy-to-use, and provide both usage-documentation and actual unit-test functionality. But whenever I start using them in any serious extensive way, I go back to using regular unit-tests in a file or directory -- because of limitations of docstring-tests. So I haven't used them in a while. But for a informal collaborative experimental project, without testing set up, today I wanted to add a few simple tests to a function to confirm that it's really doing what we expect. I remembered docstrings for testing, and I'm once-again in the love-phase.
