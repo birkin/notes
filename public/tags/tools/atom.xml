@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - tools</title>
+    <link href="https://bspace.us/tags/tools/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://bspace.us"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-04-17T00:00:00+00:00</updated>
+    <id>https://bspace.us/tags/tools/atom.xml</id>
+    <entry xml:lang="en">
+        <title>django 4.2 LTS template</title>
+        <published>2023-04-17T00:00:00+00:00</published>
+        <updated>2023-04-17T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://bspace.us/posts/django-42-lts/" type="text/html"/>
+        <id>https://bspace.us/posts/django-42-lts/</id>
+        
+        <content type="html">&lt;p&gt;Django released a new long-term-support version. &lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;birkin&#x2F;django_template_42_project&quot;&gt;This repo&lt;&#x2F;a&gt; serves as a template for new projects. &lt;&#x2F;p&gt;
+&lt;p&gt;It contains &lt;code&gt;error_check()&lt;&#x2F;code&gt; and &lt;code&gt;version()&lt;&#x2F;code&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;birkin&#x2F;django_template_42_project&#x2F;blob&#x2F;166a0393f1c311433fd2738404635364c6202135&#x2F;x_app&#x2F;views.py#L29-L55&quot;&gt;view functions&lt;&#x2F;a&gt;. The first makes it easy to test that admins will be emailed on errors. The second helpfully shows the branch and commit in-use (as well as exercises logging).  &lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>installing wireshark</title>
+        <published>2008-03-08T00:00:00+00:00</published>
+        <updated>2008-03-08T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://bspace.us/posts/installing-wireshark/" type="text/html"/>
+        <id>https://bspace.us/posts/installing-wireshark/</id>
+        
+        <content type="html">&lt;p&gt;&lt;em&gt;[2023 update -- all this is ancient history. As of today, the standard Mac package-installer is &lt;a href=&quot;https:&#x2F;&#x2F;brew.sh&#x2F;&quot;&gt;Homebrew&lt;&#x2F;a&gt;]&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;[2008 note: This was like being back in school, where we did a bunch of &#x27;compiling&#x27; and &#x27;make&#x27;ing, and often took steps backwards, sometimes for a while, in order to go forward.]&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;[2008 update: tried the macport install again after a required library was back online; all proceeded smoothly.]&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;Wanted to run &lt;a href=&quot;http:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Wireshark&quot;&gt;wireshark&lt;&#x2F;a&gt; (formerly ethereal) to check on something. Looks like Leopard install has moved it and other stuff around. Looking into getting it back up...&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;ve used Fink in the past to install linux packages that don&#x27;t have mac binary versions, but have heard good things about &lt;a href=&quot;http:&#x2F;&#x2F;www.macports.org&#x2F;&quot;&gt;MacPorts&lt;&#x2F;a&gt; and am trying this (I did check and they do have a wireshark port.)&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Downloaded the universal installer for Leopard.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Ran install. Though the documentation indicated that macports would automatically edit my .profile file; it didn&#x27;t, so I added two paths to my .profile file:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;  export PATH=$PATH:&#x2F;opt&#x2F;local&#x2F;bin        
+&lt;&#x2F;span&gt;&lt;span&gt;  export PATH=$PATH:&#x2F;opt&#x2F;local&#x2F;var&#x2F;macports&#x2F;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Looked good:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;  birkinbox:~ birkin$         
+&lt;&#x2F;span&gt;&lt;span&gt;  birkinbox:~ birkin$ which port        
+&lt;&#x2F;span&gt;&lt;span&gt;  &#x2F;opt&#x2F;local&#x2F;bin&#x2F;port        
+&lt;&#x2F;span&gt;&lt;span&gt;  birkinbox:~ birkin$         
+&lt;&#x2F;span&gt;&lt;span&gt;  birkinbox:~ birkin$ sudo port selfupdate        
+&lt;&#x2F;span&gt;&lt;span&gt;      
+&lt;&#x2F;span&gt;&lt;span&gt;  MacPorts base version 1.600 installed        
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  Downloaded MacPorts base version 1.600        
+&lt;&#x2F;span&gt;&lt;span&gt;          
+&lt;&#x2F;span&gt;&lt;span&gt;  The MacPorts installation is not outdated and so was not updated        
+&lt;&#x2F;span&gt;&lt;span&gt;  selfupdate done!        
+&lt;&#x2F;span&gt;&lt;span&gt;  birkinbox:~ birkin$ \r\n  \r\n  * wireshark found:\r\n          
+&lt;&#x2F;span&gt;&lt;span&gt;  birkinbox:~ birkin$         
+&lt;&#x2F;span&gt;&lt;span&gt;  birkinbox:~ birkin$ port search &amp;#39;wireshark&amp;#39;        
+&lt;&#x2F;span&gt;&lt;span&gt;  wireshark                      net&#x2F;wireshark  0.99.8       Graphical network analyzer and capture tool        
+&lt;&#x2F;span&gt;&lt;span&gt;  birkinbox:~ birkin$ \r\n    \r\n  * but install unsuccessful:\r\n          
+&lt;&#x2F;span&gt;&lt;span&gt;  birkinbox:~ birkin$         
+&lt;&#x2F;span&gt;&lt;span&gt;  birkinbox:~ birkin$ sudo port install &amp;#39;wireshark&amp;#39;        
+&lt;&#x2F;span&gt;&lt;span&gt;  Password:        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Fetching expat        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Attempting to fetch expat-2.0.1.tar.gz from http:&#x2F;&#x2F;downloads.sourceforge.net&#x2F;expat        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Verifying checksum(s) for expat        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Extracting expat        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Configuring expat        
+&lt;&#x2F;span&gt;&lt;span&gt;  Error: Target org.macports.configure returned: configure failure: shell command \&amp;quot; cd \&amp;quot;&#x2F;opt&#x2F;local&#x2F;var&#x2F;macports&#x2F;build&#x2F;_opt_local_var_macports_sources_rsync.macports.org_release_ports_textproc_expat&#x2F;work&#x2F;expat-2.0.1\&amp;quot; &amp;amp;&amp;amp; .&#x2F;configure --prefix=&#x2F;opt&#x2F;local --mandir=&#x2F;opt&#x2F;local&#x2F;share&#x2F;man \&amp;quot; returned error 77        
+&lt;&#x2F;span&gt;&lt;span&gt;  Command output: checking build system type... i386-apple-darwin9.2.0        
+&lt;&#x2F;span&gt;&lt;span&gt;  checking host system type... i386-apple-darwin9.2.0        
+&lt;&#x2F;span&gt;&lt;span&gt;  checking for gcc... &#x2F;usr&#x2F;bin&#x2F;gcc-4.0        
+&lt;&#x2F;span&gt;&lt;span&gt;  checking for C compiler default output file name... configure: error: C compiler cannot create executables        
+&lt;&#x2F;span&gt;&lt;span&gt;  See `config.log&amp;#39; for more details.        
+&lt;&#x2F;span&gt;&lt;span&gt;          
+&lt;&#x2F;span&gt;&lt;span&gt;  Error: The following dependencies failed to build: glib2 gettext expat libiconv gperf ncurses ncursesw pkgconfig gtk2 atk cairo fontconfig freetype zlib libpng render xrender gtk-doc docbook-xml-4.1.2 xmlcatmgr docbook-xsl libxml2 perl5.8 scrollkeeper docbook-xml docbook-xml-4.2 docbook-xml-4.3 docbook-xml-4.4 docbook-xml-4.5 libxslt p5-xml-parser jpeg pango Xft2 xorg-xproto xorg-util-macros shared-mime-info tiff libpcap openssl        
+&lt;&#x2F;span&gt;&lt;span&gt;  Error: Status 1 encountered during processing.        
+&lt;&#x2F;span&gt;&lt;span&gt;  birkinbox:~ birkin$ 
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Another step back to try and figure this out.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&#x27;Amer from Boston&#x27; &lt;em&gt;(link &lt;code&gt;http:&#x2F;&#x2F;www.anders.com&#x2F;cms&#x2F;241&#x2F;Wireshark&#x2F;MacPorts&lt;&#x2F;code&gt; no longer active)&lt;&#x2F;em&gt;, has some steps he said worked for him; I&#x27;ll try them.&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;  sudo port -v install gtk2 +x11
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  birkinbox:~ birkin$         
+&lt;&#x2F;span&gt;&lt;span&gt;  birkinbox:~ birkin$ sudo port -v install gtk2 +x11        
+&lt;&#x2F;span&gt;&lt;span&gt;  Password:        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Configuring expat        
+&lt;&#x2F;span&gt;&lt;span&gt;  checking build system type... i386-apple-darwin9.2.0        
+&lt;&#x2F;span&gt;&lt;span&gt;  checking host system type... i386-apple-darwin9.2.0        
+&lt;&#x2F;span&gt;&lt;span&gt;  checking for gcc... &#x2F;usr&#x2F;bin&#x2F;gcc-4.0        
+&lt;&#x2F;span&gt;&lt;span&gt;  checking for C compiler default output file name... configure: error: C compiler cannot create executables        
+&lt;&#x2F;span&gt;&lt;span&gt;  See `config.log&amp;#39; for more details.        
+&lt;&#x2F;span&gt;&lt;span&gt;  Error: Target org.macports.configure returned: configure failure: shell command \&amp;quot; cd \&amp;quot;&#x2F;opt&#x2F;local&#x2F;var&#x2F;macports&#x2F;build&#x2F;_opt_local_var_macports_sources_rsync.macports.org_release_ports_textproc_expat&#x2F;work&#x2F;expat-2.0.1\&amp;quot; &amp;amp;&amp;amp; .&#x2F;configure --prefix=&#x2F;opt&#x2F;local --mandir=&#x2F;opt&#x2F;local&#x2F;share&#x2F;man \&amp;quot; returned error 77        
+&lt;&#x2F;span&gt;&lt;span&gt;  Command output: checking build system type... i386-apple-darwin9.2.0        
+&lt;&#x2F;span&gt;&lt;span&gt;  checking host system type... i386-apple-darwin9.2.0        
+&lt;&#x2F;span&gt;&lt;span&gt;  checking for gcc... &#x2F;usr&#x2F;bin&#x2F;gcc-4.0        
+&lt;&#x2F;span&gt;&lt;span&gt;  checking for C compiler default output file name... configure: error: C compiler cannot create executables        
+&lt;&#x2F;span&gt;&lt;span&gt;  See `config.log&amp;#39; for more details.        
+&lt;&#x2F;span&gt;&lt;span&gt;          
+&lt;&#x2F;span&gt;&lt;span&gt;  Warning: the following items did not execute (for expat): org.macports.activate org.macports.configure org.macports.build org.macports.destroot org.macports.install        
+&lt;&#x2F;span&gt;&lt;span&gt;  Error: The following dependencies failed to build: atk gettext expat libiconv gperf ncurses ncursesw glib2 pkgconfig cairo fontconfig freetype zlib libpng render xrender gtk-doc docbook-xml-4.1.2 xmlcatmgr docbook-xsl libxml2 perl5.8 scrollkeeper docbook-xml docbook-xml-4.2 docbook-xml-4.3 docbook-xml-4.4 docbook-xml-4.5 libxslt p5-xml-parser jpeg pango Xft2 xorg-xproto xorg-util-macros shared-mime-info tiff        
+&lt;&#x2F;span&gt;&lt;span&gt;  Error: Status 1 encountered during processing.        
+&lt;&#x2F;span&gt;&lt;span&gt;  birkinbox:~ birkin$ 
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Consulting installation documentation &lt;em&gt;(bad link: http:&#x2F;&#x2F;trac.macports.org&#x2F;projects&#x2F;macports&#x2F;wiki&#x2F;InstallingMacPorts)&lt;&#x2F;em&gt; from main documentation page &lt;em&gt;(bad link: http:&#x2F;&#x2F;trac.macports.org&#x2F;projects&#x2F;macports)&lt;&#x2F;em&gt;. Reading through the docs I see there&#x27;s a lot I didn&#x27;t do that I need to, but pretty basic stuff. This is good; it&#x27;s always nice to have ideas about why something&#x27;s not working.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;xcode 3.0 is required; I thought I had installed that when I installed Leopard, but there&#x27;s no &#x2F;Developer directory in the new installation (only one is in the &#x27;Previous Systems&#x27; directory) so I must not have. Downloading the (big) intaller.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;The modified date on the Utilities&#x2F;X11.app is 2008-02-29, which is when I installed Leopard. So I suspect that the selection I remember on the install was for the X11 install, not the whole xcode package.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Hmmn... the macports xcode-installation docs say &lt;em&gt;&amp;quot;Click Customize, expand the Applications category and click the checkbox beside X11 SDK to add it to the default items.&amp;quot;&lt;&#x2F;em&gt; ...but the xcode installer didn&#x27;t have an Applications category; proceeding with install.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Looks like it went ok.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Looks like a good source of Leopard X11 info &lt;em&gt;(bad link: http:&#x2F;&#x2F;homepage.mac.com&#x2F;sao1&#x2F;X11&#x2F;index.html)&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Based on intall docs, revised &lt;code&gt;~&#x2F;.profile&lt;&#x2F;code&gt; to:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;  # for macport install (2008-03-21)        
+&lt;&#x2F;span&gt;&lt;span&gt;  export PATH=&#x2F;opt&#x2F;local&#x2F;bin:&#x2F;opt&#x2F;local&#x2F;sbin:$PATH        
+&lt;&#x2F;span&gt;&lt;span&gt;  export DISPLAY=:0.0
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;The &#x27;Verify the shell environment&#x27; section instructs to run &#x27;env&#x27; to confirm that the initial paths are the MacPort paths, like:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;  PATH=&#x2F;opt&#x2F;local&#x2F;bin:&#x2F;opt&#x2F;local&#x2F;sbin:&#x2F;bin:&#x2F;sbin:&#x2F;usr&#x2F;bin:&#x2F;usr&#x2F;sbin  
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;My path has the old &#x27;&#x2F;sw&#x2F;&#x27; paths previously installed via Fink:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;  birkinbox:~ birkin$         
+&lt;&#x2F;span&gt;&lt;span&gt;  birkinbox:~ birkin$ env        
+&lt;&#x2F;span&gt;&lt;span&gt;  ...        
+&lt;&#x2F;span&gt;&lt;span&gt;  PATH=&#x2F;sw&#x2F;bin:&#x2F;sw&#x2F;sbin::&#x2F;usr&#x2F;lib&#x2F;php&#x2F;:&#x2F;opt&#x2F;local&#x2F;bin:&#x2F;opt&#x2F;local&#x2F;sbin:&#x2F;usr&#x2F;bin:&#x2F;bin:&#x2F;usr&#x2F;sbin:...        
+&lt;&#x2F;span&gt;&lt;span&gt;  ...        
+&lt;&#x2F;span&gt;&lt;span&gt;  birkinbox:~ birkin$ 
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Ok, disabled the fink stuff; the php lib still comes before the macport directories, but I&#x27;m thinking that&#x27;s ok. Onward...&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Trying the wireshark install again... OMG, I&#x27;m over an hour into the install command and stuff&#x27;s still being downloaded and installed. Is this a natural series of dependencies? Or is an entire &#x27;base&#x27; environment being installed? I now seem to remember something similar with Fink. It&#x27;s not at all necessary to list all this output, but I&#x27;m going to, for the strange geeky factor, and because over the years I&#x27;ve been occasionlly been surprised at the benefits of having this bizarre documentation.&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;  birkinbox:~ birkin$         
+&lt;&#x2F;span&gt;&lt;span&gt;  birkinbox:~ birkin$ sudo port install &amp;#39;wireshark&amp;#39;        
+&lt;&#x2F;span&gt;&lt;span&gt;  Password:        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Configuring expat        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Building expat with target all        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Staging expat into destroot        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Installing expat 2.0.1_0        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Activating expat 2.0.1_0        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Cleaning expat        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Fetching libiconv        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Attempting to fetch libiconv-1.12.tar.gz from http:&#x2F;&#x2F;ftp.gnu.org&#x2F;gnu&#x2F;libiconv        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Verifying checksum(s) for libiconv        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Extracting libiconv        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Applying patches to libiconv        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Configuring libiconv        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Building libiconv with target all        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Staging libiconv into destroot        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Installing libiconv 1.12_0        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Activating libiconv 1.12_0        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Cleaning libiconv        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Fetching ncursesw        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Attempting to fetch ncurses-5.6.tar.gz from http:&#x2F;&#x2F;ftp.gnu.org&#x2F;gnu&#x2F;ncurses        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Verifying checksum(s) for ncursesw        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Extracting ncursesw        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Applying patches to ncursesw        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Configuring ncursesw        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Building ncursesw with target all        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Staging ncursesw into destroot        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Installing ncursesw 5.6_1        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Activating ncursesw 5.6_1        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Cleaning ncursesw        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Fetching ncurses        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Verifying checksum(s) for ncurses        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Extracting ncurses        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Applying patches to ncurses        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Configuring ncurses        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Building ncurses with target all        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Staging ncurses into destroot        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Installing ncurses 5.6_0        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Activating ncurses 5.6_0        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Cleaning ncurses        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Fetching gettext        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Attempting to fetch gettext-0.17.tar.gz from http:&#x2F;&#x2F;ftp.gnu.org&#x2F;gnu&#x2F;gettext        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Verifying checksum(s) for gettext        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Extracting gettext        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Applying patches to gettext        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Configuring gettext        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Building gettext with target all        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Staging gettext into destroot        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Installing gettext 0.17_3        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Activating gettext 0.17_3        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Cleaning gettext        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Fetching pkgconfig        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Attempting to fetch pkg-config-0.23.tar.gz from http:&#x2F;&#x2F;pkg-config.freedesktop.org&#x2F;releases&#x2F;        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Verifying checksum(s) for pkgconfig        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Extracting pkgconfig        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Configuring pkgconfig        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Building pkgconfig with target all        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Staging pkgconfig into destroot        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Installing pkgconfig 0.23_0        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Activating pkgconfig 0.23_0        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Cleaning pkgconfig        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Fetching glib2        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Attempting to fetch glib-2.16.1.tar.bz2 from ftp:&#x2F;&#x2F;ftp.gtk.org&#x2F;pub&#x2F;glib&#x2F;2.16&#x2F;        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Attempting to fetch glib-2.16.1.tar.bz2 from http:&#x2F;&#x2F;mandril.creatis.insa-lyon.fr&#x2F;linux&#x2F;gnome.org&#x2F;sources&#x2F;glib&#x2F;2.16&#x2F;        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Verifying checksum(s) for glib2        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Extracting glib2        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Applying patches to glib2        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Configuring glib2        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Building glib2 with target all        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Staging glib2 into destroot        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Installing glib2 2.16.1_0+darwin_9        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Activating glib2 2.16.1_0+darwin_9        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Cleaning glib2        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Fetching atk        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Attempting to fetch atk-1.22.0.tar.bz2 from http:&#x2F;&#x2F;mandril.creatis.insa-lyon.fr&#x2F;linux&#x2F;gnome.org&#x2F;sources&#x2F;atk&#x2F;1.22&#x2F;        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Verifying checksum(s) for atk        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Extracting atk        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Configuring atk        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Building atk with target all        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Staging atk into destroot        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Installing atk 1.22.0_1        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Activating atk 1.22.0_1        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Cleaning atk        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Fetching zlib        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Attempting to fetch zlib-1.2.3.tar.bz2 from http:&#x2F;&#x2F;www.zlib.net&#x2F;        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Verifying checksum(s) for zlib        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Extracting zlib        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Applying patches to zlib        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Configuring zlib        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Building zlib with target all        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Staging zlib into destroot        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Installing zlib 1.2.3_1        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Activating zlib 1.2.3_1        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Cleaning zlib        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Fetching freetype        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Attempting to fetch freetype-2.3.5.tar.bz2 from http:&#x2F;&#x2F;download.savannah.gnu.org&#x2F;releases&#x2F;freetype&#x2F;        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Verifying checksum(s) for freetype        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Extracting freetype        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Applying patches to freetype        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Configuring freetype        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Building freetype with target all        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Staging freetype into destroot        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Installing freetype 2.3.5_1        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Activating freetype 2.3.5_1        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Cleaning freetype        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Fetching fontconfig        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Attempting to fetch fontconfig-2.5.0.tar.gz from http:&#x2F;&#x2F;fontconfig.org&#x2F;release&#x2F;        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Verifying checksum(s) for fontconfig        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Extracting fontconfig        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Configuring fontconfig        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Building fontconfig with target all        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Staging fontconfig into destroot        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Installing fontconfig 2.5.0_0+macosx        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Activating fontconfig 2.5.0_0+macosx        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Cleaning fontconfig        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Fetching libpng        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Attempting to fetch libpng-1.2.25.tar.bz2 from http:&#x2F;&#x2F;downloads.sourceforge.net&#x2F;libpng        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Verifying checksum(s) for libpng        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Extracting libpng        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Configuring libpng        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Building libpng with target all        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Staging libpng into destroot        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Installing libpng 1.2.25_0        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Activating libpng 1.2.25_0        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Cleaning libpng        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Fetching render        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Attempting to fetch renderext-0.9.tar.bz2 from http:&#x2F;&#x2F;xlibs.freedesktop.org&#x2F;release&#x2F;        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Verifying checksum(s) for render        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Extracting render        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Configuring render        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Building render with target all        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Staging render into destroot        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Installing render 0.9_1        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Activating render 0.9_1        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Cleaning render        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Fetching xrender        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Attempting to fetch libXrender-0.9.0.tar.bz2 from http:&#x2F;&#x2F;xlibs.freedesktop.org&#x2F;release&#x2F;        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Verifying checksum(s) for xrender        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Extracting xrender        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Configuring xrender        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Building xrender with target all        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Staging xrender into destroot        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Installing xrender 0.9.0_2        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Activating xrender 0.9.0_2        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Cleaning xrender        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Fetching cairo        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Attempting to fetch cairo-1.4.14.tar.gz from http:&#x2F;&#x2F;cairographics.org&#x2F;releases&#x2F;        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Verifying checksum(s) for cairo        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Extracting cairo        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Configuring cairo        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Building cairo with target all        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Staging cairo into destroot        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Installing cairo 1.4.14_0        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Activating cairo 1.4.14_0        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Cleaning cairo        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Fetching xmlcatmgr        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Attempting to fetch xmlcatmgr-2.2.tar.gz from ftp:&#x2F;&#x2F;ftp.FreeBSD.org&#x2F;pub&#x2F;FreeBSD&#x2F;ports&#x2F;distfiles&#x2F;        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Verifying checksum(s) for xmlcatmgr        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Extracting xmlcatmgr        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Configuring xmlcatmgr        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Building xmlcatmgr with target all        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Staging xmlcatmgr into destroot        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Installing xmlcatmgr 2.2_1        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Activating xmlcatmgr 2.2_1        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Cleaning xmlcatmgr        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Fetching docbook-xml-4.1.2        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Attempting to fetch docbkx412.zip from http:&#x2F;&#x2F;www.oasis-open.org&#x2F;docbook&#x2F;xml&#x2F;4.1.2&#x2F;        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Verifying checksum(s) for docbook-xml-4.1.2        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Extracting docbook-xml-4.1.2        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Configuring docbook-xml-4.1.2        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Building docbook-xml-4.1.2 with target all        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Staging docbook-xml-4.1.2 into destroot        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Installing docbook-xml-4.1.2 4.1.2_1        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Activating docbook-xml-4.1.2 4.1.2_1        
+&lt;&#x2F;span&gt;&lt;span&gt;  ######################################################################        
+&lt;&#x2F;span&gt;&lt;span&gt;  # As MacPorts does not currently have a post-deactivate hook,         
+&lt;&#x2F;span&gt;&lt;span&gt;  # you will need to ensure that you manually remove the catalog         
+&lt;&#x2F;span&gt;&lt;span&gt;  # entry for this port when you uninstall it.  To do so, run         
+&lt;&#x2F;span&gt;&lt;span&gt;  # \&amp;quot;xmlcatmgr remove nextCatalog &#x2F;opt&#x2F;local&#x2F;share&#x2F;xml&#x2F;docbook&#x2F;4.1.2&#x2F;catalog.xml\&amp;quot;.        
+&lt;&#x2F;span&gt;&lt;span&gt;  ######################################################################        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Cleaning docbook-xml-4.1.2        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Fetching docbook-xsl        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Attempting to fetch docbook-xsl-1.72.0.tar.bz2 from http:&#x2F;&#x2F;downloads.sourceforge.net&#x2F;docbook        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Verifying checksum(s) for docbook-xsl        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Extracting docbook-xsl        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Configuring docbook-xsl        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Building docbook-xsl with target all        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Staging docbook-xsl into destroot        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Installing docbook-xsl 1.72.0_0        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Activating docbook-xsl 1.72.0_0        
+&lt;&#x2F;span&gt;&lt;span&gt;  ######################################################################        
+&lt;&#x2F;span&gt;&lt;span&gt;  # As MacPorts does not currently have a post-deactivate hook,         
+&lt;&#x2F;span&gt;&lt;span&gt;  # you will need to ensure that you manually remove the catalog         
+&lt;&#x2F;span&gt;&lt;span&gt;  # entry for this port when you uninstall it.  To do so, run         
+&lt;&#x2F;span&gt;&lt;span&gt;  # \&amp;quot;xmlcatmgr remove nextCatalog &#x2F;opt&#x2F;local&#x2F;share&#x2F;xsl&#x2F;docbook-xsl&#x2F;catalog.xml\&amp;quot;.        
+&lt;&#x2F;span&gt;&lt;span&gt;  ######################################################################        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Cleaning docbook-xsl        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Fetching libxml2        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Attempting to fetch libxml2-2.6.31.tar.gz from http:&#x2F;&#x2F;xmlsoft.org&#x2F;sources&#x2F;        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Verifying checksum(s) for libxml2        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Extracting libxml2        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Configuring libxml2        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Building libxml2 with target all        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Staging libxml2 into destroot        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Installing libxml2 2.6.31_0        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Activating libxml2 2.6.31_0        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Cleaning libxml2        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Fetching perl5.8        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Attempting to fetch perl-5.8.8.tar.bz2 from http:&#x2F;&#x2F;www.cpan.org&#x2F;src&#x2F;5.0&#x2F;        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Verifying checksum(s) for perl5.8        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Extracting perl5.8        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Applying patches to perl5.8        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Configuring perl5.8        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Building perl5.8 with target all        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Staging perl5.8 into destroot        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Installing perl5.8 5.8.8_2        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Activating perl5.8 5.8.8_2        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Cleaning perl5.8        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Fetching docbook-xml-4.2        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Attempting to fetch docbook-xml-4.2.zip from http:&#x2F;&#x2F;www.oasis-open.org&#x2F;docbook&#x2F;xml&#x2F;4.2&#x2F;        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Verifying checksum(s) for docbook-xml-4.2        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Extracting docbook-xml-4.2        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Configuring docbook-xml-4.2        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Building docbook-xml-4.2 with target all        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Staging docbook-xml-4.2 into destroot        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Installing docbook-xml-4.2 4.2_0        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Activating docbook-xml-4.2 4.2_0        
+&lt;&#x2F;span&gt;&lt;span&gt;  ######################################################################        
+&lt;&#x2F;span&gt;&lt;span&gt;  # As MacPorts does not currently have a post-deactivate hook,         
+&lt;&#x2F;span&gt;&lt;span&gt;  # you will need to ensure that you manually remove the catalog         
+&lt;&#x2F;span&gt;&lt;span&gt;  # entry for this port when you uninstall it.  To do so, run         
+&lt;&#x2F;span&gt;&lt;span&gt;  # \&amp;quot;xmlcatmgr remove nextCatalog &#x2F;opt&#x2F;local&#x2F;share&#x2F;xml&#x2F;docbook&#x2F;4.2&#x2F;catalog.xml\&amp;quot;.        
+&lt;&#x2F;span&gt;&lt;span&gt;  ######################################################################        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Cleaning docbook-xml-4.2        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Fetching docbook-xml-4.3        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Attempting to fetch docbook-xml-4.3.zip from http:&#x2F;&#x2F;www.oasis-open.org&#x2F;docbook&#x2F;xml&#x2F;4.3&#x2F;        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Verifying checksum(s) for docbook-xml-4.3        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Extracting docbook-xml-4.3        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Configuring docbook-xml-4.3        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Building docbook-xml-4.3 with target all        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Staging docbook-xml-4.3 into destroot        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Installing docbook-xml-4.3 4.3_0        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Activating docbook-xml-4.3 4.3_0        
+&lt;&#x2F;span&gt;&lt;span&gt;  ######################################################################        
+&lt;&#x2F;span&gt;&lt;span&gt;  # As MacPorts does not currently have a post-deactivate hook,         
+&lt;&#x2F;span&gt;&lt;span&gt;  # you will need to ensure that you manually remove the catalog         
+&lt;&#x2F;span&gt;&lt;span&gt;  # entry for this port when you uninstall it.  To do so, run         
+&lt;&#x2F;span&gt;&lt;span&gt;  # \&amp;quot;xmlcatmgr remove nextCatalog &#x2F;opt&#x2F;local&#x2F;share&#x2F;xml&#x2F;docbook&#x2F;4.3&#x2F;catalog.xml\&amp;quot;.        
+&lt;&#x2F;span&gt;&lt;span&gt;  ######################################################################        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Cleaning docbook-xml-4.3        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Fetching docbook-xml-4.4        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Attempting to fetch docbook-xml-4.4.zip from http:&#x2F;&#x2F;www.oasis-open.org&#x2F;docbook&#x2F;xml&#x2F;4.4&#x2F;        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Verifying checksum(s) for docbook-xml-4.4        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Extracting docbook-xml-4.4        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Configuring docbook-xml-4.4        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Building docbook-xml-4.4 with target all        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Staging docbook-xml-4.4 into destroot        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Installing docbook-xml-4.4 4.4_0        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Activating docbook-xml-4.4 4.4_0        
+&lt;&#x2F;span&gt;&lt;span&gt;  ######################################################################        
+&lt;&#x2F;span&gt;&lt;span&gt;  # As MacPorts does not currently have a post-deactivate hook,         
+&lt;&#x2F;span&gt;&lt;span&gt;  # you will need to ensure that you manually remove the catalog         
+&lt;&#x2F;span&gt;&lt;span&gt;  # entry for this port when you uninstall it.  To do so, run         
+&lt;&#x2F;span&gt;&lt;span&gt;  # \&amp;quot;xmlcatmgr remove nextCatalog &#x2F;opt&#x2F;local&#x2F;share&#x2F;xml&#x2F;docbook&#x2F;4.4&#x2F;catalog.xml\&amp;quot;.        
+&lt;&#x2F;span&gt;&lt;span&gt;  ######################################################################        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Cleaning docbook-xml-4.4        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Fetching docbook-xml-4.5        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Attempting to fetch docbook-xml-4.5.zip from http:&#x2F;&#x2F;www.oasis-open.org&#x2F;docbook&#x2F;xml&#x2F;4.5&#x2F;        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Verifying checksum(s) for docbook-xml-4.5        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Extracting docbook-xml-4.5        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Configuring docbook-xml-4.5        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Building docbook-xml-4.5 with target all        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Staging docbook-xml-4.5 into destroot        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Installing docbook-xml-4.5 4.5_0        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Activating docbook-xml-4.5 4.5_0        
+&lt;&#x2F;span&gt;&lt;span&gt;  ######################################################################        
+&lt;&#x2F;span&gt;&lt;span&gt;  # As MacPorts does not currently have a post-deactivate hook,         
+&lt;&#x2F;span&gt;&lt;span&gt;  # you will need to ensure that you manually remove the catalog         
+&lt;&#x2F;span&gt;&lt;span&gt;  # entry for this port when you uninstall it.  To do so, run         
+&lt;&#x2F;span&gt;&lt;span&gt;  # \&amp;quot;xmlcatmgr remove nextCatalog &#x2F;opt&#x2F;local&#x2F;share&#x2F;xml&#x2F;docbook&#x2F;4.5&#x2F;catalog.xml\&amp;quot;.        
+&lt;&#x2F;span&gt;&lt;span&gt;  ######################################################################        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Cleaning docbook-xml-4.5        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Fetching docbook-xml        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Verifying checksum(s) for docbook-xml        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Extracting docbook-xml        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Configuring docbook-xml        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Building docbook-xml with target all        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Staging docbook-xml into destroot        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Installing docbook-xml 4.5_1        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Activating docbook-xml 4.5_1        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Cleaning docbook-xml        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Fetching libxslt        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Attempting to fetch libxslt-1.1.22.tar.gz from ftp:&#x2F;&#x2F;xmlsoft.org&#x2F;libxslt&#x2F;        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Verifying checksum(s) for libxslt        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Extracting libxslt        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Configuring libxslt        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Building libxslt with target all        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Staging libxslt into destroot        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Installing libxslt 1.1.22_0        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Activating libxslt 1.1.22_0        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Cleaning libxslt        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Fetching p5-xml-parser        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Attempting to fetch XML-Parser-2.36.tar.gz from http:&#x2F;&#x2F;ftp.ucr.ac.cr&#x2F;Unix&#x2F;CPAN&#x2F;modules&#x2F;by-module&#x2F;XML        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Verifying checksum(s) for p5-xml-parser        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Extracting p5-xml-parser        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Configuring p5-xml-parser        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Building p5-xml-parser with target all        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Staging p5-xml-parser into destroot        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Installing p5-xml-parser 2.36_0        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Activating p5-xml-parser 2.36_0        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Cleaning p5-xml-parser        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Fetching scrollkeeper        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Attempting to fetch scrollkeeper-0.3.14.tar.gz from http:&#x2F;&#x2F;downloads.sourceforge.net&#x2F;scrollkeeper        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Verifying checksum(s) for scrollkeeper        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Extracting scrollkeeper        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Applying patches to scrollkeeper        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Configuring scrollkeeper        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Building scrollkeeper with target all        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Staging scrollkeeper into destroot        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Installing scrollkeeper 0.3.14_6        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Activating scrollkeeper 0.3.14_6        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Cleaning scrollkeeper        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Fetching gtk-doc        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Attempting to fetch gtk-doc-1.9.tar.bz2 from http:&#x2F;&#x2F;mandril.creatis.insa-lyon.fr&#x2F;linux&#x2F;gnome.org&#x2F;sources&#x2F;gtk-doc&#x2F;1.9&#x2F;        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Verifying checksum(s) for gtk-doc        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Extracting gtk-doc        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Configuring gtk-doc        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Building gtk-doc with target all        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Staging gtk-doc into destroot        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Installing gtk-doc 1.9_1        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Activating gtk-doc 1.9_1        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Cleaning gtk-doc        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Fetching jpeg        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Attempting to fetch jpegsrc.v6b.tar.gz from http:&#x2F;&#x2F;www.ijg.org&#x2F;files        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Attempting to fetch droppatch.tar.gz from http:&#x2F;&#x2F;sylvana.net&#x2F;jpegcrop&#x2F;        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Verifying checksum(s) for jpeg        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Extracting jpeg        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Applying patches to jpeg        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Configuring jpeg        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Building jpeg with target all        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Staging jpeg into destroot        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Installing jpeg 6b_2        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Activating jpeg 6b_2        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Cleaning jpeg        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Fetching xorg-util-macros        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Attempting to fetch util-macros-1.1.5.tar.bz2 from http:&#x2F;&#x2F;www.x.org&#x2F;pub&#x2F;individual&#x2F;util&#x2F;        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Verifying checksum(s) for xorg-util-macros        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Extracting xorg-util-macros        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Configuring xorg-util-macros        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Building xorg-util-macros with target all        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Staging xorg-util-macros into destroot        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Installing xorg-util-macros 1.1.5_0        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Activating xorg-util-macros 1.1.5_0        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Cleaning xorg-util-macros        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Fetching xorg-xproto        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Attempting to fetch xproto-7.0.11.tar.bz2 from http:&#x2F;&#x2F;www.x.org&#x2F;pub&#x2F;individual&#x2F;proto&#x2F;        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Verifying checksum(s) for xorg-xproto        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Extracting xorg-xproto        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Applying patches to xorg-xproto        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Configuring xorg-xproto        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Building xorg-xproto with target all        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Staging xorg-xproto into destroot        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Installing xorg-xproto 7.0.11_1        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Activating xorg-xproto 7.0.11_1        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Cleaning xorg-xproto        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Fetching Xft2        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Attempting to fetch libXft-2.1.12.tar.bz2 from http:&#x2F;&#x2F;xorg.freedesktop.org&#x2F;releases&#x2F;individual&#x2F;lib&#x2F;        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Verifying checksum(s) for Xft2        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Extracting Xft2        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Configuring Xft2        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Building Xft2 with target all        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Staging Xft2 into destroot        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Installing Xft2 2.1.12_0        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Activating Xft2 2.1.12_0        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Cleaning Xft2        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Fetching pango        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Attempting to fetch pango-1.20.0.tar.bz2 from http:&#x2F;&#x2F;mandril.creatis.insa-lyon.fr&#x2F;linux&#x2F;gnome.org&#x2F;sources&#x2F;pango&#x2F;1.20        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Verifying checksum(s) for pango        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Extracting pango        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Applying patches to pango        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Configuring pango        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Building pango with target all        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Staging pango into destroot        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Installing pango 1.20.0_0        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Activating pango 1.20.0_0        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Cleaning pango        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Fetching shared-mime-info        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Attempting to fetch shared-mime-info-0.23.tar.bz2 from http:&#x2F;&#x2F;people.freedesktop.org&#x2F;~hadess&#x2F;        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Verifying checksum(s) for shared-mime-info        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Extracting shared-mime-info        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Configuring shared-mime-info        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Building shared-mime-info with target all        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Staging shared-mime-info into destroot        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Installing shared-mime-info 0.23_1        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Activating shared-mime-info 0.23_1        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Cleaning shared-mime-info        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Fetching tiff        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Attempting to fetch tiff-3.8.2.tar.gz from ftp:&#x2F;&#x2F;ftp.remotesensing.org&#x2F;pub&#x2F;libtiff&#x2F;        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Verifying checksum(s) for tiff        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Extracting tiff        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Configuring tiff        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Building tiff with target all        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Staging tiff into destroot        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Installing tiff 3.8.2_1+macosx        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Activating tiff 3.8.2_1+macosx        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Cleaning tiff        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Fetching gtk2        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Attempting to fetch gtk+-2.12.9.tar.bz2 from http:&#x2F;&#x2F;mandril.creatis.insa-lyon.fr&#x2F;linux&#x2F;gnome.org&#x2F;sources&#x2F;gtk+&#x2F;2.12&#x2F;        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Verifying checksum(s) for gtk2        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Extracting gtk2        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Applying patches to gtk2        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Configuring gtk2        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Building gtk2 with target all        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Staging gtk2 into destroot        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Installing gtk2 2.12.9_0+x11        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Activating gtk2 2.12.9_0+x11        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Cleaning gtk2        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Fetching libpcap        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Attempting to fetch libpcap-0.9.8.tar.gz from http:&#x2F;&#x2F;www.tcpdump.org&#x2F;release&#x2F;        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Attempting to fetch libpcap-0.9.8.tar.gz from http:&#x2F;&#x2F;svn.macports.org&#x2F;repository&#x2F;macports&#x2F;distfiles&#x2F;libpcap        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Attempting to fetch libpcap-0.9.8.tar.gz from http:&#x2F;&#x2F;svn.macports.org&#x2F;repository&#x2F;macports&#x2F;distfiles&#x2F;general&#x2F;        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Attempting to fetch libpcap-0.9.8.tar.gz from http:&#x2F;&#x2F;svn.macports.org&#x2F;repository&#x2F;macports&#x2F;downloads&#x2F;libpcap        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Attempting to fetch libpcap-0.9.8.tar.gz from http:&#x2F;&#x2F;svn.macports.org&#x2F;repository&#x2F;macports&#x2F;distfiles&#x2F;libpcap        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Attempting to fetch libpcap-0.9.8.tar.gz from http:&#x2F;&#x2F;svn.macports.org&#x2F;repository&#x2F;macports&#x2F;distfiles&#x2F;general&#x2F;        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Attempting to fetch libpcap-0.9.8.tar.gz from http:&#x2F;&#x2F;svn.macports.org&#x2F;repository&#x2F;macports&#x2F;downloads&#x2F;libpcap        
+&lt;&#x2F;span&gt;&lt;span&gt;  Error: Target org.macports.fetch returned: fetch failed        
+&lt;&#x2F;span&gt;&lt;span&gt;  Error: The following dependencies failed to build: libpcap openssl        
+&lt;&#x2F;span&gt;&lt;span&gt;  Error: Status 1 encountered during processing.        
+&lt;&#x2F;span&gt;&lt;span&gt;  birkinbox:~ birkin$ 
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Tried an install of libpcap directly and it failed the same way.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Posted a message to the MacPorts listserve &lt;em&gt;(bad link: http:&#x2F;&#x2F;lists.macosforge.org&#x2F;mailman&#x2F;listinfo.cgi&#x2F;macports-users)&lt;&#x2F;em&gt;  , and got back a helpful suggestion to get libpcap from SfR-fresh &lt;em&gt;(bad link: http:&#x2F;&#x2F;www.sfr-fresh.com&#x2F;unix&#x2F;misc&#x2F;libpcap-0.9.8.tar.gz&#x2F;)&lt;&#x2F;em&gt;, and put it at:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;  &#x2F;opt&#x2F;local&#x2F;var&#x2F;macports&#x2F;distfiles&#x2F;libpcap&#x2F;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Whew. Will do, but first: going to bed again.    :)&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Two weeks later...&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Figured I&#x27;d just try the standard way again...&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;  birkinbox:~ birkin$   
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  birkinbox:~ birkin$ sudo port install wireshark        
+&lt;&#x2F;span&gt;&lt;span&gt;  Portfile changed since last build; discarding previous state.        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Fetching libpcap        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Attempting to fetch libpcap-0.9.8.tar.gz from http:&#x2F;&#x2F;www.tcpdump.org&#x2F;release&#x2F;        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Verifying checksum(s) for libpcap        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Extracting libpcap        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Applying patches to libpcap        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Configuring libpcap        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Building libpcap with target all        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Staging libpcap into destroot        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Installing libpcap 0.9.8_0        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Activating libpcap 0.9.8_0        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Cleaning libpcap        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Fetching wireshark        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Attempting to fetch wireshark-1.0.0.tar.bz2 from http:&#x2F;&#x2F;www.wireshark.org&#x2F;download&#x2F;src&#x2F;        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Verifying checksum(s) for wireshark        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Extracting wireshark        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Configuring wireshark        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Building wireshark with target all        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Staging wireshark into destroot        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Installing wireshark 1.0.0_0+darwin_9        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Activating wireshark 1.0.0_0+darwin_9        
+&lt;&#x2F;span&gt;&lt;span&gt;  ---&amp;gt;  Cleaning wireshark        
+&lt;&#x2F;span&gt;&lt;span&gt;  birkinbox:~ birkin$
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Life is good!&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+</feed>

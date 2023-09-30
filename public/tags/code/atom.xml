@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - code</title>
+    <link href="https://bspace.us/tags/code/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://bspace.us"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-08-30T00:00:00+00:00</updated>
+    <id>https://bspace.us/tags/code/atom.xml</id>
+    <entry xml:lang="en">
+        <title>docstring-testing: love→hate→forget→rediscover→repeat</title>
+        <published>2023-08-30T00:00:00+00:00</published>
+        <updated>2023-08-30T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://bspace.us/posts/i-love-hate-python-docstrings-for-testing/" type="text/html"/>
+        <id>https://bspace.us/posts/i-love-hate-python-docstrings-for-testing/</id>
+        
+        <content type="html">&lt;p&gt;I have a love-hate relationship with &lt;a href=&quot;https:&#x2F;&#x2F;realpython.com&#x2F;python-doctest&#x2F;&quot;&gt;using python docstrings for testing&lt;&#x2F;a&gt;. They&#x27;re simple, easy-to-use, and provide both usage-documentation and actual unit-test functionality. But whenever I start using them in any serious extensive way, I go back to using regular unit-tests in a file or directory -- because of limitations of docstring-tests (which I&#x27;m not addressing here). So I haven&#x27;t used them in a while. But for a informal collaborative experimental project, without testing set up, today I wanted to add a few simple tests to a function to confirm that it&#x27;s really doing what we expect. I remembered docstrings for testing, and I&#x27;m once-again in the love-phase.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Brown-University-Library&#x2F;ml_bdr_ota_experiment&#x2F;blob&#x2F;0a9c4f0fc7a3471736a7344b6e441274bf61d2dd&#x2F;data_clean.py#L122&quot;&gt;Here&#x27;s a function&lt;&#x2F;a&gt; in some experimental code a few of us are working on -- to which I added a few docstring-tests. The docstring is everything between the initial and closing &lt;code&gt;&amp;quot;&amp;quot;&amp;quot;&lt;&#x2F;code&gt;. Generally docstrings are just used to provide multi-line comments on the purpose of a function. But they&#x27;re cool for two reasons:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;tools such as Sphinx can be run on code to auto-generate documentation from docstrings. (I never use that.)&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;assertions can be auto-executed as tests. &lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;In this function, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Brown-University-Library&#x2F;ml_bdr_ota_experiment&#x2F;blob&#x2F;0a9c4f0fc7a3471736a7344b6e441274bf61d2dd&#x2F;data_clean.py#L127-L134&quot;&gt;here are the doc-test assertions&lt;&#x2F;a&gt;. If the project had a normal unit-test harness, running tests the regular way would not only run the unit-tests, but also automatically test these assertion-statements. This experimental code has no test-harness set up; there are no unit-test imports. But the docstring tests can still be run like this: &lt;code&gt;% python -m doctest .&#x2F;data_clean.py&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Running that command shows no output if the test-assertions pass (you would see lots of output if running with the &lt;code&gt;-v&lt;&#x2F;code&gt; (verbose) flag). But imagine if the part that reads:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span&gt;    &amp;gt;&amp;gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;stringify_list&lt;&#x2F;span&gt;&lt;span&gt;( &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;42 &lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;42&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;...instead were:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span&gt;    &amp;gt;&amp;gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;stringify_list&lt;&#x2F;span&gt;&lt;span&gt;( &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;42 &lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;blah&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;...then, running the test would yield:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span&gt;**********************************************************************
+&lt;&#x2F;span&gt;&lt;span&gt;File &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;path&#x2F;to&#x2F;ml_OTA_experiment_stuff&#x2F;ml_bdr_ota_experiment&#x2F;.&#x2F;data_clean.py&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;, line &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;133&lt;&#x2F;span&gt;&lt;span&gt;, in data_clean.stringify_list
+&lt;&#x2F;span&gt;&lt;span&gt;Failed example:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;stringify_list&lt;&#x2F;span&gt;&lt;span&gt;( &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;42 &lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;Expected:
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;blah&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;Got:
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;42&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;**********************************************************************
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1 &lt;&#x2F;span&gt;&lt;span&gt;items had failures:
+&lt;&#x2F;span&gt;&lt;span&gt;   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1 &lt;&#x2F;span&gt;&lt;span&gt;of   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;4 &lt;&#x2F;span&gt;&lt;span&gt;in data_clean.stringify_list
+&lt;&#x2F;span&gt;&lt;span&gt;***Test Failed*** &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1 &lt;&#x2F;span&gt;&lt;span&gt;failures.
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Cool -- simple lightweight documentation and testing; very nice!&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

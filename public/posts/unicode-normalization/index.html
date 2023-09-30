@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="#ffffff" name="theme-color" />
+  <meta content="#da532c" name="msapplication-TileColor" />
+
+  
+  
+  
+  
+  
+
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/themes/folio/galleria.folio.min.css" integrity="sha384-+rY0QD+LRnTOquDMzGa9lXU6jIwdiQuwCJQ2cdcW0qeP/0UbjQCZlXnRsUMA+9pH" crossorigin="anonymous">
+  
+
+  
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.1/css/academicons.min.css" integrity="sha384-FIue+PI4SsI9XfHCz8dBLg33b0c1fMJgNU3X//L26FYbGnlSEfWmNT7zgWc2N9b6" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link href="https://bspace.us/deep-thought.css" rel="stylesheet" />
+  
+  
+
+  <title>
+    
+ | unicode normalization
+
+  </title>
+
+  
+  
+  
+
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js" integrity="sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx" crossorigin="anonymous"></script>
+
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/mathtex-script-type.min.js" integrity="sha384-jiBVvJ8NGGj5n7kJaiWwWp9AjC+Yh8rhZY3GtAX8yU28azcLgoRo4oukO87g7zDT" crossorigin="anonymous"></script>
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+  
+  
+</head>
+
+<body class="has-background-white">
+  <nav aria-label="section navigation" class="navbar is-light" role="navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item is-size-5 has-text-weight-bold" href="https:&#x2F;&#x2F;bspace.us"></a>
+        <a aria-expanded="false" aria-label="menu" class="navbar-burger burger" data-target="navMenu" role="button">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div class="navbar-menu" id="navMenu">
+        <div class="navbar-end has-text-centered">
+          
+          
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;bspace.us&#x2F;">
+            Home
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;bspace.us&#x2F;posts">
+            Posts
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;bspace.us&#x2F;tags">
+            Tags
+          </a>
+          
+          
+          
+          <a class="navbar-item" id="nav-search" title="Search" data-target="#search-modal">
+            <span class="icon">
+              <i class="fas fa-search"></i>
+            </span>
+          </a>
+          <a class="navbar-item" id="dark-mode" title="Switch to dark theme">
+            <span class="icon">
+              <i class="fas fa-adjust"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  
+  
+
+  
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-8 is-offset-2">
+        <article class="box">
+          <h1 class="title">
+            unicode normalization
+          </h1>
+          <p class="subtitle">paraphasing Montoya: &#x27;I do not think this word is what you think it is.&#x27;</p>
+          <div class="columns is-multiline is-gapless">
+            <div class="column is-8">
+              
+<span class="icon-text has-text-grey">
+  
+  
+  <span class="icon">
+    <i class="far fa-calendar-alt"></i>
+  </span>
+  <span><time datetime="2022-01-28">January 28, 2022</time></span>
+</span>
+
+            </div>
+            <div class="column is-4 has-text-right-desktop">
+              
+<span class="icon-text has-text-grey">
+  <span class="icon">
+    <i class="far fa-clock"></i>
+  </span>
+  <span>3 min,</span>
+  <span class="icon">
+    <i class="fas fa-pencil-alt"></i>
+  </span>
+  <span>480 words</span>
+</span>
+
+            </div>
+            <div class="column">
+              
+            </div>
+            <div class="column has-text-right-desktop">
+              
+              
+<p>
+  Tags:
+  
+  <a class="has-text-info-dark has-text-weight-semibold" href="https://bspace.us/tags/unicode/">
+    <span class="icon-text">
+      <span class="icon">
+        <i class="fas fa-tag"></i>
+      </span>
+      <span>unicode</span>
+    </span>
+  </a>
+  
+  <a class="has-text-info-dark has-text-weight-semibold" href="https://bspace.us/tags/good-practices/">
+    <span class="icon-text">
+      <span class="icon">
+        <i class="fas fa-tag"></i>
+      </span>
+      <span>good-practices</span>
+    </span>
+  </a>
+  
+</p>
+
+              
+            </div>
+          </div>
+          <div class="content mt-2">
+            <h2 id="the-problem">The problem...</h2>
+<p>You feel you're on top of unicode, because all your database-data is encoded in utf-8, and your search-terms are encoded in utf-8, and internally you're decoding to unicode for everything -- all-good. But... you have a search term, and you <em>know</em> the search term is in the database, yet no match is found!!</p>
+<p>Example...</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>&gt;&gt;&gt; database_words
+</span><span>[&#39;hola&#39;, &#39;más&#39;, &#39;qué&#39;]
+</span><span>&gt;&gt;&gt; 
+</span><span>&gt;&gt;&gt; &#39;foo&#39; in database_words
+</span><span>False
+</span><span>&gt;&gt;&gt; 
+</span><span>&gt;&gt;&gt; &#39;hola&#39; in database_words
+</span><span>True
+</span><span>&gt;&gt;&gt; 
+</span><span>&gt;&gt;&gt; &#39;más&#39; in database_words  # search word typed in via mac &#39;option-e, a&#39; method
+</span><span>True
+</span><span>&gt;&gt;&gt; 
+</span><span>&gt;&gt;&gt; &#39;qué&#39; in database_words  # search word typed in via mac &#39;option-e, e&#39; method
+</span><span>False  # ???
+</span><span>&gt;&gt;&gt; 
+</span></code></pre>
+<p>The above confusing situation is because in the 'database' (<code>database_words</code>), the last word's accented-letter is two combined unicode-characters, but the search-term is using a single unicode-character for the accented letter.</p>
+<p>Here's how <code>database_words</code> was created:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>&gt;&gt;&gt; database_words = [&#39;hola&#39;, &#39;m&#39; + &#39;\u00e1&#39; + &#39;s&#39;, &#39;qu&#39; + &#39;\u0065&#39; + &#39;\u0301&#39;]
+</span><span>&gt;&gt;&gt; database_words
+</span><span>[&#39;hola&#39;, &#39;más&#39;, &#39;qué&#39;]
+</span></code></pre>
+<p>And this is how you'd explicitly create the single unicode-character search term:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>&gt;&gt;&gt; &#39;qu&#39; + &#39;\u00e9&#39;
+</span><span>&#39;qué&#39;
+</span><span>&gt;&gt;&gt; 
+</span></code></pre>
+<p>(On the Mac, that accented-e is created via typing <code>option-e</code> then <code>e</code>, which produces the above single-unicode character.)</p>
+<p>There is no way, just by looking, that you can tell the true nature of that accented 'e'.</p>
+<h2 id="examining-characters-if-curious">examining characters, if curious...</h2>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>&gt;&gt;&gt; import unicodedata
+</span><span>&gt;&gt;&gt; 
+</span><span>&gt;&gt;&gt; for c in &#39;qué&#39;:  # typed in via option-e method which produces `&#39;qu&#39; + &#39;\u00e9&#39;`
+</span><span>...     print( f&#39;unicode-name, ``{unicodedata.name(c)}``&#39; )
+</span><span>... 
+</span><span>unicode-name, ``LATIN SMALL LETTER Q``
+</span><span>unicode-name, ``LATIN SMALL LETTER U``
+</span><span>unicode-name, ``LATIN SMALL LETTER E WITH ACUTE``
+</span><span>&gt;&gt;&gt; 
+</span><span>
+</span><span>&gt;&gt;&gt; for c in &#39;qué&#39;:  # pasted in from database_words, which uses the two combined unicode-characters: `&#39;qu&#39; + &#39;\u0065&#39; + &#39;\u0301&#39;`
+</span><span>...     print( f&#39;unicode-name, ``{unicodedata.name(c)}``&#39; )
+</span><span>... 
+</span><span>unicode-name, ``LATIN SMALL LETTER Q``
+</span><span>unicode-name, ``LATIN SMALL LETTER U``
+</span><span>unicode-name, ``LATIN SMALL LETTER E``
+</span><span>unicode-name, ``COMBINING ACUTE ACCENT``
+</span><span>&gt;&gt;&gt; 
+</span></code></pre>
+<h2 id="dealing-with-this-weird-reality">Dealing with this weird reality...</h2>
+<p><em>Good tools, like solr, often enable you to not have to worry about this -- a search-term with characters composed one way will generally find content composed the other way.</em></p>
+<p>If you normalize--&gt;decompose data in the database, and normalize--&gt;decompose the search term, all will work.</p>
+<p>The code below normalizes by decomposing single-unicode characters into multiple-unicode characters. Note that we start with the single unicode-character, and transform it into the two combined unicode-characters.</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>&gt;&gt;&gt; decomposed_output = unicodedata.normalize( &#39;NFKD&#39;, &#39;qu&#39; + &#39;\u00e9&#39; )
+</span><span>&gt;&gt;&gt; 
+</span><span>&gt;&gt;&gt; for c in decomposed_output:
+</span><span>...     print( f&#39;unicode-name, ``{unicodedata.name(c)}``&#39; )
+</span><span>... 
+</span><span>unicode-name, ``LATIN SMALL LETTER Q``
+</span><span>unicode-name, ``LATIN SMALL LETTER U``
+</span><span>unicode-name, ``LATIN SMALL LETTER E``
+</span><span>unicode-name, ``COMBINING ACUTE ACCENT``
+</span><span>&gt;&gt;&gt; 
+</span></code></pre>
+<h2 id="so-one-overall-solution">So one overall solution...</h2>
+<p>Save data in a normalized--&gt;decomposed way...</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>&gt;&gt;&gt; decomposed_database_words = []
+</span><span>&gt;&gt;&gt; 
+</span><span>&gt;&gt;&gt; for word in database_words:
+</span><span>...     decomposed_word = unicodedata.normalize( &#39;NFKD&#39;, word )
+</span><span>...     decomposed_database_words.append( decomposed_word )
+</span><span>... 
+</span><span>&gt;&gt;&gt; decomposed_database_words
+</span><span>[&#39;hola&#39;, &#39;más&#39;, &#39;qué&#39;]
+</span><span>&gt;&gt;&gt; 
+</span></code></pre>
+<p>...and then normalize--&gt;decompose the search-term...</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>&gt;&gt;&gt; search_term = &#39;qu&#39; + &#39;\u00e9&#39;  # demonstrates search term starts with the single unicode character
+</span><span>&gt;&gt;&gt; 
+</span><span>&gt;&gt;&gt; decomposed_search_term = unicodedata.normalize( &#39;NFKD&#39;, search_term )
+</span><span>&gt;&gt;&gt;
+</span></code></pre>
+<p>...then the normalized--&gt;decomposed search term will find the data...</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>&gt;&gt;&gt; decomposed_search_term in decomposed_database_words
+</span><span>True
+</span><span>&gt;&gt;&gt; 
+</span></code></pre>
+
+          </div>
+        </article>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+  
+  <section class="modal" id="search-modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Search</p>
+      </header>
+      <section class="modal-card-body">
+        <div class="field mb-2">
+          <div class="control">
+            <input class="input" id="search" placeholder="Search this website." type="search" />
+          </div>
+        </div>
+        <div class="search-results">
+          <div class="search-results__items"></div>
+        </div>
+      </section>
+    </div>
+    <button aria-label="close" class="modal-close is-large"></button>
+  </section>
+  
+
+
+  
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <nav class="level">
+              
+          <div class="level-item has-text-centered">
+            <a class="button is-black is-outlined" href="https:&#x2F;&#x2F;bspace.us&#x2F;posts&#x2F;art-of-testing&#x2F;">
+              <span class="icon mr-2">
+                <i class="fas fa-arrow-circle-left"></i>
+              </span>
+              approaches to testing
+            </a>
+          </div>
+           
+          <div class="level-item has-text-centered">
+            <a class="button is-black is-outlined" href="https:&#x2F;&#x2F;bspace.us&#x2F;posts&#x2F;querydict-params&#x2F;">
+              validating django params<span class="icon ml-2">
+                <i class="fas fa-arrow-circle-right"></i>
+              </span>
+            </a>
+          </div>
+          
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  
+
+
+
+  
+  <footer class="footer py-4">
+    <div class="content has-text-centered">
+      <p style="font-size: 0.8em; font-style: italic;">(powered by the
+        <a href="https://www.getzola.org/" target="_blank">Zola</a> static-site-generator and the
+        <a href="https://www.getzola.org/themes/deepthought/" target="_blank">DeepThought</a> theme)
+      </p>
+    </div>
+  </footer>
+  
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/galleria.min.js" integrity="sha384-QSfwGT8/EU536DKdtyP2D6SLlh8zBaZ0cVkwfrwhqzIU9VCfJT00CLVP5t+HAiYg" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/themes/folio/galleria.folio.min.js" integrity="sha384-DwpKI+deZB267+hPKwiOIc5Y2GKsVL0mR6hgz7GgIu7AgAMYqJwcJKY1YBNfhWcY" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@8.13.5/dist/mermaid.min.js" integrity="sha384-0yWn54pSGtfKCU+skfA69l25VsCw+MZt4LQov3xNRoS7YkAMrFokGgSBnAWSK4pv" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.xkcd@1.1.13/dist/chart.xkcd.min.js" integrity="sha384-xC3h1+IHXK8seA+8KfT79Z4e0GPsznjXBoMa5nd8ooWKplPyXx92NOmljWxLC/cs" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://bspace.us/elasticlunr.min.js"></script>
+  <script src="https://bspace.us/search_index.en.js"></script><script src="https://bspace.us/js/site.js"></script>
+
+  
+
+
+
+
+
+  
+  
+</body>
+
+</html>

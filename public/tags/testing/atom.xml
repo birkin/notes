@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - testing</title>
+    <link href="https://bspace.us/tags/testing/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://bspace.us"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-08-30T00:00:00+00:00</updated>
+    <id>https://bspace.us/tags/testing/atom.xml</id>
+    <entry xml:lang="en">
+        <title>docstring-testing: love→hate→forget→rediscover→repeat</title>
+        <published>2023-08-30T00:00:00+00:00</published>
+        <updated>2023-08-30T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://bspace.us/posts/i-love-hate-python-docstrings-for-testing/" type="text/html"/>
+        <id>https://bspace.us/posts/i-love-hate-python-docstrings-for-testing/</id>
+        
+        <content type="html">&lt;p&gt;I have a love-hate relationship with &lt;a href=&quot;https:&#x2F;&#x2F;realpython.com&#x2F;python-doctest&#x2F;&quot;&gt;using python docstrings for testing&lt;&#x2F;a&gt;. They&#x27;re simple, easy-to-use, and provide both usage-documentation and actual unit-test functionality. But whenever I start using them in any serious extensive way, I go back to using regular unit-tests in a file or directory -- because of limitations of docstring-tests (which I&#x27;m not addressing here). So I haven&#x27;t used them in a while. But for a informal collaborative experimental project, without testing set up, today I wanted to add a few simple tests to a function to confirm that it&#x27;s really doing what we expect. I remembered docstrings for testing, and I&#x27;m once-again in the love-phase.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Brown-University-Library&#x2F;ml_bdr_ota_experiment&#x2F;blob&#x2F;0a9c4f0fc7a3471736a7344b6e441274bf61d2dd&#x2F;data_clean.py#L122&quot;&gt;Here&#x27;s a function&lt;&#x2F;a&gt; in some experimental code a few of us are working on -- to which I added a few docstring-tests. The docstring is everything between the initial and closing &lt;code&gt;&amp;quot;&amp;quot;&amp;quot;&lt;&#x2F;code&gt;. Generally docstrings are just used to provide multi-line comments on the purpose of a function. But they&#x27;re cool for two reasons:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;tools such as Sphinx can be run on code to auto-generate documentation from docstrings. (I never use that.)&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;assertions can be auto-executed as tests. &lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;In this function, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Brown-University-Library&#x2F;ml_bdr_ota_experiment&#x2F;blob&#x2F;0a9c4f0fc7a3471736a7344b6e441274bf61d2dd&#x2F;data_clean.py#L127-L134&quot;&gt;here are the doc-test assertions&lt;&#x2F;a&gt;. If the project had a normal unit-test harness, running tests the regular way would not only run the unit-tests, but also automatically test these assertion-statements. This experimental code has no test-harness set up; there are no unit-test imports. But the docstring tests can still be run like this: &lt;code&gt;% python -m doctest .&#x2F;data_clean.py&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Running that command shows no output if the test-assertions pass (you would see lots of output if running with the &lt;code&gt;-v&lt;&#x2F;code&gt; (verbose) flag). But imagine if the part that reads:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span&gt;    &amp;gt;&amp;gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;stringify_list&lt;&#x2F;span&gt;&lt;span&gt;( &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;42 &lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;42&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;...instead were:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span&gt;    &amp;gt;&amp;gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;stringify_list&lt;&#x2F;span&gt;&lt;span&gt;( &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;42 &lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;blah&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;...then, running the test would yield:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span&gt;**********************************************************************
+&lt;&#x2F;span&gt;&lt;span&gt;File &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;path&#x2F;to&#x2F;ml_OTA_experiment_stuff&#x2F;ml_bdr_ota_experiment&#x2F;.&#x2F;data_clean.py&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;, line &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;133&lt;&#x2F;span&gt;&lt;span&gt;, in data_clean.stringify_list
+&lt;&#x2F;span&gt;&lt;span&gt;Failed example:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;stringify_list&lt;&#x2F;span&gt;&lt;span&gt;( &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;42 &lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;Expected:
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;blah&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;Got:
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;42&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;**********************************************************************
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1 &lt;&#x2F;span&gt;&lt;span&gt;items had failures:
+&lt;&#x2F;span&gt;&lt;span&gt;   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1 &lt;&#x2F;span&gt;&lt;span&gt;of   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;4 &lt;&#x2F;span&gt;&lt;span&gt;in data_clean.stringify_list
+&lt;&#x2F;span&gt;&lt;span&gt;***Test Failed*** &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1 &lt;&#x2F;span&gt;&lt;span&gt;failures.
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Cool -- simple lightweight documentation and testing; very nice!&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>approaches to testing</title>
+        <published>2021-09-17T00:00:00+00:00</published>
+        <updated>2021-09-17T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://bspace.us/posts/art-of-testing/" type="text/html"/>
+        <id>https://bspace.us/posts/art-of-testing/</id>
+        
+        <content type="html">&lt;p&gt;&lt;em&gt;The evolution of testing -- what&#x27;s lost and gained?&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;I have a project in which I&#x27;m parsing data.&lt;&#x2F;p&gt;
+&lt;p&gt;One useful principle of testing is to have a discrete piece of functionality tested. And the most direct way to do that for parsing is to pass in source-data, and specify a clear assertion. &lt;&#x2F;p&gt;
+&lt;h2 id=&quot;simple-and-direct&quot;&gt;simple and direct&lt;&#x2F;h2&gt;
+&lt;p&gt;I began that way: &lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Brown-University-Library&#x2F;parse_alma_annex_requests_code&#x2F;blob&#x2F;8109bdbf6b9ff3dd609d8d2c5c7775d72ad3de10&#x2F;tests.py#L156&quot;&gt;Here&#x27;s&lt;&#x2F;a&gt; the beginning of Parser testing.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Brown-University-Library&#x2F;parse_alma_annex_requests_code&#x2F;blob&#x2F;8109bdbf6b9ff3dd609d8d2c5c7775d72ad3de10&#x2F;tests.py#L241-L246&quot;&gt;Here&#x27;s&lt;&#x2F;a&gt; the first iteration of parsing a patron note -- although the test was originally called, simply &lt;code&gt;test_parse_patron_note()&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;That happened to be for a physical item; shortly thereafter I needed to parse the note for a digital item. &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Brown-University-Library&#x2F;parse_alma_annex_requests_code&#x2F;blob&#x2F;8109bdbf6b9ff3dd609d8d2c5c7775d72ad3de10&#x2F;tests.py#L248-L253&quot;&gt;Here&lt;&#x2F;a&gt; is the iteration that tested for that. &lt;&#x2F;p&gt;
+&lt;p&gt;Implementing that second test, I renamed the first example to show that the test was for a physical item, and named the second test to show that it was testing a digital item. I could have passed just the specific item-xml or item-xml-object to each test. In some ways that would have been simpler and &amp;quot;purer&amp;quot;. But the real data for this project comes in a file containing multiple kinds of items, and I was going to be using the items for different kinds of tests (not just notes), so I figured I&#x27;d have one main test-file that would contain a variety of items to use for the tests. (Though this does add a slight dependency to the test -- file loading -- and dependences are frowned upon.)&lt;&#x2F;p&gt;
+&lt;p&gt;In the two examples shown so far, I chose, from the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Brown-University-Library&#x2F;parse_alma_annex_requests_code&#x2F;blob&#x2F;8109bdbf6b9ff3dd609d8d2c5c7775d72ad3de10&#x2F;test_dirs&#x2F;static_source&#x2F;BUL_ANNEX-sample.xml&quot;&gt;source-data&lt;&#x2F;a&gt; being tested, the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Brown-University-Library&#x2F;parse_alma_annex_requests_code&#x2F;blob&#x2F;8109bdbf6b9ff3dd609d8d2c5c7775d72ad3de10&#x2F;tests.py#L244&quot;&gt;first list item&lt;&#x2F;a&gt; for the physical-note test, and the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Brown-University-Library&#x2F;parse_alma_annex_requests_code&#x2F;blob&#x2F;8109bdbf6b9ff3dd609d8d2c5c7775d72ad3de10&#x2F;tests.py#L251&quot;&gt;sixth list item&lt;&#x2F;a&gt; for the digital-note test.&lt;&#x2F;p&gt;
+&lt;p&gt;This is all reasonably forthright. The nice thing about this is that, coming back to this code in future weeks or months, and running the tests, I&#x27;d see from the terminal output, when running the test-suite, the explicit &lt;code&gt;test_parse_patron_note_physical()&lt;&#x2F;code&gt; and &lt;code&gt;test_parse_patron_note_digital()&lt;&#x2F;code&gt; tests. That&#x27;s really useful when revisiting code.&lt;&#x2F;p&gt;
+&lt;p&gt;But the more edge-cases that arise, the benefits of this explicitness quickly, for me, feel outweighed by the duplication. I could have half-a-dozen explicit tests for parsing just the notes field for physical items, another half-dozen for digital items, and have lots of very specific tests for all the other parsing.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;scalable&quot;&gt;scalable&lt;&#x2F;h2&gt;
+&lt;p&gt;In this and other projects, in this situation, I&#x27;ve moved to a different pattern: a &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Brown-University-Library&#x2F;parse_alma_annex_requests_code&#x2F;blob&#x2F;8109bdbf6b9ff3dd609d8d2c5c7775d72ad3de10&#x2F;tests.py#L221-L239&quot;&gt;single test&lt;&#x2F;a&gt; for parsing the target field (in this case the note). This single test first loads up an array of items, an array of expectations, and then iterates through the array, so the single test in this case is actually testing eight variations.&lt;&#x2F;p&gt;
+&lt;p&gt;This has some real advantages -- it&#x27;s very scalable, since adding a new source-data item simply involves adding an expectation to this note, and the other parsed fields. I might be adding the new item because I&#x27;m aware of an edge-case for parsing, say, the item-barcode, and by having to also list the note expectation, I might end up catching some error I hadn&#x27;t been aware of.&lt;&#x2F;p&gt;
+&lt;p&gt;BUT... there is loss with the gain. I need to view the comments (or the source-data) to see&#x2F;remember that I&#x27;m parsing physical vs digital items. (Might there be another digital item that I forgot to indicate via a comment?) And I&#x27;m not going to see those comments in the test-output. &lt;&#x2F;p&gt;
+&lt;p&gt;I just remembered long ago implementing something like this with an additional field in the array. Instead of just handing two-elements in each loop iteration (the source-item-data, and the expectation) -- I also had a comment that was printed, too. That would restore some of the useful specificity of output -- and on a failure, allow me to target, more quickly, the location of the error.&lt;&#x2F;p&gt;
+&lt;p&gt;This example of gain&#x2F;loss refactoring is a miniscule one -- but it reveals aspects of the decision-making in programming that I love.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>
