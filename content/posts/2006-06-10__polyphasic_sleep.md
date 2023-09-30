@@ -8,7 +8,7 @@ authors = []
 tags=[ "self-improvement" ]
 +++
 
-From June 2006 for just over a year I tried a modified polyphasic sleep regimen, and blogged about it [here](https://birkin.wordpress.com/polyphasic-sleep/).
+Starting June 2006, for just over a year, I tried a modified polyphasic sleep regimen, and blogged about it [here](https://birkin.wordpress.com/polyphasic-sleep/).
 
 An excerpt from that page...
 
