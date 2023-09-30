@@ -1,6 +1,6 @@
 +++
 title = "polyphasic sleep"
-date = 2006-06-10
+date = 2006-06-09
 description = "blogging a polyphasic sleep experiment"
 authors = []
 
