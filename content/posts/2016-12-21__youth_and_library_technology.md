@@ -5,7 +5,7 @@ description = "letting high-schoolers know that Libraries offer creative, dynami
 authors = []
 
 [taxonomies]
-tags=[ "conferences", "outreach" ]
+tags=[ "conferences", "presentations" ]
 +++
 
 In late September I saw an announcement about a computer science talk which referred to an acronym I wasn’t familiar with: CS4RI. A bit of googling led to the organization '[CS4RI: Computer Science for Rhode Island](http://www.cs4ri.org)'. Its website included a link to their '[CS4RI Summit 2016](http://www.cs4ri.org/summit)', which stated as a goal: _"The CS4RI Summit aims to inspire the next generation of computer scientists, entrepreneurs, and engaged tech sector employees… let’s excite students with the many educational and career opportunities that result from studying CS…"_

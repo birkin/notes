@@ -5,7 +5,7 @@ description = "some good API practices"
 authors = []
 
 [taxonomies]
-tags=[ "APIs", "service-oriented-architecture", "good-practices" ]
+tags=[ "APIs", "good-practices", "software development" ]
 +++
 
 I've evangelized [service-oriented architecture](http://en.wikipedia.org/wiki/Service-oriented_architecture) (SOA) [before](@/posts/2008-02-09__moving_code_onto_network.md). 

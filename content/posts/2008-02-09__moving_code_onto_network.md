@@ -5,7 +5,7 @@ description = "benefits of moving code from project-level classes and functions 
 authors = []
 
 [taxonomies]
-tags=[ "service-oriented-architecture", "APIs" ]
+tags=[ "APIs", "software development" ]
 +++
 
 In 2004, while in my masters program, deeply immersed in java object-oriented programming, I saw the potential benefits of code re-use that classes offer. I envisioned over time building up libraries of class-objects; by accessing them in future projects, I expected to be more and more productive.
