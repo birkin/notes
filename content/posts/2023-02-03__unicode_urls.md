@@ -5,7 +5,7 @@ description = "minimizing unicode gnashing of teeth"
 authors = []
 
 [taxonomies]
-tags=[ "unicode", "good-practices" ]
+tags=[ "code", "unicode", "good-practices" ]
 +++
 
 

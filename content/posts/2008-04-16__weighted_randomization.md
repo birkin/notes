@@ -5,7 +5,7 @@ description = "how randomization can improve user-experience"
 authors = []
 
 [taxonomies]
-tags=[ "algorithms", "remembrances" ]
+tags=[ "remembrances", "software development" ]
 +++
 
 

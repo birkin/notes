@@ -5,7 +5,7 @@ description = "notes on a dashboard idea"
 authors = []
 
 [taxonomies]
-tags=[ "analytics", "ideas", "presentations", "projects" ]
+tags=[ "code4lib", "ideas", "presentations" ]
 +++
 
 

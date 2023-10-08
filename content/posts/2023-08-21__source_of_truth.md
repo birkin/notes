@@ -6,7 +6,7 @@ authors = []
 draft = false
 
 [taxonomies]
-tags=[ "code4lib", "repositories"  ]
+tags=[ "code4lib", "repositories", "software development"  ]
 +++
 
 Just read a great post from long-time [code4libber][code4lib] Jonathan Rochkind: "[OCFL and ‘source of truth’ — two options][truth]".
