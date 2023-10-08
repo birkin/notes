@@ -27,7 +27,7 @@
 
   <title>
     
- | docstring-testing: love→hate→forget→rediscover→repeat
+ | source of truth
 
   </title>
 
@@ -101,9 +101,9 @@
       <div class="column is-8 is-offset-2">
         <article class="box">
           <h1 class="title">
-            docstring-testing: love→hate→forget→rediscover→repeat
+            source of truth
           </h1>
-          <p class="subtitle">❤️ i&#x27;ve just rediscovered them ❤️</p>
+          <p class="subtitle">what _is_ the source-of-truth data?</p>
           <div class="columns is-multiline is-gapless">
             <div class="column is-8">
               
@@ -113,7 +113,7 @@
   <span class="icon">
     <i class="far fa-calendar-alt"></i>
   </span>
-  <span><time datetime="2023-08-30">August 30, 2023</time></span>
+  <span><time datetime="2023-08-21">August 21, 2023</time></span>
 </span>
 
             </div>
@@ -123,11 +123,11 @@
   <span class="icon">
     <i class="far fa-clock"></i>
   </span>
-  <span>2 min,</span>
+  <span>4 min,</span>
   <span class="icon">
     <i class="fas fa-pencil-alt"></i>
   </span>
-  <span>372 words</span>
+  <span>717 words</span>
 </span>
 
             </div>
@@ -140,21 +140,21 @@
 <p>
   Tags:
   
-  <a class="has-text-info-dark has-text-weight-semibold" href="https://bspace.us/tags/code/">
+  <a class="has-text-info-dark has-text-weight-semibold" href="https://bspace.us/tags/code4lib/">
     <span class="icon-text">
       <span class="icon">
         <i class="fas fa-tag"></i>
       </span>
-      <span>code</span>
+      <span>code4lib</span>
     </span>
   </a>
   
-  <a class="has-text-info-dark has-text-weight-semibold" href="https://bspace.us/tags/testing/">
+  <a class="has-text-info-dark has-text-weight-semibold" href="https://bspace.us/tags/repositories/">
     <span class="icon-text">
       <span class="icon">
         <i class="fas fa-tag"></i>
       </span>
-      <span>testing</span>
+      <span>repositories</span>
     </span>
   </a>
   
@@ -164,40 +164,20 @@
             </div>
           </div>
           <div class="content mt-2">
-            <p>I have a love-hate relationship with <a href="https://realpython.com/python-doctest/">using python docstrings for testing</a>. They're simple, easy-to-use, and provide both usage-documentation and actual unit-test functionality. But whenever I start using them in any serious extensive way, I go back to using regular unit-tests in a file or directory -- because of limitations of docstring-tests (which I'm not addressing here). So I haven't used them in a while. But for a informal collaborative experimental project, without testing set up, today I wanted to add a few simple tests to a function to confirm that it's really doing what we expect. I remembered docstrings for testing, and I'm once-again in the love-phase.</p>
-<p><a href="https://github.com/Brown-University-Library/ml_bdr_ota_experiment/blob/0a9c4f0fc7a3471736a7344b6e441274bf61d2dd/data_clean.py#L122">Here's a function</a> in some experimental code a few of us are working on -- to which I added a few docstring-tests. The docstring is everything between the initial and closing <code>&quot;&quot;&quot;</code>. Generally docstrings are just used to provide multi-line comments on the purpose of a function. But they're cool for two reasons:</p>
-<ul>
-<li>
-<p>tools such as Sphinx can be run on code to auto-generate documentation from docstrings. (I never use that.)</p>
-</li>
-<li>
-<p>assertions can be auto-executed as tests. </p>
-</li>
-</ul>
-<p>In this function, <a href="https://github.com/Brown-University-Library/ml_bdr_ota_experiment/blob/0a9c4f0fc7a3471736a7344b6e441274bf61d2dd/data_clean.py#L127-L134">here are the doc-test assertions</a>. If the project had a normal unit-test harness, running tests the regular way would not only run the unit-tests, but also automatically test these assertion-statements. This experimental code has no test-harness set up; there are no unit-test imports. But the docstring tests can still be run like this: <code>% python -m doctest ./data_clean.py</code></p>
-<p>Running that command shows no output if the test-assertions pass (you would see lots of output if running with the <code>-v</code> (verbose) flag). But imagine if the part that reads:</p>
-<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span>    &gt;&gt;&gt; </span><span style="color:#bf616a;">stringify_list</span><span>( </span><span style="color:#d08770;">42 </span><span>)
-</span><span>    &#39;</span><span style="color:#a3be8c;">42</span><span>&#39;
-</span></code></pre>
-<p>...instead were:</p>
-<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span>    &gt;&gt;&gt; </span><span style="color:#bf616a;">stringify_list</span><span>( </span><span style="color:#d08770;">42 </span><span>)
-</span><span>    &#39;</span><span style="color:#a3be8c;">blah</span><span>&#39;
-</span></code></pre>
-<p>...then, running the test would yield:</p>
-<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span>**********************************************************************
-</span><span>File &quot;</span><span style="color:#a3be8c;">/path/to/ml_OTA_experiment_stuff/ml_bdr_ota_experiment/./data_clean.py</span><span>&quot;, line </span><span style="color:#d08770;">133</span><span>, in data_clean.stringify_list
-</span><span>Failed example:
-</span><span>    </span><span style="color:#bf616a;">stringify_list</span><span>( </span><span style="color:#d08770;">42 </span><span>)
-</span><span>Expected:
-</span><span>    &#39;</span><span style="color:#a3be8c;">blah</span><span>&#39;
-</span><span>Got:
-</span><span>    &#39;</span><span style="color:#a3be8c;">42</span><span>&#39;
-</span><span>**********************************************************************
-</span><span style="color:#d08770;">1 </span><span>items had failures:
-</span><span>   </span><span style="color:#d08770;">1 </span><span>of   </span><span style="color:#d08770;">4 </span><span>in data_clean.stringify_list
-</span><span>***Test Failed*** </span><span style="color:#d08770;">1 </span><span>failures.
-</span></code></pre>
-<p>Cool -- simple lightweight documentation and testing; very nice!</p>
+            <p>Just read a great post from long-time <a href="https://code4lib.org/" title="code4lib.org link">code4libber</a> Jonathan Rochkind: &quot;<a href="https://bibwild.wordpress.com/2023/03/21/ocfl-and-source-of-truth-two-options/" title="source of truth link">OCFL and ‘source of truth’ — two options</a>&quot;.</p>
+<p>To give a nutshell summary, it's first useful to be aware of a common web-development pattern, where the 'data' returned by a browser-request comes from an index. That index is an intermediary between the actual source data/file, and the webpage a user loads.</p>
+<p>An example... For two work-projects, the source-truth of the scholarly data is in xml-files (<a href="https://github.com/Brown-University-Library/usep-data/tree/master/xml_inscriptions/transcribed" title="GitHub usep link">example</a>). Knowedgeable trained folk encode data from headstones or other sources into these xml-files.</p>
+<p>But when a user performs a search on the project's webpage, or loads an inscription-page from the website, the server looks up info from our <a href="https://solr.apache.org/" title="solr link">solr</a> indexer.</p>
+<p>Why the intermediary index? Partly because indexers are very, very fast. Also because they can deliver great search results in a way that offers a user easy and useful ways to filter results (<a href="https://en.wikipedia.org/wiki/Faceted_search" title="facet wikipedia link">&quot;facets&quot;</a>). And also because the most common indexers are very easy for developers to configure and query and update.</p>
+<p>Given this small architectural tour, since the data for a web-request comes most directly from the index (not the xml files), it's easy to see how the &quot;source-of-truth&quot; <em>could</em> be thought of as the index. If an xml-file hasn't been indexed, it won't appear on the website; in a way, it doesn't exist.</p>
+<p>Jonathan's post focuses on a specification for saving files-and-associated-metadata to a filesystem, called <a href="https://ocfl.io/" title="OCFL link">OCFL</a> (&quot;Oxford Common File Layout&quot;). Though the uses of OCFL are not limited to repositories, it was developed from University repository-developers deliberating about, and implementing, a simple useful file-layout specification that different software-tools can use. </p>
+<p>Because OCFL is most common in this repository context, and because repositories conceptually prioritize archival durability, OCFL data tends to be thought of as &quot;source of truth&quot; data in repository-architecture. </p>
+<p>But repositories use indexers. Jonathan's post illuminates competing visions of whether the OCFL storage-layer, or the indexer (or some correlative intermediary) should be considered the &quot;source of truth&quot; -- and the implications for decisions. My take is a bit different than his about the increased technical challenges of an OCFL-first source-of-truth, vs an intermediary-first source-of-truth -- but the main take-away for me is that it's important to be very clear on what the purposes are for the two layers.</p>
+<p>For the <a href="https://repository.library.brown.edu/studio/" title="BDR link">BDR</a> (Brown Digital Repository), we want to ensure that if some disaster struck, and all the the BDR's infrastructure went down, but we still had the offsite-OCFL-file-data (and our indexer-code in GitHub), we could reconstitute the BDR.</p>
+<p>But other projects may lend themselves to a <em>shared</em> source-of-truth between the two key layers. </p>
+<p>For a current work project, the main data-source is a FileMaker-Pro database. That data is exported, and indexed; the website accesses the index. A long-term project is underway to scan this collection's materials, and put them in the BDR. Once there, we'll naturally want to link to the relevant BDR-content from the website. How to do that?</p>
+<p>For various reasons, we've decided not to add BDR links to the FileMaker-Pro database. Instead, we'll add those urls directly to the index. So there will be very useful data in the index that's not in the foundational source-data.</p>
+<p>But that's ok -- the important thing is to be clear and deliberate about what data is going where, for what reasons. And to be clear about how a useful website can be reconstituted from that source-data if needed. These are issues that we developers are <em>familiar</em> with, but given time and resource constraints, may not always think through deeply and document clearly. Which is why I so appreciate Jonathan's post: it raises a variety of useful issues to work through intentionally.</p>
 
           </div>
         </article>
@@ -240,14 +220,22 @@
         <nav class="level">
               
           <div class="level-item has-text-centered">
-            <a class="button is-black is-outlined" href="https:&#x2F;&#x2F;bspace.us&#x2F;posts&#x2F;source-of-truth&#x2F;">
+            <a class="button is-black is-outlined" href="https:&#x2F;&#x2F;bspace.us&#x2F;posts&#x2F;ok-again-to-buy-non-teslas&#x2F;">
               <span class="icon mr-2">
                 <i class="fas fa-arrow-circle-left"></i>
               </span>
-              source of truth
+              go forth and buy (some) non-tesla EVs!
             </a>
           </div>
            
+          <div class="level-item has-text-centered">
+            <a class="button is-black is-outlined" href="https:&#x2F;&#x2F;bspace.us&#x2F;posts&#x2F;i-love-hate-python-docstrings-for-testing&#x2F;">
+              docstring-testing: love→hate→forget→rediscover→repeat<span class="icon ml-2">
+                <i class="fas fa-arrow-circle-right"></i>
+              </span>
+            </a>
+          </div>
+          
         </nav>
       </div>
     </div>

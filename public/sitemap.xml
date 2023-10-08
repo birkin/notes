@@ -97,6 +97,10 @@
         <lastmod>2010-01-16</lastmod>
     </url>
     <url>
+        <loc>https://bspace.us/posts/source-of-truth/</loc>
+        <lastmod>2023-08-21</lastmod>
+    </url>
+    <url>
         <loc>https://bspace.us/posts/ssh-tunneling-notes/</loc>
         <lastmod>2006-02-02</lastmod>
     </url>
@@ -153,6 +157,9 @@
     </url>
     <url>
         <loc>https://bspace.us/tags/code/</loc>
+    </url>
+    <url>
+        <loc>https://bspace.us/tags/code4lib/</loc>
     </url>
     <url>
         <loc>https://bspace.us/tags/conferences/</loc>

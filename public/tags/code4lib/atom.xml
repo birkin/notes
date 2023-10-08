@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - code4lib</title>
+    <link href="https://bspace.us/tags/code4lib/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://bspace.us"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-08-21T00:00:00+00:00</updated>
+    <id>https://bspace.us/tags/code4lib/atom.xml</id>
+    <entry xml:lang="en">
+        <title>source of truth</title>
+        <published>2023-08-21T00:00:00+00:00</published>
+        <updated>2023-08-21T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://bspace.us/posts/source-of-truth/" type="text/html"/>
+        <id>https://bspace.us/posts/source-of-truth/</id>
+        
+        <content type="html">&lt;p&gt;Just read a great post from long-time &lt;a href=&quot;https:&#x2F;&#x2F;code4lib.org&#x2F;&quot; title=&quot;code4lib.org link&quot;&gt;code4libber&lt;&#x2F;a&gt; Jonathan Rochkind: &amp;quot;&lt;a href=&quot;https:&#x2F;&#x2F;bibwild.wordpress.com&#x2F;2023&#x2F;03&#x2F;21&#x2F;ocfl-and-source-of-truth-two-options&#x2F;&quot; title=&quot;source of truth link&quot;&gt;OCFL and ‘source of truth’ — two options&lt;&#x2F;a&gt;&amp;quot;.&lt;&#x2F;p&gt;
+&lt;p&gt;To give a nutshell summary, it&#x27;s first useful to be aware of a common web-development pattern, where the &#x27;data&#x27; returned by a browser-request comes from an index. That index is an intermediary between the actual source data&#x2F;file, and the webpage a user loads.&lt;&#x2F;p&gt;
+&lt;p&gt;An example... For two work-projects, the source-truth of the scholarly data is in xml-files (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Brown-University-Library&#x2F;usep-data&#x2F;tree&#x2F;master&#x2F;xml_inscriptions&#x2F;transcribed&quot; title=&quot;GitHub usep link&quot;&gt;example&lt;&#x2F;a&gt;). Knowedgeable trained folk encode data from headstones or other sources into these xml-files.&lt;&#x2F;p&gt;
+&lt;p&gt;But when a user performs a search on the project&#x27;s webpage, or loads an inscription-page from the website, the server looks up info from our &lt;a href=&quot;https:&#x2F;&#x2F;solr.apache.org&#x2F;&quot; title=&quot;solr link&quot;&gt;solr&lt;&#x2F;a&gt; indexer.&lt;&#x2F;p&gt;
+&lt;p&gt;Why the intermediary index? Partly because indexers are very, very fast. Also because they can deliver great search results in a way that offers a user easy and useful ways to filter results (&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Faceted_search&quot; title=&quot;facet wikipedia link&quot;&gt;&amp;quot;facets&amp;quot;&lt;&#x2F;a&gt;). And also because the most common indexers are very easy for developers to configure and query and update.&lt;&#x2F;p&gt;
+&lt;p&gt;Given this small architectural tour, since the data for a web-request comes most directly from the index (not the xml files), it&#x27;s easy to see how the &amp;quot;source-of-truth&amp;quot; &lt;em&gt;could&lt;&#x2F;em&gt; be thought of as the index. If an xml-file hasn&#x27;t been indexed, it won&#x27;t appear on the website; in a way, it doesn&#x27;t exist.&lt;&#x2F;p&gt;
+&lt;p&gt;Jonathan&#x27;s post focuses on a specification for saving files-and-associated-metadata to a filesystem, called &lt;a href=&quot;https:&#x2F;&#x2F;ocfl.io&#x2F;&quot; title=&quot;OCFL link&quot;&gt;OCFL&lt;&#x2F;a&gt; (&amp;quot;Oxford Common File Layout&amp;quot;). Though the uses of OCFL are not limited to repositories, it was developed from University repository-developers deliberating about, and implementing, a simple useful file-layout specification that different software-tools can use. &lt;&#x2F;p&gt;
+&lt;p&gt;Because OCFL is most common in this repository context, and because repositories conceptually prioritize archival durability, OCFL data tends to be thought of as &amp;quot;source of truth&amp;quot; data in repository-architecture. &lt;&#x2F;p&gt;
+&lt;p&gt;But repositories use indexers. Jonathan&#x27;s post illuminates competing visions of whether the OCFL storage-layer, or the indexer (or some correlative intermediary) should be considered the &amp;quot;source of truth&amp;quot; -- and the implications for decisions. My take is a bit different than his about the increased technical challenges of an OCFL-first source-of-truth, vs an intermediary-first source-of-truth -- but the main take-away for me is that it&#x27;s important to be very clear on what the purposes are for the two layers.&lt;&#x2F;p&gt;
+&lt;p&gt;For the &lt;a href=&quot;https:&#x2F;&#x2F;repository.library.brown.edu&#x2F;studio&#x2F;&quot; title=&quot;BDR link&quot;&gt;BDR&lt;&#x2F;a&gt; (Brown Digital Repository), we want to ensure that if some disaster struck, and all the the BDR&#x27;s infrastructure went down, but we still had the offsite-OCFL-file-data (and our indexer-code in GitHub), we could reconstitute the BDR.&lt;&#x2F;p&gt;
+&lt;p&gt;But other projects may lend themselves to a &lt;em&gt;shared&lt;&#x2F;em&gt; source-of-truth between the two key layers. &lt;&#x2F;p&gt;
+&lt;p&gt;For a current work project, the main data-source is a FileMaker-Pro database. That data is exported, and indexed; the website accesses the index. A long-term project is underway to scan this collection&#x27;s materials, and put them in the BDR. Once there, we&#x27;ll naturally want to link to the relevant BDR-content from the website. How to do that?&lt;&#x2F;p&gt;
+&lt;p&gt;For various reasons, we&#x27;ve decided not to add BDR links to the FileMaker-Pro database. Instead, we&#x27;ll add those urls directly to the index. So there will be very useful data in the index that&#x27;s not in the foundational source-data.&lt;&#x2F;p&gt;
+&lt;p&gt;But that&#x27;s ok -- the important thing is to be clear and deliberate about what data is going where, for what reasons. And to be clear about how a useful website can be reconstituted from that source-data if needed. These are issues that we developers are &lt;em&gt;familiar&lt;&#x2F;em&gt; with, but given time and resource constraints, may not always think through deeply and document clearly. Which is why I so appreciate Jonathan&#x27;s post: it raises a variety of useful issues to work through intentionally.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

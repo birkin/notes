@@ -27,8 +27,8 @@
 
   <title>
     
- | docstring-testing: love→hate→forget→rediscover→repeat
-
+    
+    
   </title>
 
   
@@ -92,18 +92,41 @@
   </nav>
 
   
-  
+<header class='hero'>
+  <div class='hero-body pb-0'>
+    <div class='container'>
+      <div class='has-text-centered'>
+        <h1 class="title">
+          <span class="icon-text">
+            <span class="icon">
+              <i class="fas fa-tag"></i>
+            </span>
+            <span>code4lib</span>
+          </span>
+        </h1>
+      </div>
+    </div>
+  </div>
+</header>
+
 
   
 <section class="section">
   <div class="container">
-    <div class="columns">
-      <div class="column is-8 is-offset-2">
+    <div class="columns is-centered">
+      <div class="column is-9">
+        
+        
+        
+
+        
         <article class="box">
-          <h1 class="title">
-            docstring-testing: love→hate→forget→rediscover→repeat
-          </h1>
-          <p class="subtitle">❤️ i&#x27;ve just rediscovered them ❤️</p>
+          <h2 class="title">
+            <a href='https:&#x2F;&#x2F;bspace.us&#x2F;posts&#x2F;source-of-truth&#x2F;'>
+              source of truth
+            </a>
+          </h2>
+          <p class="subtitle">what _is_ the source-of-truth data?</p>
           <div class="columns is-multiline is-gapless">
             <div class="column is-8">
               
@@ -113,7 +136,7 @@
   <span class="icon">
     <i class="far fa-calendar-alt"></i>
   </span>
-  <span><time datetime="2023-08-30">August 30, 2023</time></span>
+  <span><time datetime="2023-08-21">August 21, 2023</time></span>
 </span>
 
             </div>
@@ -123,14 +146,25 @@
   <span class="icon">
     <i class="far fa-clock"></i>
   </span>
-  <span>2 min,</span>
+  <span>4 min,</span>
   <span class="icon">
     <i class="fas fa-pencil-alt"></i>
   </span>
-  <span>372 words</span>
+  <span>717 words</span>
 </span>
 
             </div>
+          </div>
+          <div class="content mt-2">
+            
+            <a href='https:&#x2F;&#x2F;bspace.us&#x2F;posts&#x2F;source-of-truth&#x2F;'>
+              Read More
+              <span class="icon is-small">
+                <i class="fas fa-arrow-right fa-xs"></i>
+              </span>
+            </a>
+          </div>
+          <div class="columns">
             <div class="column">
               
             </div>
@@ -140,21 +174,21 @@
 <p>
   Tags:
   
-  <a class="has-text-info-dark has-text-weight-semibold" href="https://bspace.us/tags/code/">
+  <a class="has-text-info-dark has-text-weight-semibold" href="https://bspace.us/tags/code4lib/">
     <span class="icon-text">
       <span class="icon">
         <i class="fas fa-tag"></i>
       </span>
-      <span>code</span>
+      <span>code4lib</span>
     </span>
   </a>
   
-  <a class="has-text-info-dark has-text-weight-semibold" href="https://bspace.us/tags/testing/">
+  <a class="has-text-info-dark has-text-weight-semibold" href="https://bspace.us/tags/repositories/">
     <span class="icon-text">
       <span class="icon">
         <i class="fas fa-tag"></i>
       </span>
-      <span>testing</span>
+      <span>repositories</span>
     </span>
   </a>
   
@@ -163,46 +197,9 @@
               
             </div>
           </div>
-          <div class="content mt-2">
-            <p>I have a love-hate relationship with <a href="https://realpython.com/python-doctest/">using python docstrings for testing</a>. They're simple, easy-to-use, and provide both usage-documentation and actual unit-test functionality. But whenever I start using them in any serious extensive way, I go back to using regular unit-tests in a file or directory -- because of limitations of docstring-tests (which I'm not addressing here). So I haven't used them in a while. But for a informal collaborative experimental project, without testing set up, today I wanted to add a few simple tests to a function to confirm that it's really doing what we expect. I remembered docstrings for testing, and I'm once-again in the love-phase.</p>
-<p><a href="https://github.com/Brown-University-Library/ml_bdr_ota_experiment/blob/0a9c4f0fc7a3471736a7344b6e441274bf61d2dd/data_clean.py#L122">Here's a function</a> in some experimental code a few of us are working on -- to which I added a few docstring-tests. The docstring is everything between the initial and closing <code>&quot;&quot;&quot;</code>. Generally docstrings are just used to provide multi-line comments on the purpose of a function. But they're cool for two reasons:</p>
-<ul>
-<li>
-<p>tools such as Sphinx can be run on code to auto-generate documentation from docstrings. (I never use that.)</p>
-</li>
-<li>
-<p>assertions can be auto-executed as tests. </p>
-</li>
-</ul>
-<p>In this function, <a href="https://github.com/Brown-University-Library/ml_bdr_ota_experiment/blob/0a9c4f0fc7a3471736a7344b6e441274bf61d2dd/data_clean.py#L127-L134">here are the doc-test assertions</a>. If the project had a normal unit-test harness, running tests the regular way would not only run the unit-tests, but also automatically test these assertion-statements. This experimental code has no test-harness set up; there are no unit-test imports. But the docstring tests can still be run like this: <code>% python -m doctest ./data_clean.py</code></p>
-<p>Running that command shows no output if the test-assertions pass (you would see lots of output if running with the <code>-v</code> (verbose) flag). But imagine if the part that reads:</p>
-<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span>    &gt;&gt;&gt; </span><span style="color:#bf616a;">stringify_list</span><span>( </span><span style="color:#d08770;">42 </span><span>)
-</span><span>    &#39;</span><span style="color:#a3be8c;">42</span><span>&#39;
-</span></code></pre>
-<p>...instead were:</p>
-<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span>    &gt;&gt;&gt; </span><span style="color:#bf616a;">stringify_list</span><span>( </span><span style="color:#d08770;">42 </span><span>)
-</span><span>    &#39;</span><span style="color:#a3be8c;">blah</span><span>&#39;
-</span></code></pre>
-<p>...then, running the test would yield:</p>
-<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span>**********************************************************************
-</span><span>File &quot;</span><span style="color:#a3be8c;">/path/to/ml_OTA_experiment_stuff/ml_bdr_ota_experiment/./data_clean.py</span><span>&quot;, line </span><span style="color:#d08770;">133</span><span>, in data_clean.stringify_list
-</span><span>Failed example:
-</span><span>    </span><span style="color:#bf616a;">stringify_list</span><span>( </span><span style="color:#d08770;">42 </span><span>)
-</span><span>Expected:
-</span><span>    &#39;</span><span style="color:#a3be8c;">blah</span><span>&#39;
-</span><span>Got:
-</span><span>    &#39;</span><span style="color:#a3be8c;">42</span><span>&#39;
-</span><span>**********************************************************************
-</span><span style="color:#d08770;">1 </span><span>items had failures:
-</span><span>   </span><span style="color:#d08770;">1 </span><span>of   </span><span style="color:#d08770;">4 </span><span>in data_clean.stringify_list
-</span><span>***Test Failed*** </span><span style="color:#d08770;">1 </span><span>failures.
-</span></code></pre>
-<p>Cool -- simple lightweight documentation and testing; very nice!</p>
-
-          </div>
         </article>
+        
       </div>
-      
     </div>
   </div>
 </section>
@@ -232,33 +229,11 @@
 
 
   
-
-<section class="section">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <nav class="level">
-              
-          <div class="level-item has-text-centered">
-            <a class="button is-black is-outlined" href="https:&#x2F;&#x2F;bspace.us&#x2F;posts&#x2F;source-of-truth&#x2F;">
-              <span class="icon mr-2">
-                <i class="fas fa-arrow-circle-left"></i>
-              </span>
-              source of truth
-            </a>
-          </div>
-           
-        </nav>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
+  
   
 
-
+  
+  
 
   
   <footer class="footer py-4">
@@ -287,10 +262,7 @@
   <script src="https://bspace.us/search_index.en.js"></script><script src="https://bspace.us/js/site.js"></script>
 
   
-
-
-
-
+  
 
   
   
