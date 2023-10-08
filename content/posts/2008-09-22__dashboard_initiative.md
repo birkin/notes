@@ -17,7 +17,7 @@ As shown on this [dashboard information page](http://library.brown.edu/dashboard
      
 One of the reasons I find the dashboard concept so compelling is that it provides a kind of 'template' for data-tracking feeds. Increasingly we've been building into more projects the ability to stream out statistic counts, but to date there hasn't been a clear standardized vision of how this statistical data might be presented. The dashboard offers that standard.     
      
-If we were to rebuild from scratch the [easyBorrow](http://dl.lib.brown.edu/its/software/easyborrow/) system, we could from the start automate count-flows that could populate widgets representing trend-usage for Josiah redirects, BorrowDirect, VirtualCatalog, InRhode, and Iliad. This of course applies to all new systems, and over time I expect we'll retrofit many of our existing ad-hoc statistical counts to flow into widgets.    
+If we were to rebuild from scratch the [easyBorrow](https://web.archive.org/web/20210413162457/https://library.brown.edu/its/software/easyborrow/) system, we could from the start automate count-flows that could populate widgets representing trend-usage for Josiah redirects, BorrowDirect, VirtualCatalog, InRhode, and Iliad. This of course applies to all new systems, and over time I expect we'll retrofit many of our existing ad-hoc statistical counts to flow into widgets.    
      
 I have a vision of the creation, over time, of a plethora of widgets representing useful trend-information on checkouts, interlibrary-loan usage, new-titles additions, collections-web-access usage, requests for offsite materials, and physical library attendance to name just a few. This then begs the question of how to manage all these widgets.     
      
