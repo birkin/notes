@@ -144,12 +144,6 @@
         <loc>https://bspace.us/tags/</loc>
     </url>
     <url>
-        <loc>https://bspace.us/tags/algorithms/</loc>
-    </url>
-    <url>
-        <loc>https://bspace.us/tags/analytics/</loc>
-    </url>
-    <url>
         <loc>https://bspace.us/tags/apis/</loc>
     </url>
     <url>
@@ -163,9 +157,6 @@
     </url>
     <url>
         <loc>https://bspace.us/tags/conferences/</loc>
-    </url>
-    <url>
-        <loc>https://bspace.us/tags/discovery/</loc>
     </url>
     <url>
         <loc>https://bspace.us/tags/django/</loc>
@@ -186,13 +177,7 @@
         <loc>https://bspace.us/tags/language/</loc>
     </url>
     <url>
-        <loc>https://bspace.us/tags/outreach/</loc>
-    </url>
-    <url>
         <loc>https://bspace.us/tags/presentations/</loc>
-    </url>
-    <url>
-        <loc>https://bspace.us/tags/projects/</loc>
     </url>
     <url>
         <loc>https://bspace.us/tags/remembrances/</loc>
@@ -204,22 +189,13 @@
         <loc>https://bspace.us/tags/self-improvement/</loc>
     </url>
     <url>
-        <loc>https://bspace.us/tags/service-oriented-architecture/</loc>
-    </url>
-    <url>
         <loc>https://bspace.us/tags/software-development/</loc>
-    </url>
-    <url>
-        <loc>https://bspace.us/tags/ssh-tunneling/</loc>
     </url>
     <url>
         <loc>https://bspace.us/tags/techniques/</loc>
     </url>
     <url>
         <loc>https://bspace.us/tags/testing/</loc>
-    </url>
-    <url>
-        <loc>https://bspace.us/tags/tips/</loc>
     </url>
     <url>
         <loc>https://bspace.us/tags/tools/</loc>
