@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - good-practices</title>
+    <link href="https://bspace.us/tags/good-practices/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://bspace.us"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-02-03T00:00:00+00:00</updated>
+    <id>https://bspace.us/tags/good-practices/atom.xml</id>
+    <entry xml:lang="en">
+        <title>unicode urls</title>
+        <published>2023-02-03T00:00:00+00:00</published>
+        <updated>2023-02-03T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://bspace.us/posts/unicode-urls/" type="text/html"/>
+        <id>https://bspace.us/posts/unicode-urls/</id>
+        
+        <content type="html">&lt;h2 id=&quot;the-problem&quot;&gt;The problem...&lt;&#x2F;h2&gt;
+&lt;p&gt;You&#x27;re on top of unicode; you&#x27;ve even &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;birkin&#x2F;dev_meetings&#x2F;blob&#x2F;main&#x2F;2022&#x2F;2022-01.md#unicode-trickiness&quot;&gt;normalized&lt;&#x2F;a&gt; your filename containing unicode.&lt;&#x2F;p&gt;
+&lt;p&gt;But you&#x27;ve given someone the url to that file, and then hear that the url doesn&#x27;t work. They give you the url, and it looks like what you gave them, but doesn&#x27;t work.&lt;&#x2F;p&gt;
+&lt;p&gt;What&#x27;s happened is that although the url you gave them contained the properly normalized unicode that &lt;em&gt;did&lt;&#x2F;em&gt; work, they&#x27;ve saved the string you gave them in some way that undid the normalization.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-solution&quot;&gt;The solution...&lt;&#x2F;h2&gt;
+&lt;p&gt;Create a links that encodes the normalized form of the unicode.&lt;&#x2F;p&gt;
+&lt;p&gt;The raw link will not be human-friendly, but it&#x27;ll work, and the browser will show the nice-looking url.&lt;&#x2F;p&gt;
+&lt;p&gt;Example:&lt;&#x2F;p&gt;
+&lt;p&gt;You have a file named &lt;code&gt;birkin_iñtërnâtiønàlĭzætiФn_test.jpg&lt;&#x2F;code&gt;, properly normalized and saved on the server.&lt;&#x2F;p&gt;
+&lt;p&gt;You need to supply the url.&lt;&#x2F;p&gt;
+&lt;p&gt;You&#x27;re tempted to show the url: 
+`&lt;a href=&quot;https:&#x2F;&#x2F;some.edu&#x2F;path&#x2F;to&#x2F;birkin_in%CC%83te%CC%88rna%CC%82ti%C3%B8na%CC%80li%CC%86z%C3%A6ti%D0%A4n_test.jpg&quot;&gt;https:&#x2F;&#x2F;some.edu&#x2F;path&#x2F;to&#x2F;birkin_iñtërnâtiønàlĭzætiФn_test.jpg&lt;&#x2F;a&gt;`` -- which works in your testing.&lt;&#x2F;p&gt;
+&lt;p&gt;Instead, provide the url:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;lt;https:&#x2F;&#x2F;some.edu&#x2F;path&#x2F;to&#x2F;birkin_in%CC%83te%CC%88rna%CC%82ti%C3%B8na%CC%80li%CC%86z%C3%A6ti%D0%A4n_test.jpg&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Yes, it looks horrible, but...&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;you don&#x27;t need to &amp;quot;show&amp;quot; that link&lt;&#x2F;li&gt;
+&lt;li&gt;when the user copies it into a browser, the browser will automatically show the nicer:
+`&lt;a href=&quot;https:&#x2F;&#x2F;some.edu&#x2F;path&#x2F;to&#x2F;birkin_in%CC%83te%CC%88rna%CC%82ti%C3%B8na%CC%80li%CC%86z%C3%A6ti%D0%A4n_test.jpg&quot;&gt;https:&#x2F;&#x2F;some.edu&#x2F;path&#x2F;to&#x2F;birkin_iñtërnâtiønàlĭzætiФn_test.jpg&lt;&#x2F;a&gt;``&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Most importantly, the url won&#x27;t get corrupted by whatever editor the user puts it through and will work when finally copied and pasted into a browser.&lt;&#x2F;p&gt;
+&lt;p&gt;How to get that encoding?&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;from django.utils import http&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;http.urlquote_plus( &#x27;birkin_iñtërnâtiønàlĭzætiФn_test.jpg&#x27; )&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;...which yields: &lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;birkin_in%CC%83te%CC%88rna%CC%82ti%C3%B8na%CC%80li%CC%86z%C3%A6ti%D0%A4n_test.jpg
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ul&gt;
+&lt;li&gt;then use that in the full url above.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>validating django params</title>
+        <published>2022-09-22T00:00:00+00:00</published>
+        <updated>2022-09-22T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://bspace.us/posts/querydict-params/" type="text/html"/>
+        <id>https://bspace.us/posts/querydict-params/</id>
+        
+        <content type="html">&lt;h2 id=&quot;expected-a-get-got-a-post&quot;&gt;expected a GET; got a POST&lt;&#x2F;h2&gt;
+&lt;p&gt;Some surprises while working on a recent &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;birkin&#x2F;solr_proxy_project&quot;&gt;project&lt;&#x2F;a&gt;...&lt;&#x2F;p&gt;
+&lt;p&gt;I was creating a simple proxy-webapp to receive GETs, check the params against an allow-list, and pass on the cleaned params to query solr, returning json.&lt;&#x2F;p&gt;
+&lt;p&gt;So my code &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;birkin&#x2F;solr_proxy_project&#x2F;blob&#x2F;17ba0b68d2754b793c853fcf3a8507f55cef153f&#x2F;solr_proxy_app&#x2F;views.py#L48&quot;&gt;began&lt;&#x2F;a&gt; by looking at the querystring.&lt;&#x2F;p&gt;
+&lt;p&gt;Once I had everything working, and had checked a bunch of querystrings against it, I pointed the webapp calling solr to my proxy-webapp, and it didn&#x27;t work.&lt;&#x2F;p&gt;
+&lt;p&gt;Debugging took some time, because I was verifying what I knew, rather than being open to what I didn&#x27;t know. I verified the params for the solr calls, ran them against my proxy-webapp, and it looked like it &lt;em&gt;should&lt;&#x2F;em&gt; have been working. Turns out that the project calling solr was using an old library, &lt;a href=&quot;https:&#x2F;&#x2F;pypi.org&#x2F;project&#x2F;solrpy&#x2F;&quot;&gt;solrpy&lt;&#x2F;a&gt;, which builds the select-data via POSTing form-like params to solr (using xml IIRC). Solr handles that just fine, but my proxy didn&#x27;t, so I had to deal with the POST.&lt;&#x2F;p&gt;
+&lt;p&gt;If I had to do this from the beginning, I&#x27;d start by looking at the params whether from a POST or GET, and should refactor to do that, but I had the code written (with tests), to expect a querystring, and to validate the params in the querystring, etc..., and was feeling a time-pressure, so I figured I&#x27;d just convert the POST params to a querystring and pass that querystring to the pre-existing code.&lt;&#x2F;p&gt;
+&lt;p&gt;Did that, and then, when pointing the webapp to my proxy-webapp, &lt;em&gt;most&lt;&#x2F;em&gt; things worked, but not all.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;querydict-dict&quot;&gt;querydict ≠ dict&lt;&#x2F;h2&gt;
+&lt;p&gt;That round of debugging also took some time, because whereas the original solr calls were all being made by python code, the solr calls that weren&#x27;t working were being made by various javascript calls to a webapp-api (to avoid cross-site domain issues). Turns out the calls coming from javascript had lots of same-param fields. Here&#x27;s an example:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;q=*:*+AND+display_status:approved&amp;amp;facet.field=type&amp;amp;facet.field=physical_type&amp;amp;facet.field=language&amp;amp;facet.field=religion&amp;amp;facet.field=material&amp;amp;facet.field=placeMenu&amp;amp;indent=on&amp;amp;fl=type&amp;amp;start=0&amp;amp;rows=0&amp;amp;facet=on&amp;amp;wt=json
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;...there are six &lt;code&gt;facet.field&lt;&#x2F;code&gt; keys there.&lt;&#x2F;p&gt;
+&lt;p&gt;My original convert-POST-to-GET code was treating the post-params as a regular dict (oops), and so was only passing one value to solr (since regular dicts don&#x27;t allow multiple identical keys). I wanted to update the Django QueryDict (a Django dict-like structure that allows multiple identical keys) -- to validate the par, but the original django Querydict wasn&#x27;t mutable, so I couldn&#x27;t simply remove non-legit params.&lt;&#x2F;p&gt;
+&lt;p&gt;So I made a copy (probably not in the most efficient way), and iterated through the original incoming Querydict&#x27;s keys -- but actually updated the copy&#x27;s params. Then, with the copy validated, I could return it urlencode() it and return it.&lt;&#x2F;p&gt;
+&lt;p&gt;My &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;birkin&#x2F;solr_proxy_project&#x2F;blob&#x2F;17ba0b68d2754b793c853fcf3a8507f55cef153f&#x2F;solr_proxy_app&#x2F;lib&#x2F;validator.py#L57&quot;&gt;implementation&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>unicode normalization</title>
+        <published>2022-01-28T00:00:00+00:00</published>
+        <updated>2022-01-28T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://bspace.us/posts/unicode-normalization/" type="text/html"/>
+        <id>https://bspace.us/posts/unicode-normalization/</id>
+        
+        <content type="html">&lt;h2 id=&quot;the-problem&quot;&gt;The problem...&lt;&#x2F;h2&gt;
+&lt;p&gt;You feel you&#x27;re on top of unicode, because all your database-data is encoded in utf-8, and your search-terms are encoded in utf-8, and internally you&#x27;re decoding to unicode for everything -- all-good. But... you have a search term, and you &lt;em&gt;know&lt;&#x2F;em&gt; the search term is in the database, yet no match is found!!&lt;&#x2F;p&gt;
+&lt;p&gt;Example...&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; database_words
+&lt;&#x2F;span&gt;&lt;span&gt;[&amp;#39;hola&amp;#39;, &amp;#39;más&amp;#39;, &amp;#39;qué&amp;#39;]
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; 
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; &amp;#39;foo&amp;#39; in database_words
+&lt;&#x2F;span&gt;&lt;span&gt;False
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; 
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; &amp;#39;hola&amp;#39; in database_words
+&lt;&#x2F;span&gt;&lt;span&gt;True
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; 
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; &amp;#39;más&amp;#39; in database_words  # search word typed in via mac &amp;#39;option-e, a&amp;#39; method
+&lt;&#x2F;span&gt;&lt;span&gt;True
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; 
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; &amp;#39;qué&amp;#39; in database_words  # search word typed in via mac &amp;#39;option-e, e&amp;#39; method
+&lt;&#x2F;span&gt;&lt;span&gt;False  # ???
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; 
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The above confusing situation is because in the &#x27;database&#x27; (&lt;code&gt;database_words&lt;&#x2F;code&gt;), the last word&#x27;s accented-letter is two combined unicode-characters, but the search-term is using a single unicode-character for the accented letter.&lt;&#x2F;p&gt;
+&lt;p&gt;Here&#x27;s how &lt;code&gt;database_words&lt;&#x2F;code&gt; was created:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; database_words = [&amp;#39;hola&amp;#39;, &amp;#39;m&amp;#39; + &amp;#39;\u00e1&amp;#39; + &amp;#39;s&amp;#39;, &amp;#39;qu&amp;#39; + &amp;#39;\u0065&amp;#39; + &amp;#39;\u0301&amp;#39;]
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; database_words
+&lt;&#x2F;span&gt;&lt;span&gt;[&amp;#39;hola&amp;#39;, &amp;#39;más&amp;#39;, &amp;#39;qué&amp;#39;]
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;And this is how you&#x27;d explicitly create the single unicode-character search term:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; &amp;#39;qu&amp;#39; + &amp;#39;\u00e9&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;qué&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; 
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;(On the Mac, that accented-e is created via typing &lt;code&gt;option-e&lt;&#x2F;code&gt; then &lt;code&gt;e&lt;&#x2F;code&gt;, which produces the above single-unicode character.)&lt;&#x2F;p&gt;
+&lt;p&gt;There is no way, just by looking, that you can tell the true nature of that accented &#x27;e&#x27;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;examining-characters-if-curious&quot;&gt;examining characters, if curious...&lt;&#x2F;h2&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; import unicodedata
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; 
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; for c in &amp;#39;qué&amp;#39;:  # typed in via option-e method which produces `&amp;#39;qu&amp;#39; + &amp;#39;\u00e9&amp;#39;`
+&lt;&#x2F;span&gt;&lt;span&gt;...     print( f&amp;#39;unicode-name, ``{unicodedata.name(c)}``&amp;#39; )
+&lt;&#x2F;span&gt;&lt;span&gt;... 
+&lt;&#x2F;span&gt;&lt;span&gt;unicode-name, ``LATIN SMALL LETTER Q``
+&lt;&#x2F;span&gt;&lt;span&gt;unicode-name, ``LATIN SMALL LETTER U``
+&lt;&#x2F;span&gt;&lt;span&gt;unicode-name, ``LATIN SMALL LETTER E WITH ACUTE``
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; 
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; for c in &amp;#39;qué&amp;#39;:  # pasted in from database_words, which uses the two combined unicode-characters: `&amp;#39;qu&amp;#39; + &amp;#39;\u0065&amp;#39; + &amp;#39;\u0301&amp;#39;`
+&lt;&#x2F;span&gt;&lt;span&gt;...     print( f&amp;#39;unicode-name, ``{unicodedata.name(c)}``&amp;#39; )
+&lt;&#x2F;span&gt;&lt;span&gt;... 
+&lt;&#x2F;span&gt;&lt;span&gt;unicode-name, ``LATIN SMALL LETTER Q``
+&lt;&#x2F;span&gt;&lt;span&gt;unicode-name, ``LATIN SMALL LETTER U``
+&lt;&#x2F;span&gt;&lt;span&gt;unicode-name, ``LATIN SMALL LETTER E``
+&lt;&#x2F;span&gt;&lt;span&gt;unicode-name, ``COMBINING ACUTE ACCENT``
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; 
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;dealing-with-this-weird-reality&quot;&gt;Dealing with this weird reality...&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;em&gt;Good tools, like solr, often enable you to not have to worry about this -- a search-term with characters composed one way will generally find content composed the other way.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;If you normalize--&amp;gt;decompose data in the database, and normalize--&amp;gt;decompose the search term, all will work.&lt;&#x2F;p&gt;
+&lt;p&gt;The code below normalizes by decomposing single-unicode characters into multiple-unicode characters. Note that we start with the single unicode-character, and transform it into the two combined unicode-characters.&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; decomposed_output = unicodedata.normalize( &amp;#39;NFKD&amp;#39;, &amp;#39;qu&amp;#39; + &amp;#39;\u00e9&amp;#39; )
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; 
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; for c in decomposed_output:
+&lt;&#x2F;span&gt;&lt;span&gt;...     print( f&amp;#39;unicode-name, ``{unicodedata.name(c)}``&amp;#39; )
+&lt;&#x2F;span&gt;&lt;span&gt;... 
+&lt;&#x2F;span&gt;&lt;span&gt;unicode-name, ``LATIN SMALL LETTER Q``
+&lt;&#x2F;span&gt;&lt;span&gt;unicode-name, ``LATIN SMALL LETTER U``
+&lt;&#x2F;span&gt;&lt;span&gt;unicode-name, ``LATIN SMALL LETTER E``
+&lt;&#x2F;span&gt;&lt;span&gt;unicode-name, ``COMBINING ACUTE ACCENT``
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; 
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;so-one-overall-solution&quot;&gt;So one overall solution...&lt;&#x2F;h2&gt;
+&lt;p&gt;Save data in a normalized--&amp;gt;decomposed way...&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; decomposed_database_words = []
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; 
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; for word in database_words:
+&lt;&#x2F;span&gt;&lt;span&gt;...     decomposed_word = unicodedata.normalize( &amp;#39;NFKD&amp;#39;, word )
+&lt;&#x2F;span&gt;&lt;span&gt;...     decomposed_database_words.append( decomposed_word )
+&lt;&#x2F;span&gt;&lt;span&gt;... 
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; decomposed_database_words
+&lt;&#x2F;span&gt;&lt;span&gt;[&amp;#39;hola&amp;#39;, &amp;#39;más&amp;#39;, &amp;#39;qué&amp;#39;]
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; 
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;...and then normalize--&amp;gt;decompose the search-term...&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; search_term = &amp;#39;qu&amp;#39; + &amp;#39;\u00e9&amp;#39;  # demonstrates search term starts with the single unicode character
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; 
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; decomposed_search_term = unicodedata.normalize( &amp;#39;NFKD&amp;#39;, search_term )
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;...then the normalized--&amp;gt;decomposed search term will find the data...&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; decomposed_search_term in decomposed_database_words
+&lt;&#x2F;span&gt;&lt;span&gt;True
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; 
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>approaches to testing</title>
+        <published>2021-09-17T00:00:00+00:00</published>
+        <updated>2021-09-17T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://bspace.us/posts/art-of-testing/" type="text/html"/>
+        <id>https://bspace.us/posts/art-of-testing/</id>
+        
+        <content type="html">&lt;p&gt;&lt;em&gt;The evolution of testing -- what&#x27;s lost and gained?&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;I have a project in which I&#x27;m parsing data.&lt;&#x2F;p&gt;
+&lt;p&gt;One useful principle of testing is to have a discrete piece of functionality tested. And the most direct way to do that for parsing is to pass in source-data, and specify a clear assertion. &lt;&#x2F;p&gt;
+&lt;h2 id=&quot;simple-and-direct&quot;&gt;simple and direct&lt;&#x2F;h2&gt;
+&lt;p&gt;I began that way: &lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Brown-University-Library&#x2F;parse_alma_annex_requests_code&#x2F;blob&#x2F;8109bdbf6b9ff3dd609d8d2c5c7775d72ad3de10&#x2F;tests.py#L156&quot;&gt;Here&#x27;s&lt;&#x2F;a&gt; the beginning of Parser testing.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Brown-University-Library&#x2F;parse_alma_annex_requests_code&#x2F;blob&#x2F;8109bdbf6b9ff3dd609d8d2c5c7775d72ad3de10&#x2F;tests.py#L241-L246&quot;&gt;Here&#x27;s&lt;&#x2F;a&gt; the first iteration of parsing a patron note -- although the test was originally called, simply &lt;code&gt;test_parse_patron_note()&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;That happened to be for a physical item; shortly thereafter I needed to parse the note for a digital item. &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Brown-University-Library&#x2F;parse_alma_annex_requests_code&#x2F;blob&#x2F;8109bdbf6b9ff3dd609d8d2c5c7775d72ad3de10&#x2F;tests.py#L248-L253&quot;&gt;Here&lt;&#x2F;a&gt; is the iteration that tested for that. &lt;&#x2F;p&gt;
+&lt;p&gt;Implementing that second test, I renamed the first example to show that the test was for a physical item, and named the second test to show that it was testing a digital item. I could have passed just the specific item-xml or item-xml-object to each test. In some ways that would have been simpler and &amp;quot;purer&amp;quot;. But the real data for this project comes in a file containing multiple kinds of items, and I was going to be using the items for different kinds of tests (not just notes), so I figured I&#x27;d have one main test-file that would contain a variety of items to use for the tests. (Though this does add a slight dependency to the test -- file loading -- and dependences are frowned upon.)&lt;&#x2F;p&gt;
+&lt;p&gt;In the two examples shown so far, I chose, from the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Brown-University-Library&#x2F;parse_alma_annex_requests_code&#x2F;blob&#x2F;8109bdbf6b9ff3dd609d8d2c5c7775d72ad3de10&#x2F;test_dirs&#x2F;static_source&#x2F;BUL_ANNEX-sample.xml&quot;&gt;source-data&lt;&#x2F;a&gt; being tested, the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Brown-University-Library&#x2F;parse_alma_annex_requests_code&#x2F;blob&#x2F;8109bdbf6b9ff3dd609d8d2c5c7775d72ad3de10&#x2F;tests.py#L244&quot;&gt;first list item&lt;&#x2F;a&gt; for the physical-note test, and the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Brown-University-Library&#x2F;parse_alma_annex_requests_code&#x2F;blob&#x2F;8109bdbf6b9ff3dd609d8d2c5c7775d72ad3de10&#x2F;tests.py#L251&quot;&gt;sixth list item&lt;&#x2F;a&gt; for the digital-note test.&lt;&#x2F;p&gt;
+&lt;p&gt;This is all reasonably forthright. The nice thing about this is that, coming back to this code in future weeks or months, and running the tests, I&#x27;d see from the terminal output, when running the test-suite, the explicit &lt;code&gt;test_parse_patron_note_physical()&lt;&#x2F;code&gt; and &lt;code&gt;test_parse_patron_note_digital()&lt;&#x2F;code&gt; tests. That&#x27;s really useful when revisiting code.&lt;&#x2F;p&gt;
+&lt;p&gt;But the more edge-cases that arise, the benefits of this explicitness quickly, for me, feel outweighed by the duplication. I could have half-a-dozen explicit tests for parsing just the notes field for physical items, another half-dozen for digital items, and have lots of very specific tests for all the other parsing.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;scalable&quot;&gt;scalable&lt;&#x2F;h2&gt;
+&lt;p&gt;In this and other projects, in this situation, I&#x27;ve moved to a different pattern: a &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Brown-University-Library&#x2F;parse_alma_annex_requests_code&#x2F;blob&#x2F;8109bdbf6b9ff3dd609d8d2c5c7775d72ad3de10&#x2F;tests.py#L221-L239&quot;&gt;single test&lt;&#x2F;a&gt; for parsing the target field (in this case the note). This single test first loads up an array of items, an array of expectations, and then iterates through the array, so the single test in this case is actually testing eight variations.&lt;&#x2F;p&gt;
+&lt;p&gt;This has some real advantages -- it&#x27;s very scalable, since adding a new source-data item simply involves adding an expectation to this note, and the other parsed fields. I might be adding the new item because I&#x27;m aware of an edge-case for parsing, say, the item-barcode, and by having to also list the note expectation, I might end up catching some error I hadn&#x27;t been aware of.&lt;&#x2F;p&gt;
+&lt;p&gt;BUT... there is loss with the gain. I need to view the comments (or the source-data) to see&#x2F;remember that I&#x27;m parsing physical vs digital items. (Might there be another digital item that I forgot to indicate via a comment?) And I&#x27;m not going to see those comments in the test-output. &lt;&#x2F;p&gt;
+&lt;p&gt;I just remembered long ago implementing something like this with an additional field in the array. Instead of just handing two-elements in each loop iteration (the source-item-data, and the expectation) -- I also had a comment that was printed, too. That would restore some of the useful specificity of output -- and on a failure, allow me to target, more quickly, the location of the error.&lt;&#x2F;p&gt;
+&lt;p&gt;This example of gain&#x2F;loss refactoring is a miniscule one -- but it reveals aspects of the decision-making in programming that I love.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>nice lightweight SOA implementation</title>
+        <published>2008-05-18T00:00:00+00:00</published>
+        <updated>2008-05-18T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://bspace.us/posts/nice-soa-implementation/" type="text/html"/>
+        <id>https://bspace.us/posts/nice-soa-implementation/</id>
+        
+        <content type="html">&lt;p&gt;I&#x27;ve evangelized &lt;a href=&quot;http:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Service-oriented_architecture&quot;&gt;service-oriented architecture&lt;&#x2F;a&gt; (SOA) &lt;a href=&quot;https:&#x2F;&#x2F;bspace.us&#x2F;posts&#x2F;moving-code-onto-network&#x2F;&quot;&gt;before&lt;&#x2F;a&gt;. &lt;&#x2F;p&gt;
+&lt;p&gt;To review, briefly and roughly: SOA promotes decoupled services. For example, a Fahrenheit-to-Celsius converter would likely be implemented as a web-service, instead of as a function&#x2F;method embedded&#x2F;tied into some bigger program. The benefits of this are multiple: 1) The service can be written in any programming language, and accessed by other services written in different languages. 2) SOA makes the idealized promise of code-reuse a reality.&lt;&#x2F;p&gt;
+&lt;p&gt;I have a programmer friend who works for a large corporation who is familiar with implementing SOA using industrial-scale best-practices; I&#x27;m familiar with implementing it in a lightweight, seat-of-the-pants fashion.&lt;&#x2F;p&gt;
+&lt;p&gt;Over the past year+ I&#x27;ve created well over a dozen or so SOA web-services for different projects. But I recently implemented one I put some best-practice effort into that&#x27;ll be a model for my future SOA work. Some links:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;[2023 update -- the march of progress has resulted in the retirement of these services, so no active links. Sorry!]&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;http:&#x2F;&#x2F;library.brown.edu&#x2F;services&#x2F;language_translator&#x2F;&lt;&#x2F;code&gt;
+&lt;code&gt;http:&#x2F;&#x2F;library.brown.edu&#x2F;services&#x2F;language_translator&#x2F;api_v1&#x2F;code_eng&#x2F;&lt;&#x2F;code&gt;
+&lt;code&gt;http:&#x2F;&#x2F;library.brown.edu&#x2F;services&#x2F;language_translator&#x2F;api_v1&#x2F;all&#x2F;&lt;&#x2F;code&gt;
+&lt;code&gt;http:&#x2F;&#x2F;library.brown.edu&#x2F;services&#x2F;language_translator&#x2F;list&#x2F;&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;What I like about this one...&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;The api urls offer &#x27;discovery&#x27; via embedding, in the built-in returned data, contact and documentation information. Having just one of these pieces of info would be great; having both is particularly nice because web urls and staff change over time. Why is this useful? If someone is looking at the code that calls this service 5 years from now, and if I&#x27;m not around, the documentation will provide info on some extra features of the service that otherwise wouldn&#x27;t be apparent if, say, the web-service just returned the word &#x27;English&#x27;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;The api urls are &#x27;hackable&#x27;, another way of enhancing discovery. One can intuitively try entering a code other than &#x27;enk&#x27; to see what comes up (like &#x27;&lt;a href=&quot;http:&#x2F;&#x2F;library.brown.edu&#x2F;services&#x2F;language_translator&#x2F;api_v1&#x2F;code_tlh&#x2F;&quot;&gt;tlh&lt;&#x2F;a&gt;&#x27;). Also, reasonably appropriate things happen if one lops off increasing sections of the url (in this case, redirects to documentation pages).&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;The api urls are versioned. Key:value pairs can be added to this api -- but the existing key:value pairs must never be changed. The reason is that post-release, I don&#x27;t know who&#x27;s using it for what, thus I have to assume any changes could break someone&#x27;s app. So if I want to change the label &#x27;response&#x27; to &#x27;language&#x27;, and deliver it in xml, I can leave the existing one as is, and label the new one &#x27;api_v2&#x27;.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;All these urls utilize server-caching. This is an implementation rather than a design feature, but worth mentioning. &lt;a href=&quot;http:&#x2F;&#x2F;www.djangoproject.com&#x2F;&quot;&gt;Django&lt;&#x2F;a&gt; offers a flexible and easy-to-use &lt;a href=&quot;http:&#x2F;&#x2F;www.djangoproject.com&#x2F;documentation&#x2F;cache&#x2F;&quot;&gt;caching feature&lt;&#x2F;a&gt;; I have it set so that the list and api urls only have to hit the database once a day, no matter how many times the urls are hit. Further, django&#x27;s caching is intelligent: its response includes &#x27;Cache-Control&#x27;, &#x27;Etag&#x27;, and &#x27;Expires&#x27; http-headers so that a browser or well-designed code &lt;em&gt;doesn&#x27;t even have to call the web-service again&lt;&#x2F;em&gt; to redisplay the data. Nice. This would be particularly important and useful for something like RSS feeds. &lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Good info...&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;A terrific, hands-on review-resource on http-headers: The &lt;a href=&quot;http:&#x2F;&#x2F;www.diveintopython.org&#x2F;http_web_services&#x2F;index.html&quot;&gt;web-services chapter&lt;&#x2F;a&gt; of Mark Pilgrims &#x27;Dive Into Python&#x27; &lt;a href=&quot;http:&#x2F;&#x2F;www.diveintopython.org&#x2F;index.html&quot;&gt;website&lt;&#x2F;a&gt; &amp;amp; &lt;a href=&quot;http:&#x2F;&#x2F;www.worldcat.org&#x2F;oclc&#x2F;56366433&quot;&gt;book&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Many of the features of this language_translator web-service were informed by the &lt;a href=&quot;http:&#x2F;&#x2F;www.worldcat.org&#x2F;oclc&#x2F;82671871&quot;&gt;book&lt;&#x2F;a&gt; &#x27;RESTful Web Services&#x27;, by Richardson &amp;amp; Ruby. Some parts are a bit dense, but it&#x27;s chock-full of terrific detailed info and food for thought. I came across it after having written a half-dozen or so SOA web-services, each one a little different and better, and it directly addressed many issues I had begun to think about or saw referenced via web-research.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;em&gt;[Acknowledgements to Peter Murray&#x27;s&lt;&#x2F;em&gt; &lt;a href=&quot;http:&#x2F;&#x2F;dltj.org&#x2F;article&#x2F;defining-soa-by-analogy&#x2F;&quot;&gt;&lt;em&gt;article&lt;&#x2F;em&gt;&lt;&#x2F;a&gt; &lt;em&gt;and Richard Akerman&#x27;s Access_2006&lt;&#x2F;em&gt; &lt;a href=&quot;http:&#x2F;&#x2F;scilib.typepad.com&#x2F;science_library_pad&#x2F;access2006&#x2F;&quot;&gt;&lt;em&gt;presentation&lt;&#x2F;em&gt;&lt;&#x2F;a&gt; &lt;em&gt;that first inspired my SOA thinking.]&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

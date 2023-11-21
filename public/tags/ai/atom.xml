@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - AI</title>
+    <link href="https://bspace.us/tags/ai/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://bspace.us"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-10-26T00:00:00+00:00</updated>
+    <id>https://bspace.us/tags/ai/atom.xml</id>
+    <entry xml:lang="en">
+        <title>ai4Libraries virtual-conference</title>
+        <published>2023-10-26T00:00:00+00:00</published>
+        <updated>2023-10-26T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://bspace.us/posts/ai4libraries-vconf-notes/" type="text/html"/>
+        <id>https://bspace.us/posts/ai4libraries-vconf-notes/</id>
+        
+        <content type="html">&lt;h3 id=&quot;conference-info&quot;&gt;conference info&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;virtual conference, October 19, 2023&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.ai4libraries.org&#x2F;&quot;&gt;org&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.ai4libraries.org&#x2F;2023recordings&quot;&gt;recordings&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;take-aways&quot;&gt;take-aways&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;morning-keynote-by-dave-hansen&quot;&gt;Morning keynote by Dave Hansen&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;terrific&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Some issues around mining-for-AI aren&#x27;t new, legally; text-data-mining has been around for a long time.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;em&gt;lots&lt;&#x2F;em&gt; of lawsuits recently filed (against Stability, OpenAI, Meta) -- should have more clarity over the next year or so&lt;&#x2F;li&gt;
+&lt;li&gt;Is it permissible to use copyrighted works for use as training data? -- for non-commercial academic-research, probably, based on text-mining settled law.&lt;&#x2F;li&gt;
+&lt;li&gt;Open questions:
+&lt;ul&gt;
+&lt;li&gt;what about when copying is&#x27;t just for search&#x2F;analysis, but for creation of new works?&lt;&#x2F;li&gt;
+&lt;li&gt;how should we think about systems that are used by users to create new works that may in some way substitute for the original?&lt;&#x2F;li&gt;
+&lt;li&gt;&amp;quot;snoopy problem&amp;quot; -- generative AI can be used to create known-copyrighted-characters.
+&lt;ul&gt;
+&lt;li&gt;do the products&#x2F;tools have safeguards &lt;em&gt;against&lt;&#x2F;em&gt; creating copyrighted outputs? If not, does that put the tools and tool-creators at legal risk?&lt;&#x2F;li&gt;
+&lt;li&gt;to what extent are the products&#x2F;tools (vs user) responsible for resultant infringing works?&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Terms of service can have implications.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;ai-libraries-and-higher-education-panel&quot;&gt;AI, Libraries, and Higher Education (Panel&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;AI tools will play a role in retrieval of info. Either because users want to use them, or because regular tools we all use will begin invisibly using AI.&lt;&#x2F;li&gt;
+&lt;li&gt;Libraries have a historic curation role -- offering not only the info but info but also attributions of where info is from -- unlike AI.&lt;&#x2F;li&gt;
+&lt;li&gt;Some AI tools are &lt;em&gt;super&lt;&#x2F;em&gt; useful for academic-research projects -- eg fingerprinting project.&lt;&#x2F;li&gt;
+&lt;li&gt;Fit technology to goals -- good calculator analogy: if the purpose is &amp;quot;learning arithmetic&amp;quot;, don&#x27;t use calculator much. But if it&#x27;s learning higher-level calculus, a calculator is essential.&lt;&#x2F;li&gt;
+&lt;li&gt;Our ways of knowing &#x2F; demonstrating-knowledge --  have been through writing. Now that writing is easy and cheap and not necessarily connected to a human author, writing may be less valuable.&lt;&#x2F;li&gt;
+&lt;li&gt;One aspect of protecting ourselves from copyright infringement is to clarify that AI-use is educational&#x2F;for-learning -- not commercial.&lt;&#x2F;li&gt;
+&lt;li&gt;Assertion for good discussion: &lt;em&gt;&amp;quot;AI won&#x27;t replace humans, but humans with AI will replace humans without AI.&amp;quot;&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;ai-and-ethics-considerations-for-the-scholarly-communities&quot;&gt;AI and Ethics: Considerations for the Scholarly Communities&lt;&#x2F;h4&gt;
+&lt;p&gt;(points below are a mix of points made and my thoughts)&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Should it be clear that presented data may have been (partially) AI generated?&lt;&#x2F;li&gt;
+&lt;li&gt;Should our resources be permitted to be harvested for AI?&lt;&#x2F;li&gt;
+&lt;li&gt;How to keep AI tools from harvesting user-info potentially inappropriately?&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;trends-in-challenges-in-generative-ai-adoption-in-higher-education&quot;&gt;Trends in Challenges in Generative AI Adoption in Higher Education&lt;&#x2F;h4&gt;
+&lt;p&gt;(points below are a mix of points made and my thoughts)&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ithaka S+R is working on an AI-Resiliency project, with 19 universities
+&lt;ul&gt;
+&lt;li&gt;because I never remember: the &amp;quot;S+R&amp;quot; stands for &amp;quot;Strategy &amp;amp; Research&amp;quot;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Areas AI will be affecting: search, collections-as-data, process-automation, analytics, smart-sensors.&lt;&#x2F;li&gt;
+&lt;li&gt;Sandboxing one technique to minimize PII leakage. One example mentioned in chat: &lt;a href=&quot;https:&#x2F;&#x2F;gpt4all.io&#x2F;index.html&quot;&gt;https:&#x2F;&#x2F;gpt4all.io&#x2F;index.html&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;tech-services-panel&quot;&gt;Tech-Services panel&lt;&#x2F;h4&gt;
+&lt;p&gt;(points below are a mix of points made and my thoughts)&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Examples of how back-end processes are and will be affected by AI: transcriptions, OCR, using AI to write scripts, auto keyword-generation, enhancing OpenRefine-ish capabilities; auto-cataloging to MARC-format.&lt;&#x2F;li&gt;
+&lt;li&gt;Defining licensing-protections should be a goal; challenging.&lt;&#x2F;li&gt;
+&lt;li&gt;Challenge of communicating Library desires to vendors. They may be receptive, but if the main point-of-contact is salespeople, not constructive.&lt;&#x2F;li&gt;
+&lt;li&gt;Conveying that AI is basically &amp;quot;statistical guessing&amp;quot; may reduce staff fear.&lt;&#x2F;li&gt;
+&lt;li&gt;Would be nice to investigate ways staff knowledge could be used to train tools.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;lightning-talks&quot;&gt;Lightning talks&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Leveraging AI tools for automating metadata extraction&lt;&#x2F;strong&gt; -- UCLA folk used OCR, fed data into spaCy for &amp;quot;named entity recognition&amp;quot;, tried using chatgpt for DC records (good for title, description, language; bad for date, type, physical description, rights)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Moles and Martians: A New, LLM-based Library Search&lt;&#x2F;strong&gt;, by Tim Spalding, LibraryThing -- gave examples of human exploratory searches that were handled well. See &lt;a href=&quot;https:&#x2F;&#x2F;www.talpa.ai&quot;&gt;https:&#x2F;&#x2F;www.talpa.ai&lt;&#x2F;a&gt; and the youtube video there.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;interesting-projects-articles-mentioned&quot;&gt;interesting projects&#x2F;articles mentioned&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;quot;&lt;a href=&quot;https:&#x2F;&#x2F;datasittersclub.github.io&#x2F;site&#x2F;&quot;&gt;The DataSitters Club&lt;&#x2F;a&gt;&amp;quot;; group at U.Richmond doing interesting work on &amp;quot;distant-viewing&amp;quot; -- analyzing characters in Bewitched &amp;amp; I Dream of Jeannie&lt;&#x2F;li&gt;
+&lt;li&gt;&amp;quot;&lt;a href=&quot;ttps:&#x2F;&#x2F;mark-riedl.medium.com&#x2F;a-very-gentle-introduction-to-large-language-models-without-the-hype-5f67941fa59e&quot;&gt;A Very Gentle Introduction to Large Language Models without the Hype&lt;&#x2F;a&gt;&amp;quot; &lt;&#x2F;li&gt;
+&lt;li&gt;&amp;quot;&lt;a href=&quot;https:&#x2F;&#x2F;arxiv.org&#x2F;pdf&#x2F;2306.07998.pdf&quot;&gt;Contrastive Attention Networks for Attribution of Early Modern Print&lt;&#x2F;a&gt;&amp;quot;
+&lt;ul&gt;
+&lt;li&gt;summary: &lt;em&gt;The study develops a machine learning method to identify printers of early modern English books by analyzing damaged type-imprints in anonymous prints. Using a novel Contrastive Attention-based approach and synthetic data generation, the technique effectively matches type-imprints, aiding in historical print attribution.&lt;&#x2F;em&gt; (ChatGPT4)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&amp;quot;&lt;a href=&quot;https:&#x2F;&#x2F;dl.acm.org&#x2F;doi&#x2F;pdf&#x2F;10.1145&#x2F;3589651&quot;&gt;ChatGPT in Education: Partner or pariah?&lt;&#x2F;a&gt;&amp;quot;&lt;&#x2F;li&gt;
+&lt;li&gt;&amp;quot;&lt;a href=&quot;https:&#x2F;&#x2F;arstechnica.com&#x2F;ai&#x2F;2023&#x2F;10&#x2F;ai-chatbots-can-infer-an-alarming-amount-of-info-about-you-from-your-responses&#x2F;&quot;&gt;AI chatbots can infer an alarming amount of info about you from your responses&lt;&#x2F;a&gt;&amp;quot;&lt;&#x2F;li&gt;
+&lt;li&gt;&amp;quot;&lt;a href=&quot;https:&#x2F;&#x2F;sr.ithaka.org&#x2F;blog&#x2F;making-ai-generative-for-higher-education&#x2F;&quot;&gt;Making AI Generative for Higher Education&lt;&#x2F;a&gt;&amp;quot;&lt;&#x2F;li&gt;
+&lt;li&gt;&amp;quot;&lt;a href=&quot;https:&#x2F;&#x2F;www.talpa.ai&quot;&gt;...magical, AI-powered library search backed by true and authoritative data...&lt;&#x2F;a&gt;&amp;quot;
+&lt;ul&gt;
+&lt;li&gt;summary: &lt;em&gt;Talpa is an AI-based library search tool, integrating Claude AI, ChatGPT, and authoritative book databases. It provides accurate, library-specific search results, currently free for certain libraries. Developed by LibraryThing, in collaboration with ProQuest, Talpa is an ongoing experiment​​​​​​​​​​.&lt;&#x2F;em&gt; (ChatGPT4)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+</content>
+        
+    </entry>
+</feed>

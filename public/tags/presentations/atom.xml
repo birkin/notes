@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - presentations</title>
+    <link href="https://bspace.us/tags/presentations/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://bspace.us"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2016-12-21T00:00:00+00:00</updated>
+    <id>https://bspace.us/tags/presentations/atom.xml</id>
+    <entry xml:lang="en">
+        <title>high-schoolers: technology in the library</title>
+        <published>2016-12-21T00:00:00+00:00</published>
+        <updated>2016-12-21T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://bspace.us/posts/youth-and-library-technology/" type="text/html"/>
+        <id>https://bspace.us/posts/youth-and-library-technology/</id>
+        
+        <content type="html">&lt;p&gt;In late September I saw an announcement about a computer science talk which referred to an acronym I wasn’t familiar with: CS4RI. A bit of googling led to the organization &#x27;&lt;a href=&quot;http:&#x2F;&#x2F;www.cs4ri.org&quot;&gt;CS4RI: Computer Science for Rhode Island&lt;&#x2F;a&gt;&#x27;. Its website included a link to their &#x27;&lt;a href=&quot;http:&#x2F;&#x2F;www.cs4ri.org&#x2F;summit&quot;&gt;CS4RI Summit 2016&lt;&#x2F;a&gt;&#x27;, which stated as a goal: &lt;em&gt;&amp;quot;The CS4RI Summit aims to inspire the next generation of computer scientists, entrepreneurs, and engaged tech sector employees… let’s excite students with the many educational and career opportunities that result from studying CS…&amp;quot;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Our Digital Technologes department is a vibrant place to work. We combine focused productivity with a culture of learning about new technologies and practices. And Libraries at our peer institutions are also known to be terrific places to work.&lt;&#x2F;p&gt;
+&lt;p&gt;It occurred to me that while CS middle and high-school students would suspect that robotics or game-design organizations could be interesting places to work — they’d very likely never think that Libraries could be worth considering. A few of us set out to remedy that; we reserved an exhibit-table at the CS4RI Summit held at the University of Rhode Island on December 14, 2016.&lt;&#x2F;p&gt;
+&lt;p&gt;It was a wonderful event. All sorts of interesting tech companies and organizations exhibited for some 1,500 students. At our exhibit, we talked about how Amazon and Google set the bar for making things easy to find, and easy to get — and how Libraries have worked hard to improve the discoverability and accessibility of our services. We shared that we’ve hired and are continuing to hire people with computer-science and other technology backgrounds. We noted that our Digital Technologies team gets to partner with researchers working on all sorts of interesting issues and technologies. And we let students know we work with, and contribute to, open-source technologies so that our work benefits not only our users, but a much wider community of learners.&lt;&#x2F;p&gt;
+&lt;p&gt;A few hundreds of middle and high-schoolers now have some awareness that Libraries are worth considering for working with technology in a variety of creative, dynamic, and rewarding ways.&lt;&#x2F;p&gt;
+&lt;p&gt;(For making this possible and successful, thanks to Bruce Boucek, Hector Correa, Jean Rainwater, Kerri Hicks, Patrick Rashleigh, and Shashi Mishra.)&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>dashboard initiative</title>
+        <published>2009-09-22T00:00:00+00:00</published>
+        <updated>2009-09-22T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://bspace.us/posts/dashboard-initiative/" type="text/html"/>
+        <id>https://bspace.us/posts/dashboard-initiative/</id>
+        
+        <content type="html">&lt;p&gt;I&#x27;ve been putting some productive time into something I&#x27;m calling &amp;quot;The Dashboard Initiative&amp;quot;. Most of this time to date has been outside of normal work hours due to a few other priorities, but in time I expect to add this to the list of on-going work projects.&lt;&#x2F;p&gt;
+&lt;p&gt;Inspired by work done by Brown&#x27;s &lt;a href=&quot;http:&#x2F;&#x2F;www.brown.edu&#x2F;Administration&#x2F;Institutional_Research&#x2F;&quot;&gt;Office of Institutional Research&lt;&#x2F;a&gt;, the concept of the dashboard is to provide useful trend information about the operation of different facets of the Library. The analogy to a car dashboard is good: whereas &#x27;instruments&#x27; make up a car&#x27;s dashboard, what I&#x27;m calling &#x27;widgets&#x27; make up the Library&#x27;s dashboard.&lt;&#x2F;p&gt;
+&lt;p&gt;As shown on this &lt;a href=&quot;http:&#x2F;&#x2F;library.brown.edu&#x2F;dashboard&#x2F;info&#x2F;&quot;&gt;dashboard information page&lt;&#x2F;a&gt;, a dashboard widget consists of three counts (baseline, trend, and current), a trend indicator, and a &#x27;more-info&#x27; button that itself is a miniature graph. My visions for possible future dashboard usage within the Library and across campus are grand, but it is important to remember that the dashboard idea is intended to serve a rather specific data-display purpose: to usefully display trend information. Data that lends itself to pie-chart breakdowns can be important to an organization and can be an integral part of an organization&#x27;s data-farm, but is somewhat outside the scope of the dashboard focus on trends.&lt;&#x2F;p&gt;
+&lt;p&gt;One of the reasons I find the dashboard concept so compelling is that it provides a kind of &#x27;template&#x27; for data-tracking feeds. Increasingly we&#x27;ve been building into more projects the ability to stream out statistic counts, but to date there hasn&#x27;t been a clear standardized vision of how this statistical data might be presented. The dashboard offers that standard.&lt;&#x2F;p&gt;
+&lt;p&gt;If we were to rebuild from scratch the &lt;a href=&quot;https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20210413162457&#x2F;https:&#x2F;&#x2F;library.brown.edu&#x2F;its&#x2F;software&#x2F;easyborrow&#x2F;&quot;&gt;easyBorrow&lt;&#x2F;a&gt; system, we could from the start automate count-flows that could populate widgets representing trend-usage for Josiah redirects, BorrowDirect, VirtualCatalog, InRhode, and Iliad. This of course applies to all new systems, and over time I expect we&#x27;ll retrofit many of our existing ad-hoc statistical counts to flow into widgets.&lt;&#x2F;p&gt;
+&lt;p&gt;I have a vision of the creation, over time, of a plethora of widgets representing useful trend-information on checkouts, interlibrary-loan usage, new-titles additions, collections-web-access usage, requests for offsite materials, and physical library attendance to name just a few. This then begs the question of how to manage all these widgets.&lt;&#x2F;p&gt;
+&lt;p&gt;I envision a &#x27;MyWidgets&#x27; page where, based on cookies and login, a user could view a listing of all Library widgets, filter by tag, and select those she finds useful for a personalized widget page. As part of my work I may pay particular attention to the flow of easyBorrow requests to our different borrowing partners, and scan other widgets tracking workbench file uploads to our in-development repository. Other folk in the library might be particularly interested in widgets that track numbers of books sent to our offsite Annex facility, as well as widgets that track the number of requests for those materials, and widgets that track how many requests for offsite materials are still made when the user is offered a link to a Google Book scan of the requested title. Our French scholarly resources librarian might choose for her page widgets tracking French new-title additions, as well as checkouts of French-language items.&lt;&#x2F;p&gt;
+&lt;p&gt;Thinking even more broadly -- campus-wide -- it&#x27;s easy to imagine how, if other departments adopt the dashboard idea, a facility could even be developed for, say, the chair of the French department to &#x27;subscribe&#x27; to a Library &#x27;French New-Titles&#x27; widget, a Library &#x27;French-Language Checkouts&#x27; widget, as well as a Registrar widget representing the numbers of freshmen enrolled in French 1, and another Registrar widget representing numbers of French concentrators.&lt;&#x2F;p&gt;
+&lt;p&gt;Along these lines, I expect to one-day add an rss and html parameter-segment to a widget-url to facilitate such cross-campus usage.&lt;&#x2F;p&gt;
+&lt;p&gt;For now, starting on a small-scale, I&#x27;ve created via Django&#x27;s default admin a simple form allowing non-technical end-users to create a widget simply by typing or pasting into the form a list of key-value data-pairs.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;http:&#x2F;&#x2F;library.brown.edu&#x2F;django_media&#x2F;dashboard_media&#x2F;images&#x2F;form_sample.png&quot; alt=&quot;widget entry form&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Upon submitting the form, the data-points are parsed  and made into the discrete data-elements comprising a widget. This is in-place now. In fact, the widget on the &lt;a href=&quot;http:&#x2F;&#x2F;library.brown.edu&#x2F;dashboard&#x2F;info&#x2F;&quot;&gt;dashboard information page&lt;&#x2F;a&gt; was created (and can easily be updated) via this form. Further, this weekend I implemented the ability to view detail line-chart information using &lt;a href=&quot;http:&#x2F;&#x2F;code.google.com&#x2F;apis&#x2F;chart&#x2F;&quot;&gt;Google&#x27;s chart API&lt;&#x2F;a&gt;. So changing a label or data-point via the simple form now changes not just the widget but also the detail chart, on-the-fly. Though I expect to automate many data flows used to create dashboard widgets, the utility of the form will allow non-technical folk to take data they already create via manual processes and easily make that data much more visible to others.&lt;&#x2F;p&gt;
+&lt;p&gt;We&#x27;ll see how this all unfolds. The potential is exciting.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;[ Update: I &lt;em&gt;&lt;a href=&quot;http:&#x2F;&#x2F;code4lib.org&#x2F;conference&#x2F;2009&#x2F;diana&quot;&gt;&lt;em&gt;presented&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;&lt;&#x2F;em&gt; on the dashboard at the &lt;em&gt;&lt;a href=&quot;http:&#x2F;&#x2F;code4lib.org&#x2F;conference&#x2F;2009&#x2F;schedule&quot;&gt;&lt;em&gt;2009 code4lib conference&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;&lt;&#x2F;em&gt;. Good feedback (&lt;&#x2F;em&gt;&lt;a href=&quot;http:&#x2F;&#x2F;twitter.com&#x2F;dchud&#x2F;statuses&#x2F;1245524571&quot;&gt;&lt;em&gt;DC&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;&lt;em&gt;, &lt;em&gt;&lt;a href=&quot;http:&#x2F;&#x2F;infomotions.com&#x2F;blog&#x2F;2009&#x2F;03&#x2F;code4lib-conference-providence-rhode-island-2009&#x2F;&quot;&gt;&lt;em&gt;ELM&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;&lt;&#x2F;em&gt;). ]&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>discovery tools, standards, trends</title>
+        <published>2008-04-01T00:00:00+00:00</published>
+        <updated>2008-04-01T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://bspace.us/posts/discovery-tools-standards-trends/" type="text/html"/>
+        <id>https://bspace.us/posts/discovery-tools-standards-trends/</id>
+        
+        <content type="html">&lt;p&gt;&lt;em&gt;[Got a nice little blog-recognition email a couple weeks ago by a reader asking if I would write up a report on this NISO conference for possible inclusion in a newsletter. Here&#x27;s the web-version.]&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;Thirteen presentations were given at the &lt;a href=&quot;http:&#x2F;&#x2F;www.niso.org&#x2F;home&quot;&gt;NISO&lt;&#x2F;a&gt; Forum &lt;a href=&quot;https:&#x2F;&#x2F;www.niso.org&#x2F;events&#x2F;2008&#x2F;03&#x2F;next-generation-discovery-tools-new-tools-aging-standards&quot;&gt;&#x27;Next Generation Discovery: New Tools, Aging Standards&#x27;&lt;&#x2F;a&gt;, held on March 27 and 28, 2008, in Chapel Hill, North Carolina. They covered three main areas: current user-expectations, discovery tools attempting to meet those expectations, and architectures to facilitate the development and adoption of discovery tools.&lt;&#x2F;p&gt;
+&lt;p&gt;Speakers reenforced that users want searching to be easy and fast. Dinah Sanders of III noted how this process of finding information has become increasingly iterative, with users expecting to refine their queries. Vinod Chachra of VTLS described that this is why search results must be returned quickly: it allows humans to be seamlessly involved in the discernment process, scanning and instantaneously determining relevancy.&lt;&#x2F;p&gt;
+&lt;p&gt;Robert Sandusky of the University of Illinois at Chicago, Cameilia Csora of 2collab.com, Karen Hawkins of scitopio.org, Dinah, and Peter Murray of OhioLINK, all showed tools that incorporate at least some now-common web elements to meet these user-expectations, including faceted results, tagging, tag-clouds, and feeds.&lt;&#x2F;p&gt;
+&lt;p&gt;Many new discovery tools offer truly laudable interface-improvements over previous displays of information, but suffer from a significant architectural limitation: If a tool assumes the only end-user experience is the tool&#x27;s default web-page, opportunities for discovery are drastically limited. For example, if we at Brown were to license the III Encore tool, and a user were to land on one of our &lt;a href=&quot;https:&#x2F;&#x2F;library.brown.edu&#x2F;cds&#x2F;napoleon&#x2F;&quot;&gt;&#x27;Napoleonic Satires&#x27;&lt;&#x2F;a&gt; collection pages, it would be wonderful to be able to query an Encore API on &#x27;Napoleon&#x27; to display in a sidebar the terrific discovery data this tool can access. But this and many other discovery tools offer no such API. Fortunately this is changing, with some vendors updating their business models to meet current library discovery needs both deeply and broadly. Ex Libris&#x27; &lt;a href=&quot;https:&#x2F;&#x2F;knowledge.exlibrisgroup.com&#x2F;MetaLib&#x2F;Knowledge_Articles&#x2F;Documentation_on_X-server_MetaLib_Version_3.13_and_Higher&quot;&gt;XServer&lt;&#x2F;a&gt; licensing is a prime example, offering API functionality to its federated-searching tool, dramatically broadening discovery possibilities beyond the default MetaLib web interface.&lt;&#x2F;p&gt;
+&lt;p&gt;The presentations that touched on system-design and architectural issues to improve discovery were particularly inspiring. &lt;&#x2F;p&gt;
+&lt;p&gt;Richard Akerman of NRC CISTI noted that we should utilize our power as information-producers to produce data that more easily lends itself to machine-harvesting. This can be done by encoding data where possible utilizing existing standards such as &lt;a href=&quot;http:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Openurl&quot;&gt;OpenURL&lt;&#x2F;a&gt; and &lt;a href=&quot;http:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;COinS&quot;&gt;COinS&lt;&#x2F;a&gt;, as well as emerging de-facto standards such as &lt;a href=&quot;http:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Microformats&quot;&gt;microformats&lt;&#x2F;a&gt;. He showed as one example information displayed in a useful time-line format by a site that had queried data from a harvester site -- possible because of standardized structured date-fields.&lt;&#x2F;p&gt;
+&lt;p&gt;Mike Teets of OCLC gave a presentation on OCLC&#x27;s emerging &lt;a href=&quot;http:&#x2F;&#x2F;worldcat.org&#x2F;devnet&#x2F;blog&#x2F;presentations&#x2F;2008_01_ALA_Grid_Intro.pdf&quot;&gt;WorldCat Grid&lt;&#x2F;a&gt; services, offering possibilities for cross-referencing standard identifiers such as ISBNs and OCLC numbers, and emerging identifiers such as &#x27;identities&#x27; -- truly a developer&#x27;s dream.&lt;&#x2F;p&gt;
+&lt;p&gt;Vinod offered numerous useful suggestions for designing systems to minimize user confusion and maximize utility. He showed an example of a site that had both a facet category of LC Subject Headings, and another facet category of Dewey Subject Headings, and the ease with which a user could be confused by this explicit display of overlapping information, hindering rather than helping discovery. &lt;&#x2F;p&gt;
+&lt;p&gt;Michael Winkler of the University of Pennsylvania discussed how &lt;a href=&quot;http:&#x2F;&#x2F;tags.library.upenn.edu&#x2F;help&#x2F;&quot;&gt;PennTags&lt;&#x2F;a&gt; is emblematic of an architectural approach the UPenn Library has found successful. His talk brought together multiple threads of this NISO Forum by showing how PennTags offers discovery possibilities in multiple different settings because it is designed as what he called a &#x27;horizontal&#x27; service, as opposed to a &#x27;vertical&#x27; service. The &#x27;vertical&#x27; service paradigm in Winkler&#x27;s view is exactly the one I described earlier as architecturally limited: much useful information is gathered together and funneled down into one website with no possibilities for alternate exposure of the gathered and massaged data. PennTags, he noted, is an example of the &#x27;horizontal&#x27; service paradigm that he sees as the future of UPenn Library discovery software and good discovery software in general. It is not tied to any particular existing service: not the catalog, not electronic resources, not their course-software -- and yet can be used with any of these services -- and in any given context can expose interesting data from another context. Each PennTag entry is exposed as an RSS feed which illustrates the power of simple standards to enhance discovery. In fact, this shift to a horizontal paradigm is so central to the UPenn Library&#x27;s current and future work, that Winkler noted he toyed with re-titling his presentation to something like &#x27;Not PennTags, but Why&#x27;.&lt;&#x2F;p&gt;
+&lt;p&gt;John Mark Ockerbloom, also of the University of Pennsylvania, followed with an update on the DLF&#x27;s &lt;a href=&quot;http:&#x2F;&#x2F;code4lib.org&#x2F;conference&#x2F;2008&#x2F;lynema&quot;&gt;&#x27;ILS Discovery Interface Task Force&#x27;&lt;&#x2F;a&gt;, of which he is the Chair. The task force is set to soon release a standard for ILS discovery services -- in other words, it will set a lightweight API standard for the OPAC layer of the ILS. In the context of this forum, this standard should help foster the shift of the OPAC from a vertical silo-service to a horizontal more flexible one, increasing opportunities for discovery of the underlying OPAC data.&lt;&#x2F;p&gt;
+&lt;p&gt;I hope to see the next Forum in this &#x27;Discovery&#x27; series showcase more tools that utilize Winkler&#x27;s horizontal-service architecture concept that increases discovery possibilities. Kudos to NISO for providing another thought-provoking Forum packed with inspirational examples and ideas and conversation.&lt;&#x2F;p&gt;
+&lt;p&gt;Links to presentations should be available soon from the NISO &lt;a href=&quot;https:&#x2F;&#x2F;www.niso.org&#x2F;events&#x2F;2008&#x2F;03&#x2F;next-generation-discovery-tools-new-tools-aging-standards&quot;&gt;event website&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>ssh tunneling notes</title>
+        <published>2006-02-02T00:00:00+00:00</published>
+        <updated>2006-02-02T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://bspace.us/posts/ssh-tunneling-notes/" type="text/html"/>
+        <id>https://bspace.us/posts/ssh-tunneling-notes/</id>
+        
+        <content type="html">&lt;hr &#x2F;&gt;
+&lt;p&gt;&lt;em&gt;This was first posted in 2006, to a no-longer-accessible wiki, to accompany a &amp;quot;Brown Internet Programming Group&amp;quot; talk I gave.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;the-problem&quot;&gt;The problem&lt;&#x2F;h3&gt;
+&lt;p&gt;The situation: My preferred way of working is to program, on my laptop, code that often must communicate with a database running on a remote server. What are good ways of handling this?
+In the past I used two different approaches.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Run a parallel database.
+&lt;ul&gt;
+&lt;li&gt;Pros: good when lots of database development&#x2F;reconfiguration is required. No separate connection file is needed.&lt;&#x2F;li&gt;
+&lt;li&gt;Cons: testing may lead to need to spend effort keeping database structures and sometimes data in sync.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Access the remote database by programming the connection-code to determine which host its running on. If running on my laptop, the connection-code would locate the database at an internet address; if running on the same server as the database, the connection-code would locate the database at the localhost address.
+&lt;ul&gt;
+&lt;li&gt;Pros: Only need to deal with one database.&lt;&#x2F;li&gt;
+&lt;li&gt;Cons: Non-localhost connectivity may be disabled for security reasons. If others work on the same code, the differing connection-code to detect multiple hosts can be a hassle and can reveal internet passwords. Care must be taken since the password may be transmitted over a non-secure connection.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;em&gt;Solution:&lt;&#x2F;em&gt; Another programmer showed me how he solves this issue via ssh-tunneling. It&#x27;s a wonderful solution.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;overview&quot;&gt;Overview&lt;&#x2F;h3&gt;
+&lt;p&gt;Background info to keep in mind: Common client-server internet connections generally generally do not require specification of originating ports (the computers can pick a port), but do require specification of destination ports.&lt;&#x2F;p&gt;
+&lt;p&gt;Example: my browser wants to access a web-page. My browser may send out the http request from any of a range of ports, but will specifically access the server&#x27;s IP address at port 80, where the web-server is listening.&lt;&#x2F;p&gt;
+&lt;p&gt;In ssh-tunneling, the client computer is set up to &#x27;listen&#x27; for incoming data on a specified port at the 127.0.0.1 localhost IP address -- and to &#x27;forward&#x27; that data, via a pre-established ssh connection, to a specific port at the server&#x27;s IP address. This terminology may be a bit confusing, because the &#x27;client&#x27; -- say, the local development laptop -- is &#x27;listening&#x27;, which a &#x27;server&#x27; normally does. In this case, think of the server as a remote database-server.&lt;&#x2F;p&gt;
+&lt;p&gt;What this means for my database situation is that I set up my laptop to listen for incoming data at &#x27;127.0.0.1:3306&#x27; and to forward that data to &#x27;somehost.services.brown.edu:3306&#x27;. All I have to do in my connection code is specify that it attempt to connect to the database at &#x27;127.0.0.1:3306&#x27;.&lt;&#x2F;p&gt;
+&lt;p&gt;The beauty of this is two-fold...&lt;&#x2F;p&gt;
+&lt;p&gt;First, the same connection code can run on my laptop and on the server with no modification at all. Example of php connection code...&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;php&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-php &quot;&gt;&lt;code class=&quot;language-php&quot; data-lang=&quot;php&quot;&gt;&lt;span style=&quot;color:#ab7967;&quot;&gt;&amp;lt;?php
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;mysql_connect&lt;&#x2F;span&gt;&lt;span&gt;(\&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;127.0.0.1:3306&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;username&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;password&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;) or die (&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Sorry, cannot connect to server&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;);
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;    mysql_select_db(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;databasename&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;) or die (&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Sorry, cannnot connect to database&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;);
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;?&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Second, because the &#x27;set up&#x27; is using SSH as the fowarding mechanism, all data is transferred securely.&lt;&#x2F;p&gt;
+&lt;p&gt;Note that there are many different ways of tunneling; this page focuses on one: &#x27;local client&#x27; to &#x27;remote service&#x27; (in this case, a remote database server).&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;setting-up-the-tunnel&quot;&gt;Setting up the tunnel&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;unices&quot;&gt;Unices&lt;&#x2F;h4&gt;
+&lt;p&gt;On Linux, Unix, and the Mac, setting up a tunnel is as easy as issuing one command in a terminal window:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;ssh -N -L 3306:somehost.services.brown.edu:3306 myaccount@somehost.services.brown.edu
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Even if you&#x27;re going to use a GUI client to set up the tunnel, examine the details of this command to get an understanding of what&#x27;s going on:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;The ssh part is the normal secure-shell command.&lt;&#x2F;li&gt;
+&lt;li&gt;The -N flag specifies that commands flowing over this connection won&#x27;t be executed on the remote computer, just forwarded.&lt;&#x2F;li&gt;
+&lt;li&gt;The -L flag specifies the details of the &#x27;localPort:remoteHost:remotePort&#x27; section that follows this flag. It means that the local computer should listen for incoming connections on the specified localPort, and forward them over the ssh connection to the remote computer at the remotePort.&lt;&#x2F;li&gt;
+&lt;li&gt;The &#x27;myaccount@somehost.services.brown.edu&#x27; sets up the ssh connection. This prompts me to enter my account-password on the remote computer &#x27;somehost&#x27;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;mac-fugu&quot;&gt;Mac: Fugu&lt;&#x2F;h4&gt;
+&lt;p&gt;Fugu is an open-source ssh client that supports ssh tunneling.&lt;&#x2F;p&gt;
+&lt;p&gt;To set up a tunnel in fugu:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Select &#x27;SSH&#x27; -&amp;gt; &#x27;New SSH Tunnel&#x27;&lt;&#x2F;li&gt;
+&lt;li&gt;Enter &#x27;somehost.services.brown.edu&#x27; in the &#x27;Create Tunnel to&#x27; textbox&#x27;.&lt;&#x2F;li&gt;
+&lt;li&gt;Enter &#x27;3306&#x27; in the &#x27;Service or Port&#x27; textbox (think of this as the &#x27;Remote Port&#x27;).&lt;&#x2F;li&gt;
+&lt;li&gt;Enter &#x27;3306&#x27; in the &#x27;Local Port&#x27; textbox.&lt;&#x2F;li&gt;
+&lt;li&gt;Enter &#x27;somehost.services.brown.edu&#x27; in the &#x27;Remote Host&#x27; textbox.
+&lt;ul&gt;
+&lt;li&gt;I&#x27;m not sure of the distinction between the two &#x27;host&#x27; textboxes, but entering info this way works.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Enter your username in the &#x27;Username&#x27; textbox.&lt;&#x2F;li&gt;
+&lt;li&gt;Enter &#x27;22&#x27; in the &#x27;Port&#x27; textbox (think of this as the &#x27;SSH Port&#x27;).&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;windows-putty&quot;&gt;Windows: Putty&lt;&#x2F;h4&gt;
+&lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;software.brown.edu&#x2F;dist&#x2F;w-putty.html&quot;&gt;Putty&lt;&#x2F;a&gt; is a free Brown-offered ssh client that supports tunneling.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Open &#x27;putty.exe&#x27; file. The &#x27;PuTTy Configuration&#x27; window appears.&lt;&#x2F;li&gt;
+&lt;li&gt;Click once on &#x27;Category&#x27; -&amp;gt; &#x27;Session&#x27;.&lt;&#x2F;li&gt;
+&lt;li&gt;On the right-side of the window enter &#x27;somehost.services.brown.edu&#x27; in the &#x27;Host Name (or IP address)&#x27; textbox.&lt;&#x2F;li&gt;
+&lt;li&gt;Enter &#x27;22&#x27; in the &#x27;Port&#x27; textbox.&lt;&#x2F;li&gt;
+&lt;li&gt;Select &#x27;SSH&#x27; for the &#x27;Protocol&#x27;.&lt;&#x2F;li&gt;
+&lt;li&gt;Click once on &#x27;Category&#x27; -&amp;gt; &#x27;SSH&#x27; -&amp;gt; &#x27;Tunnels&#x27;.&lt;&#x2F;li&gt;
+&lt;li&gt;Enter &#x27;3306&#x27; in the &#x27;Source port&#x27; textbox.&lt;&#x2F;li&gt;
+&lt;li&gt;Enter &#x27;somehost.services.brown.edu:3306&#x27; in the &#x27;Destination&#x27; textbox.&lt;&#x2F;li&gt;
+&lt;li&gt;Select the &#x27;Remote&#x27; radio-button under the &#x27;Destination&#x27; textbox.&lt;&#x2F;li&gt;
+&lt;li&gt;Click the &#x27;Add&#x27; button.&lt;&#x2F;li&gt;
+&lt;li&gt;Click the &#x27;Open&#x27; button. The putty terminal window opens.&lt;&#x2F;li&gt;
+&lt;li&gt;When prompted by &#x27;login as&#x27;, enter your username and hit return.&lt;&#x2F;li&gt;
+&lt;li&gt;When prompted by for your password, enter it and hit return.&lt;&#x2F;li&gt;
+&lt;li&gt;That&#x27;s it; the tunnel is established.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;more-tunnel-fun&quot;&gt;More tunnel fun&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;web&quot;&gt;Web&lt;&#x2F;h4&gt;
+&lt;p&gt;The idea...&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;ssh -N -L 5005:123.123.123.123:80 myaccount@123.123.123.123
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;To implement this in Fugu or Putty, just switch the IP address, use &#x27;5005&#x27; for the &#x27;Local Port&#x27; (Fugu) or &#x27;Source Port&#x27; (Putty), and use &#x27;80&#x27; for the &#x27;Service or Port&#x27; (Fugu) or the port following the host+colon in the &#x27;Category&#x27; -&amp;gt; &#x27;SSH&#x27; -&amp;gt; &#x27;Tunnels&#x27; &#x27;Destination&#x27; textbox (Putty).&lt;&#x2F;p&gt;
+&lt;p&gt;You can then access a web page on the 123.123.123.123 server using an http:&#x2F;&#x2F;127.0.0.1:5005 address instead of the normal http:&#x2F;&#x2F;123.123.123.123 address.&lt;&#x2F;p&gt;
+&lt;p&gt;Note that the 5005 &#x27;localPort&#x27; can really be any unused port above 1000. The only reason I keep the &#x27;localPort&#x27; and &#x27;remoteHostPort&#x27; the same in the database example is so my database connection code is the same and works the same on my development laptop and the actual database server.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;other&quot;&gt;Other&lt;&#x2F;h4&gt;
+&lt;p&gt;Note that these techniques can be applied in a wide variety of situations. &lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;I&#x27;ve switched over to tunneled connections from Eclipse, my programming IDE, to my Subversion repositories. &lt;&#x2F;li&gt;
+&lt;li&gt;Brown email is encrypted over the network, but if you have a home account that&#x27;s not, you can check it from a coffee-shop unencrypted wireless network using ssh-tunneling.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+</feed>

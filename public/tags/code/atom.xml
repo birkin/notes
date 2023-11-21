@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - code</title>
+    <link href="https://bspace.us/tags/code/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://bspace.us"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-08-30T00:00:00+00:00</updated>
+    <id>https://bspace.us/tags/code/atom.xml</id>
+    <entry xml:lang="en">
+        <title>docstring-testing: love→hate→forget→rediscover→repeat</title>
+        <published>2023-08-30T00:00:00+00:00</published>
+        <updated>2023-08-30T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://bspace.us/posts/i-love-hate-python-docstrings-for-testing/" type="text/html"/>
+        <id>https://bspace.us/posts/i-love-hate-python-docstrings-for-testing/</id>
+        
+        <content type="html">&lt;p&gt;I have a love-hate relationship with &lt;a href=&quot;https:&#x2F;&#x2F;realpython.com&#x2F;python-doctest&#x2F;&quot;&gt;using python docstrings for testing&lt;&#x2F;a&gt;. They&#x27;re simple, easy-to-use, and provide both usage-documentation and actual unit-test functionality. But whenever I start using them in any serious extensive way, I go back to using regular unit-tests in a file or directory -- because of limitations of docstring-tests (which I&#x27;m not addressing here). So I haven&#x27;t used them in a while. But for a informal collaborative experimental project, without testing set up, today I wanted to add a few simple tests to a function to confirm that it&#x27;s really doing what we expect. I remembered docstrings for testing, and I&#x27;m once-again in the love-phase.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Brown-University-Library&#x2F;ml_bdr_ota_experiment&#x2F;blob&#x2F;0a9c4f0fc7a3471736a7344b6e441274bf61d2dd&#x2F;data_clean.py#L122&quot;&gt;Here&#x27;s a function&lt;&#x2F;a&gt; in some experimental code a few of us are working on -- to which I added a few docstring-tests. The docstring is everything between the initial and closing &lt;code&gt;&amp;quot;&amp;quot;&amp;quot;&lt;&#x2F;code&gt;. Generally docstrings are just used to provide multi-line comments on the purpose of a function. But they&#x27;re cool for two reasons:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;tools such as Sphinx can be run on code to auto-generate documentation from docstrings. (I never use that.)&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;assertions can be auto-executed as tests. &lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;In this function, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Brown-University-Library&#x2F;ml_bdr_ota_experiment&#x2F;blob&#x2F;0a9c4f0fc7a3471736a7344b6e441274bf61d2dd&#x2F;data_clean.py#L127-L134&quot;&gt;here are the doc-test assertions&lt;&#x2F;a&gt;. If the project had a normal unit-test harness, running tests the regular way would not only run the unit-tests, but also automatically test these assertion-statements. This experimental code has no test-harness set up; there are no unit-test imports. But the docstring tests can still be run like this: &lt;code&gt;% python -m doctest .&#x2F;data_clean.py&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Running that command shows no output if the test-assertions pass (you would see lots of output if running with the &lt;code&gt;-v&lt;&#x2F;code&gt; (verbose) flag). But imagine if the part that reads:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span&gt;    &amp;gt;&amp;gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;stringify_list&lt;&#x2F;span&gt;&lt;span&gt;( &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;42 &lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;42&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;...instead were:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span&gt;    &amp;gt;&amp;gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;stringify_list&lt;&#x2F;span&gt;&lt;span&gt;( &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;42 &lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;blah&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;...then, running the test would yield:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span&gt;**********************************************************************
+&lt;&#x2F;span&gt;&lt;span&gt;File &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;path&#x2F;to&#x2F;ml_OTA_experiment_stuff&#x2F;ml_bdr_ota_experiment&#x2F;.&#x2F;data_clean.py&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;, line &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;133&lt;&#x2F;span&gt;&lt;span&gt;, in data_clean.stringify_list
+&lt;&#x2F;span&gt;&lt;span&gt;Failed example:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;stringify_list&lt;&#x2F;span&gt;&lt;span&gt;( &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;42 &lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;Expected:
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;blah&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;Got:
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;42&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;**********************************************************************
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1 &lt;&#x2F;span&gt;&lt;span&gt;items had failures:
+&lt;&#x2F;span&gt;&lt;span&gt;   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1 &lt;&#x2F;span&gt;&lt;span&gt;of   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;4 &lt;&#x2F;span&gt;&lt;span&gt;in data_clean.stringify_list
+&lt;&#x2F;span&gt;&lt;span&gt;***Test Failed*** &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1 &lt;&#x2F;span&gt;&lt;span&gt;failures.
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Cool -- simple lightweight documentation and testing; very nice!&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>unicode urls</title>
+        <published>2023-02-03T00:00:00+00:00</published>
+        <updated>2023-02-03T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://bspace.us/posts/unicode-urls/" type="text/html"/>
+        <id>https://bspace.us/posts/unicode-urls/</id>
+        
+        <content type="html">&lt;h2 id=&quot;the-problem&quot;&gt;The problem...&lt;&#x2F;h2&gt;
+&lt;p&gt;You&#x27;re on top of unicode; you&#x27;ve even &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;birkin&#x2F;dev_meetings&#x2F;blob&#x2F;main&#x2F;2022&#x2F;2022-01.md#unicode-trickiness&quot;&gt;normalized&lt;&#x2F;a&gt; your filename containing unicode.&lt;&#x2F;p&gt;
+&lt;p&gt;But you&#x27;ve given someone the url to that file, and then hear that the url doesn&#x27;t work. They give you the url, and it looks like what you gave them, but doesn&#x27;t work.&lt;&#x2F;p&gt;
+&lt;p&gt;What&#x27;s happened is that although the url you gave them contained the properly normalized unicode that &lt;em&gt;did&lt;&#x2F;em&gt; work, they&#x27;ve saved the string you gave them in some way that undid the normalization.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-solution&quot;&gt;The solution...&lt;&#x2F;h2&gt;
+&lt;p&gt;Create a links that encodes the normalized form of the unicode.&lt;&#x2F;p&gt;
+&lt;p&gt;The raw link will not be human-friendly, but it&#x27;ll work, and the browser will show the nice-looking url.&lt;&#x2F;p&gt;
+&lt;p&gt;Example:&lt;&#x2F;p&gt;
+&lt;p&gt;You have a file named &lt;code&gt;birkin_iñtërnâtiønàlĭzætiФn_test.jpg&lt;&#x2F;code&gt;, properly normalized and saved on the server.&lt;&#x2F;p&gt;
+&lt;p&gt;You need to supply the url.&lt;&#x2F;p&gt;
+&lt;p&gt;You&#x27;re tempted to show the url: 
+`&lt;a href=&quot;https:&#x2F;&#x2F;some.edu&#x2F;path&#x2F;to&#x2F;birkin_in%CC%83te%CC%88rna%CC%82ti%C3%B8na%CC%80li%CC%86z%C3%A6ti%D0%A4n_test.jpg&quot;&gt;https:&#x2F;&#x2F;some.edu&#x2F;path&#x2F;to&#x2F;birkin_iñtërnâtiønàlĭzætiФn_test.jpg&lt;&#x2F;a&gt;`` -- which works in your testing.&lt;&#x2F;p&gt;
+&lt;p&gt;Instead, provide the url:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;lt;https:&#x2F;&#x2F;some.edu&#x2F;path&#x2F;to&#x2F;birkin_in%CC%83te%CC%88rna%CC%82ti%C3%B8na%CC%80li%CC%86z%C3%A6ti%D0%A4n_test.jpg&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Yes, it looks horrible, but...&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;you don&#x27;t need to &amp;quot;show&amp;quot; that link&lt;&#x2F;li&gt;
+&lt;li&gt;when the user copies it into a browser, the browser will automatically show the nicer:
+`&lt;a href=&quot;https:&#x2F;&#x2F;some.edu&#x2F;path&#x2F;to&#x2F;birkin_in%CC%83te%CC%88rna%CC%82ti%C3%B8na%CC%80li%CC%86z%C3%A6ti%D0%A4n_test.jpg&quot;&gt;https:&#x2F;&#x2F;some.edu&#x2F;path&#x2F;to&#x2F;birkin_iñtërnâtiønàlĭzætiФn_test.jpg&lt;&#x2F;a&gt;``&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Most importantly, the url won&#x27;t get corrupted by whatever editor the user puts it through and will work when finally copied and pasted into a browser.&lt;&#x2F;p&gt;
+&lt;p&gt;How to get that encoding?&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;from django.utils import http&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;http.urlquote_plus( &#x27;birkin_iñtërnâtiønàlĭzætiФn_test.jpg&#x27; )&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;...which yields: &lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;birkin_in%CC%83te%CC%88rna%CC%82ti%C3%B8na%CC%80li%CC%86z%C3%A6ti%D0%A4n_test.jpg
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ul&gt;
+&lt;li&gt;then use that in the full url above.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>unicode normalization</title>
+        <published>2022-01-28T00:00:00+00:00</published>
+        <updated>2022-01-28T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://bspace.us/posts/unicode-normalization/" type="text/html"/>
+        <id>https://bspace.us/posts/unicode-normalization/</id>
+        
+        <content type="html">&lt;h2 id=&quot;the-problem&quot;&gt;The problem...&lt;&#x2F;h2&gt;
+&lt;p&gt;You feel you&#x27;re on top of unicode, because all your database-data is encoded in utf-8, and your search-terms are encoded in utf-8, and internally you&#x27;re decoding to unicode for everything -- all-good. But... you have a search term, and you &lt;em&gt;know&lt;&#x2F;em&gt; the search term is in the database, yet no match is found!!&lt;&#x2F;p&gt;
+&lt;p&gt;Example...&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; database_words
+&lt;&#x2F;span&gt;&lt;span&gt;[&amp;#39;hola&amp;#39;, &amp;#39;más&amp;#39;, &amp;#39;qué&amp;#39;]
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; 
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; &amp;#39;foo&amp;#39; in database_words
+&lt;&#x2F;span&gt;&lt;span&gt;False
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; 
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; &amp;#39;hola&amp;#39; in database_words
+&lt;&#x2F;span&gt;&lt;span&gt;True
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; 
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; &amp;#39;más&amp;#39; in database_words  # search word typed in via mac &amp;#39;option-e, a&amp;#39; method
+&lt;&#x2F;span&gt;&lt;span&gt;True
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; 
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; &amp;#39;qué&amp;#39; in database_words  # search word typed in via mac &amp;#39;option-e, e&amp;#39; method
+&lt;&#x2F;span&gt;&lt;span&gt;False  # ???
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; 
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The above confusing situation is because in the &#x27;database&#x27; (&lt;code&gt;database_words&lt;&#x2F;code&gt;), the last word&#x27;s accented-letter is two combined unicode-characters, but the search-term is using a single unicode-character for the accented letter.&lt;&#x2F;p&gt;
+&lt;p&gt;Here&#x27;s how &lt;code&gt;database_words&lt;&#x2F;code&gt; was created:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; database_words = [&amp;#39;hola&amp;#39;, &amp;#39;m&amp;#39; + &amp;#39;\u00e1&amp;#39; + &amp;#39;s&amp;#39;, &amp;#39;qu&amp;#39; + &amp;#39;\u0065&amp;#39; + &amp;#39;\u0301&amp;#39;]
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; database_words
+&lt;&#x2F;span&gt;&lt;span&gt;[&amp;#39;hola&amp;#39;, &amp;#39;más&amp;#39;, &amp;#39;qué&amp;#39;]
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;And this is how you&#x27;d explicitly create the single unicode-character search term:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; &amp;#39;qu&amp;#39; + &amp;#39;\u00e9&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;qué&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; 
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;(On the Mac, that accented-e is created via typing &lt;code&gt;option-e&lt;&#x2F;code&gt; then &lt;code&gt;e&lt;&#x2F;code&gt;, which produces the above single-unicode character.)&lt;&#x2F;p&gt;
+&lt;p&gt;There is no way, just by looking, that you can tell the true nature of that accented &#x27;e&#x27;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;examining-characters-if-curious&quot;&gt;examining characters, if curious...&lt;&#x2F;h2&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; import unicodedata
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; 
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; for c in &amp;#39;qué&amp;#39;:  # typed in via option-e method which produces `&amp;#39;qu&amp;#39; + &amp;#39;\u00e9&amp;#39;`
+&lt;&#x2F;span&gt;&lt;span&gt;...     print( f&amp;#39;unicode-name, ``{unicodedata.name(c)}``&amp;#39; )
+&lt;&#x2F;span&gt;&lt;span&gt;... 
+&lt;&#x2F;span&gt;&lt;span&gt;unicode-name, ``LATIN SMALL LETTER Q``
+&lt;&#x2F;span&gt;&lt;span&gt;unicode-name, ``LATIN SMALL LETTER U``
+&lt;&#x2F;span&gt;&lt;span&gt;unicode-name, ``LATIN SMALL LETTER E WITH ACUTE``
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; 
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; for c in &amp;#39;qué&amp;#39;:  # pasted in from database_words, which uses the two combined unicode-characters: `&amp;#39;qu&amp;#39; + &amp;#39;\u0065&amp;#39; + &amp;#39;\u0301&amp;#39;`
+&lt;&#x2F;span&gt;&lt;span&gt;...     print( f&amp;#39;unicode-name, ``{unicodedata.name(c)}``&amp;#39; )
+&lt;&#x2F;span&gt;&lt;span&gt;... 
+&lt;&#x2F;span&gt;&lt;span&gt;unicode-name, ``LATIN SMALL LETTER Q``
+&lt;&#x2F;span&gt;&lt;span&gt;unicode-name, ``LATIN SMALL LETTER U``
+&lt;&#x2F;span&gt;&lt;span&gt;unicode-name, ``LATIN SMALL LETTER E``
+&lt;&#x2F;span&gt;&lt;span&gt;unicode-name, ``COMBINING ACUTE ACCENT``
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; 
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;dealing-with-this-weird-reality&quot;&gt;Dealing with this weird reality...&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;em&gt;Good tools, like solr, often enable you to not have to worry about this -- a search-term with characters composed one way will generally find content composed the other way.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;If you normalize--&amp;gt;decompose data in the database, and normalize--&amp;gt;decompose the search term, all will work.&lt;&#x2F;p&gt;
+&lt;p&gt;The code below normalizes by decomposing single-unicode characters into multiple-unicode characters. Note that we start with the single unicode-character, and transform it into the two combined unicode-characters.&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; decomposed_output = unicodedata.normalize( &amp;#39;NFKD&amp;#39;, &amp;#39;qu&amp;#39; + &amp;#39;\u00e9&amp;#39; )
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; 
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; for c in decomposed_output:
+&lt;&#x2F;span&gt;&lt;span&gt;...     print( f&amp;#39;unicode-name, ``{unicodedata.name(c)}``&amp;#39; )
+&lt;&#x2F;span&gt;&lt;span&gt;... 
+&lt;&#x2F;span&gt;&lt;span&gt;unicode-name, ``LATIN SMALL LETTER Q``
+&lt;&#x2F;span&gt;&lt;span&gt;unicode-name, ``LATIN SMALL LETTER U``
+&lt;&#x2F;span&gt;&lt;span&gt;unicode-name, ``LATIN SMALL LETTER E``
+&lt;&#x2F;span&gt;&lt;span&gt;unicode-name, ``COMBINING ACUTE ACCENT``
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; 
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;so-one-overall-solution&quot;&gt;So one overall solution...&lt;&#x2F;h2&gt;
+&lt;p&gt;Save data in a normalized--&amp;gt;decomposed way...&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; decomposed_database_words = []
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; 
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; for word in database_words:
+&lt;&#x2F;span&gt;&lt;span&gt;...     decomposed_word = unicodedata.normalize( &amp;#39;NFKD&amp;#39;, word )
+&lt;&#x2F;span&gt;&lt;span&gt;...     decomposed_database_words.append( decomposed_word )
+&lt;&#x2F;span&gt;&lt;span&gt;... 
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; decomposed_database_words
+&lt;&#x2F;span&gt;&lt;span&gt;[&amp;#39;hola&amp;#39;, &amp;#39;más&amp;#39;, &amp;#39;qué&amp;#39;]
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; 
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;...and then normalize--&amp;gt;decompose the search-term...&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; search_term = &amp;#39;qu&amp;#39; + &amp;#39;\u00e9&amp;#39;  # demonstrates search term starts with the single unicode character
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; 
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; decomposed_search_term = unicodedata.normalize( &amp;#39;NFKD&amp;#39;, search_term )
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;...then the normalized--&amp;gt;decomposed search term will find the data...&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; decomposed_search_term in decomposed_database_words
+&lt;&#x2F;span&gt;&lt;span&gt;True
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; 
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>ssh tunneling notes</title>
+        <published>2006-02-02T00:00:00+00:00</published>
+        <updated>2006-02-02T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://bspace.us/posts/ssh-tunneling-notes/" type="text/html"/>
+        <id>https://bspace.us/posts/ssh-tunneling-notes/</id>
+        
+        <content type="html">&lt;hr &#x2F;&gt;
+&lt;p&gt;&lt;em&gt;This was first posted in 2006, to a no-longer-accessible wiki, to accompany a &amp;quot;Brown Internet Programming Group&amp;quot; talk I gave.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;the-problem&quot;&gt;The problem&lt;&#x2F;h3&gt;
+&lt;p&gt;The situation: My preferred way of working is to program, on my laptop, code that often must communicate with a database running on a remote server. What are good ways of handling this?
+In the past I used two different approaches.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Run a parallel database.
+&lt;ul&gt;
+&lt;li&gt;Pros: good when lots of database development&#x2F;reconfiguration is required. No separate connection file is needed.&lt;&#x2F;li&gt;
+&lt;li&gt;Cons: testing may lead to need to spend effort keeping database structures and sometimes data in sync.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Access the remote database by programming the connection-code to determine which host its running on. If running on my laptop, the connection-code would locate the database at an internet address; if running on the same server as the database, the connection-code would locate the database at the localhost address.
+&lt;ul&gt;
+&lt;li&gt;Pros: Only need to deal with one database.&lt;&#x2F;li&gt;
+&lt;li&gt;Cons: Non-localhost connectivity may be disabled for security reasons. If others work on the same code, the differing connection-code to detect multiple hosts can be a hassle and can reveal internet passwords. Care must be taken since the password may be transmitted over a non-secure connection.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;em&gt;Solution:&lt;&#x2F;em&gt; Another programmer showed me how he solves this issue via ssh-tunneling. It&#x27;s a wonderful solution.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;overview&quot;&gt;Overview&lt;&#x2F;h3&gt;
+&lt;p&gt;Background info to keep in mind: Common client-server internet connections generally generally do not require specification of originating ports (the computers can pick a port), but do require specification of destination ports.&lt;&#x2F;p&gt;
+&lt;p&gt;Example: my browser wants to access a web-page. My browser may send out the http request from any of a range of ports, but will specifically access the server&#x27;s IP address at port 80, where the web-server is listening.&lt;&#x2F;p&gt;
+&lt;p&gt;In ssh-tunneling, the client computer is set up to &#x27;listen&#x27; for incoming data on a specified port at the 127.0.0.1 localhost IP address -- and to &#x27;forward&#x27; that data, via a pre-established ssh connection, to a specific port at the server&#x27;s IP address. This terminology may be a bit confusing, because the &#x27;client&#x27; -- say, the local development laptop -- is &#x27;listening&#x27;, which a &#x27;server&#x27; normally does. In this case, think of the server as a remote database-server.&lt;&#x2F;p&gt;
+&lt;p&gt;What this means for my database situation is that I set up my laptop to listen for incoming data at &#x27;127.0.0.1:3306&#x27; and to forward that data to &#x27;somehost.services.brown.edu:3306&#x27;. All I have to do in my connection code is specify that it attempt to connect to the database at &#x27;127.0.0.1:3306&#x27;.&lt;&#x2F;p&gt;
+&lt;p&gt;The beauty of this is two-fold...&lt;&#x2F;p&gt;
+&lt;p&gt;First, the same connection code can run on my laptop and on the server with no modification at all. Example of php connection code...&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;php&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-php &quot;&gt;&lt;code class=&quot;language-php&quot; data-lang=&quot;php&quot;&gt;&lt;span style=&quot;color:#ab7967;&quot;&gt;&amp;lt;?php
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;mysql_connect&lt;&#x2F;span&gt;&lt;span&gt;(\&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;127.0.0.1:3306&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;username&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;password&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;) or die (&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Sorry, cannot connect to server&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;);
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;    mysql_select_db(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;databasename&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;) or die (&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Sorry, cannnot connect to database&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;);
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;?&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Second, because the &#x27;set up&#x27; is using SSH as the fowarding mechanism, all data is transferred securely.&lt;&#x2F;p&gt;
+&lt;p&gt;Note that there are many different ways of tunneling; this page focuses on one: &#x27;local client&#x27; to &#x27;remote service&#x27; (in this case, a remote database server).&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;setting-up-the-tunnel&quot;&gt;Setting up the tunnel&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;unices&quot;&gt;Unices&lt;&#x2F;h4&gt;
+&lt;p&gt;On Linux, Unix, and the Mac, setting up a tunnel is as easy as issuing one command in a terminal window:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;ssh -N -L 3306:somehost.services.brown.edu:3306 myaccount@somehost.services.brown.edu
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Even if you&#x27;re going to use a GUI client to set up the tunnel, examine the details of this command to get an understanding of what&#x27;s going on:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;The ssh part is the normal secure-shell command.&lt;&#x2F;li&gt;
+&lt;li&gt;The -N flag specifies that commands flowing over this connection won&#x27;t be executed on the remote computer, just forwarded.&lt;&#x2F;li&gt;
+&lt;li&gt;The -L flag specifies the details of the &#x27;localPort:remoteHost:remotePort&#x27; section that follows this flag. It means that the local computer should listen for incoming connections on the specified localPort, and forward them over the ssh connection to the remote computer at the remotePort.&lt;&#x2F;li&gt;
+&lt;li&gt;The &#x27;myaccount@somehost.services.brown.edu&#x27; sets up the ssh connection. This prompts me to enter my account-password on the remote computer &#x27;somehost&#x27;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;mac-fugu&quot;&gt;Mac: Fugu&lt;&#x2F;h4&gt;
+&lt;p&gt;Fugu is an open-source ssh client that supports ssh tunneling.&lt;&#x2F;p&gt;
+&lt;p&gt;To set up a tunnel in fugu:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Select &#x27;SSH&#x27; -&amp;gt; &#x27;New SSH Tunnel&#x27;&lt;&#x2F;li&gt;
+&lt;li&gt;Enter &#x27;somehost.services.brown.edu&#x27; in the &#x27;Create Tunnel to&#x27; textbox&#x27;.&lt;&#x2F;li&gt;
+&lt;li&gt;Enter &#x27;3306&#x27; in the &#x27;Service or Port&#x27; textbox (think of this as the &#x27;Remote Port&#x27;).&lt;&#x2F;li&gt;
+&lt;li&gt;Enter &#x27;3306&#x27; in the &#x27;Local Port&#x27; textbox.&lt;&#x2F;li&gt;
+&lt;li&gt;Enter &#x27;somehost.services.brown.edu&#x27; in the &#x27;Remote Host&#x27; textbox.
+&lt;ul&gt;
+&lt;li&gt;I&#x27;m not sure of the distinction between the two &#x27;host&#x27; textboxes, but entering info this way works.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Enter your username in the &#x27;Username&#x27; textbox.&lt;&#x2F;li&gt;
+&lt;li&gt;Enter &#x27;22&#x27; in the &#x27;Port&#x27; textbox (think of this as the &#x27;SSH Port&#x27;).&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;windows-putty&quot;&gt;Windows: Putty&lt;&#x2F;h4&gt;
+&lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;software.brown.edu&#x2F;dist&#x2F;w-putty.html&quot;&gt;Putty&lt;&#x2F;a&gt; is a free Brown-offered ssh client that supports tunneling.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Open &#x27;putty.exe&#x27; file. The &#x27;PuTTy Configuration&#x27; window appears.&lt;&#x2F;li&gt;
+&lt;li&gt;Click once on &#x27;Category&#x27; -&amp;gt; &#x27;Session&#x27;.&lt;&#x2F;li&gt;
+&lt;li&gt;On the right-side of the window enter &#x27;somehost.services.brown.edu&#x27; in the &#x27;Host Name (or IP address)&#x27; textbox.&lt;&#x2F;li&gt;
+&lt;li&gt;Enter &#x27;22&#x27; in the &#x27;Port&#x27; textbox.&lt;&#x2F;li&gt;
+&lt;li&gt;Select &#x27;SSH&#x27; for the &#x27;Protocol&#x27;.&lt;&#x2F;li&gt;
+&lt;li&gt;Click once on &#x27;Category&#x27; -&amp;gt; &#x27;SSH&#x27; -&amp;gt; &#x27;Tunnels&#x27;.&lt;&#x2F;li&gt;
+&lt;li&gt;Enter &#x27;3306&#x27; in the &#x27;Source port&#x27; textbox.&lt;&#x2F;li&gt;
+&lt;li&gt;Enter &#x27;somehost.services.brown.edu:3306&#x27; in the &#x27;Destination&#x27; textbox.&lt;&#x2F;li&gt;
+&lt;li&gt;Select the &#x27;Remote&#x27; radio-button under the &#x27;Destination&#x27; textbox.&lt;&#x2F;li&gt;
+&lt;li&gt;Click the &#x27;Add&#x27; button.&lt;&#x2F;li&gt;
+&lt;li&gt;Click the &#x27;Open&#x27; button. The putty terminal window opens.&lt;&#x2F;li&gt;
+&lt;li&gt;When prompted by &#x27;login as&#x27;, enter your username and hit return.&lt;&#x2F;li&gt;
+&lt;li&gt;When prompted by for your password, enter it and hit return.&lt;&#x2F;li&gt;
+&lt;li&gt;That&#x27;s it; the tunnel is established.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;more-tunnel-fun&quot;&gt;More tunnel fun&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;web&quot;&gt;Web&lt;&#x2F;h4&gt;
+&lt;p&gt;The idea...&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;ssh -N -L 5005:123.123.123.123:80 myaccount@123.123.123.123
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;To implement this in Fugu or Putty, just switch the IP address, use &#x27;5005&#x27; for the &#x27;Local Port&#x27; (Fugu) or &#x27;Source Port&#x27; (Putty), and use &#x27;80&#x27; for the &#x27;Service or Port&#x27; (Fugu) or the port following the host+colon in the &#x27;Category&#x27; -&amp;gt; &#x27;SSH&#x27; -&amp;gt; &#x27;Tunnels&#x27; &#x27;Destination&#x27; textbox (Putty).&lt;&#x2F;p&gt;
+&lt;p&gt;You can then access a web page on the 123.123.123.123 server using an http:&#x2F;&#x2F;127.0.0.1:5005 address instead of the normal http:&#x2F;&#x2F;123.123.123.123 address.&lt;&#x2F;p&gt;
+&lt;p&gt;Note that the 5005 &#x27;localPort&#x27; can really be any unused port above 1000. The only reason I keep the &#x27;localPort&#x27; and &#x27;remoteHostPort&#x27; the same in the database example is so my database connection code is the same and works the same on my development laptop and the actual database server.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;other&quot;&gt;Other&lt;&#x2F;h4&gt;
+&lt;p&gt;Note that these techniques can be applied in a wide variety of situations. &lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;I&#x27;ve switched over to tunneled connections from Eclipse, my programming IDE, to my Subversion repositories. &lt;&#x2F;li&gt;
+&lt;li&gt;Brown email is encrypted over the network, but if you have a home account that&#x27;s not, you can check it from a coffee-shop unencrypted wireless network using ssh-tunneling.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+</feed>
