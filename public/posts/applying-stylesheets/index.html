@@ -27,7 +27,7 @@
 
   <title>
     
- | Posts
+ | applying stylesheets
 
   </title>
 
@@ -97,27 +97,13 @@
   
 <section class="section">
   <div class="container">
-    <div class="has-text-centered">
-      <h1 class="title is-2">Posts</h1>
-      <p class="subtitle is-4">(newer to older)</p>
-    </div>
-    <div class="content">
-      
-    </div>
-    <div class="columns is-centered">
-      <div class="column is-9">
-        
-        
-        
-
-        
+    <div class="columns">
+      <div class="column is-8 is-offset-2">
         <article class="box">
-          <h2 class="title">
-            <a class="has-text-dark" href='https:&#x2F;&#x2F;bspace.us&#x2F;posts&#x2F;polyphasic-sleep&#x2F;'>
-              polyphasic sleep
-            </a>
-          </h2>
-          <p class="subtitle">blogging a polyphasic sleep experiment</p>
+          <h1 class="title">
+            applying stylesheets
+          </h1>
+          <p class="subtitle">code-recipe for applying a stylesheet</p>
           <div class="columns is-multiline is-gapless">
             <div class="column is-8">
               
@@ -127,7 +113,7 @@
   <span class="icon">
     <i class="far fa-calendar-alt"></i>
   </span>
-  <span><time datetime="2006-06-10">June 10, 2006</time></span>
+  <span><time datetime="2023-11-11">November 11, 2023</time></span>
 </span>
 
             </div>
@@ -141,91 +127,10 @@
   <span class="icon">
     <i class="fas fa-pencil-alt"></i>
   </span>
-  <span>122 words</span>
+  <span>200 words</span>
 </span>
 
             </div>
-          </div>
-          <div class="content mt-2">
-            
-            <a class="has-text-danger-dark has-text-weight-semibold" href='https:&#x2F;&#x2F;bspace.us&#x2F;posts&#x2F;polyphasic-sleep&#x2F;'>
-              Read More
-              <span class="icon is-small">
-                <i class="fas fa-arrow-right fa-xs"></i>
-              </span>
-            </a>
-          </div>
-          <div class="columns">
-            <div class="column">
-              
-            </div>
-            <div class="column has-text-right-desktop">
-              
-              
-<p>
-  Tags:
-  
-  <a class="has-text-info-dark has-text-weight-semibold" href="https://bspace.us/tags/self-improvement/">
-    <span class="icon-text">
-      <span class="icon">
-        <i class="fas fa-tag"></i>
-      </span>
-      <span>self-improvement</span>
-    </span>
-  </a>
-  
-</p>
-
-              
-            </div>
-          </div>
-        </article>
-        
-        <article class="box">
-          <h2 class="title">
-            <a class="has-text-dark" href='https:&#x2F;&#x2F;bspace.us&#x2F;posts&#x2F;ssh-tunneling-notes&#x2F;'>
-              ssh tunneling notes
-            </a>
-          </h2>
-          <p class="subtitle">useful for local development</p>
-          <div class="columns is-multiline is-gapless">
-            <div class="column is-8">
-              
-<span class="icon-text has-text-grey">
-  
-  
-  <span class="icon">
-    <i class="far fa-calendar-alt"></i>
-  </span>
-  <span><time datetime="2006-02-02">February 02, 2006</time></span>
-</span>
-
-            </div>
-            <div class="column is-4 has-text-right-desktop">
-              
-<span class="icon-text has-text-grey">
-  <span class="icon">
-    <i class="far fa-clock"></i>
-  </span>
-  <span>6 min,</span>
-  <span class="icon">
-    <i class="fas fa-pencil-alt"></i>
-  </span>
-  <span>1106 words</span>
-</span>
-
-            </div>
-          </div>
-          <div class="content mt-2">
-            
-            <a class="has-text-danger-dark has-text-weight-semibold" href='https:&#x2F;&#x2F;bspace.us&#x2F;posts&#x2F;ssh-tunneling-notes&#x2F;'>
-              Read More
-              <span class="icon is-small">
-                <i class="fas fa-arrow-right fa-xs"></i>
-              </span>
-            </a>
-          </div>
-          <div class="columns">
             <div class="column">
               
             </div>
@@ -244,32 +149,54 @@
     </span>
   </a>
   
-  <a class="has-text-info-dark has-text-weight-semibold" href="https://bspace.us/tags/presentations/">
-    <span class="icon-text">
-      <span class="icon">
-        <i class="fas fa-tag"></i>
-      </span>
-      <span>presentations</span>
-    </span>
-  </a>
-  
-  <a class="has-text-info-dark has-text-weight-semibold" href="https://bspace.us/tags/techniques/">
-    <span class="icon-text">
-      <span class="icon">
-        <i class="fas fa-tag"></i>
-      </span>
-      <span>techniques</span>
-    </span>
-  </a>
-  
 </p>
 
               
             </div>
           </div>
+          <div class="content mt-2">
+            <h3 id="small-focused-how-to">small focused <code>how-to</code></h3>
+<p>For a project with some xml-content, I put together a little demo of using python to transform a <a href="https://github.com/Brown-University-Library/xslt_exploration/blob/759fd00c06bfa2833fc60129c85665a2ffe5ad84/source_files/source.xml">source xml file</a> containing a dummy list of fifteen test-entries (three people with five entries each) like this...</p>
+<pre data-lang="xml" style="background-color:#2b303b;color:#c0c5ce;" class="language-xml "><code class="language-xml" data-lang="xml"><span>[snip]
+</span><span>&lt;</span><span style="color:#bf616a;">TestEntries</span><span>&gt;
+</span><span>    </span><span style="color:#65737e;">&lt;!-- Entries for Person 1 --&gt;
+</span><span>    &lt;</span><span style="color:#bf616a;">Entry</span><span>&gt;
+</span><span>        &lt;</span><span style="color:#bf616a;">PersonName</span><span>&gt;Person 1&lt;/</span><span style="color:#bf616a;">PersonName</span><span>&gt;
+</span><span>        &lt;</span><span style="color:#bf616a;">Date</span><span>&gt;2023-01-01&lt;/</span><span style="color:#bf616a;">Date</span><span>&gt;
+</span><span>        &lt;</span><span style="color:#bf616a;">TestScore</span><span>&gt;85&lt;/</span><span style="color:#bf616a;">TestScore</span><span>&gt;
+</span><span>    &lt;/</span><span style="color:#bf616a;">Entry</span><span>&gt;
+</span><span>    &lt;</span><span style="color:#bf616a;">Entry</span><span>&gt;
+</span><span>        &lt;</span><span style="color:#bf616a;">PersonName</span><span>&gt;Person 1&lt;/</span><span style="color:#bf616a;">PersonName</span><span>&gt;
+</span><span>        &lt;</span><span style="color:#bf616a;">Date</span><span>&gt;2023-01-15&lt;/</span><span style="color:#bf616a;">Date</span><span>&gt;
+</span><span>        &lt;</span><span style="color:#bf616a;">TestScore</span><span>&gt;88&lt;/</span><span style="color:#bf616a;">TestScore</span><span>&gt;
+</span><span>    &lt;/</span><span style="color:#bf616a;">Entry</span><span>&gt;
+</span><span>[snip]
+</span></code></pre>
+<p>-- into a nice summarization (with test-scores averaged), like this...</p>
+<pre data-lang="xml" style="background-color:#2b303b;color:#c0c5ce;" class="language-xml "><code class="language-xml" data-lang="xml"><span>&lt;</span><span style="color:#bf616a;">scores</span><span>&gt;
+</span><span> &lt;</span><span style="color:#bf616a;">Person</span><span>&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Name</span><span>&gt;Person 1&lt;/</span><span style="color:#bf616a;">Name</span><span>&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">average</span><span>&gt;83.8&lt;/</span><span style="color:#bf616a;">average</span><span>&gt;
+</span><span> &lt;/</span><span style="color:#bf616a;">Person</span><span>&gt;
+</span><span> &lt;</span><span style="color:#bf616a;">Person</span><span>&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Name</span><span>&gt;Person 2&lt;/</span><span style="color:#bf616a;">Name</span><span>&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">average</span><span>&gt;87.0&lt;/</span><span style="color:#bf616a;">average</span><span>&gt;
+</span><span> &lt;/</span><span style="color:#bf616a;">Person</span><span>&gt;
+</span><span> &lt;</span><span style="color:#bf616a;">Person</span><span>&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Name</span><span>&gt;Person 3&lt;/</span><span style="color:#bf616a;">Name</span><span>&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">average</span><span>&gt;84.0&lt;/</span><span style="color:#bf616a;">average</span><span>&gt;
+</span><span> &lt;/</span><span style="color:#bf616a;">Person</span><span>&gt;
+</span><span>&lt;/</span><span style="color:#bf616a;">scores</span><span>&gt;
+</span></code></pre>
+<p>...by <a href="https://github.com/Brown-University-Library/xslt_exploration/blob/759fd00c06bfa2833fc60129c85665a2ffe5ad84/transform_code.py#L38-L50">applying</a> a stylesheet.</p>
+<h3 id="recipe-thought">recipe thought</h3>
+<p>It'd be useful over time to build out a list of <code>recipes</code> for either good-practices or for small focused how-tos. GitHub's ability to link to a line or lines means that an index of recipes could reference small parts of existing projects -- or small focused repos such as this.</p>
+<hr />
+
+          </div>
         </article>
-        
       </div>
+      
     </div>
   </div>
 </section>
@@ -299,75 +226,33 @@
 
 
   
-  
-  <section class="section">
-    <div class="container">
-      <nav class="pagination is-centered" role="navigation" aria-label="pagination">
-        <a class="pagination-previous" href='https:&#x2F;&#x2F;bspace.us&#x2F;posts&#x2F;page&#x2F;6&#x2F;' >
-          <span class="icon">
-            <i class="fas fa-angle-double-left"></i>
-          </span>
-          Previous
-        </a>
-        <a class="pagination-next" href='' disabled>
-          Next page
-          <span class="icon">
-            <i class="fas fa-angle-double-right"></i>
-          </span>
-        </a>
-        <ul class="pagination-list">
-          
-          <li>
-            <a class="pagination-link " href='https:&#x2F;&#x2F;bspace.us&#x2F;posts&#x2F;page&#x2F;1' aria-label="Goto page 1">
-              1
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <nav class="level">
+              
+          <div class="level-item has-text-centered">
+            <a class="button is-black is-outlined" href="https:&#x2F;&#x2F;bspace.us&#x2F;posts&#x2F;ai4libraries-vconf-notes&#x2F;">
+              <span class="icon mr-2">
+                <i class="fas fa-arrow-circle-left"></i>
+              </span>
+              ai4Libraries virtual-conference
             </a>
-          </li>
-          
-          <li>
-            <a class="pagination-link " href='https:&#x2F;&#x2F;bspace.us&#x2F;posts&#x2F;page&#x2F;2' aria-label="Goto page 2">
-              2
-            </a>
-          </li>
-          
-          <li>
-            <a class="pagination-link " href='https:&#x2F;&#x2F;bspace.us&#x2F;posts&#x2F;page&#x2F;3' aria-label="Goto page 3">
-              3
-            </a>
-          </li>
-          
-          <li>
-            <a class="pagination-link " href='https:&#x2F;&#x2F;bspace.us&#x2F;posts&#x2F;page&#x2F;4' aria-label="Goto page 4">
-              4
-            </a>
-          </li>
-          
-          <li>
-            <a class="pagination-link " href='https:&#x2F;&#x2F;bspace.us&#x2F;posts&#x2F;page&#x2F;5' aria-label="Goto page 5">
-              5
-            </a>
-          </li>
-          
-          <li>
-            <a class="pagination-link " href='https:&#x2F;&#x2F;bspace.us&#x2F;posts&#x2F;page&#x2F;6' aria-label="Goto page 6">
-              6
-            </a>
-          </li>
-          
-          <li>
-            <a class="pagination-link is-current" href='https:&#x2F;&#x2F;bspace.us&#x2F;posts&#x2F;page&#x2F;7' aria-label="Goto page 7">
-              7
-            </a>
-          </li>
-          
-        </ul>
-      </nav>
+          </div>
+           
+        </nav>
+      </div>
     </div>
-  </section>
-  
-  
+  </div>
+</section>
+
+
 
   
-  
+
+
 
   
   <footer class="footer py-4">
@@ -396,7 +281,10 @@
   <script src="https://bspace.us/search_index.en.js"></script><script src="https://bspace.us/js/site.js"></script>
 
   
-  
+
+
+
+
 
   
   
