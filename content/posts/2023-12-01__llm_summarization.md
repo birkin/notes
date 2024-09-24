@@ -7,7 +7,7 @@ authors = []
 draft = false
 
 [taxonomies]
-tags=[ "code" ]
+tags=[ "AI", "code" ]
 +++
 
 
