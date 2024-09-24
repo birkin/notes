@@ -4,8 +4,32 @@
     <link href="https://bspace.us/tags/apis/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="https://bspace.us"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2008-05-18T00:00:00+00:00</updated>
+    <updated>2023-12-07T00:00:00+00:00</updated>
     <id>https://bspace.us/tags/apis/atom.xml</id>
+    <entry xml:lang="en">
+        <title>api protocol landscape</title>
+        <published>2023-12-07T00:00:00+00:00</published>
+        <updated>2023-12-07T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://bspace.us/posts/api-protocol-landscape/" type="text/html"/>
+        <id>https://bspace.us/posts/api-protocol-landscape/</id>
+        
+        <content type="html">&lt;p&gt;I really liked this post: &lt;a href=&quot;https:&#x2F;&#x2F;blog.postman.com&#x2F;api-protocols-in-2023&#x2F;&quot;&gt;&amp;quot;The evolving landscape of API protocols in 2023&amp;quot;&lt;&#x2F;a&gt;, by Alex Xu -- the content, the organization, and the graphics.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;nice-chatgpt-summary&quot;&gt;nice ChatGPT summary&lt;&#x2F;h3&gt;
+&lt;p&gt;The article &lt;em&gt;&amp;quot;The Evolving Landscape of API Protocols in 2023&amp;quot;&lt;&#x2F;em&gt; from the Postman blog, written by guest author Alex Xu, explores the current trends and developments in API protocols based on a survey of over 40,000 developers. It highlights the most popular API protocols and their advantages and limitations, providing insights into their growing or declining adoption rates.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;REST (Representational State Transfer)&lt;&#x2F;strong&gt; remains the most popular API architectural style, though its usage has slightly declined. Its simplicity, scalability, and platform-agnostic nature are key strengths, but challenges like over-fetching, chatty interfaces, and lack of real-time capabilities persist.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Webhooks&lt;&#x2F;strong&gt;, with a 36% adoption rate, are praised for enabling real-time event-driven communication without resource-heavy polling, but they require robust error handling and security measures.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;GraphQL&lt;&#x2F;strong&gt;, used by 29% of developers, offers a flexible and efficient alternative to REST, allowing more precise data retrieval through single queries. However, its flexibility can introduce performance and security issues, and it has a steeper learning curve.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;SOAP&lt;&#x2F;strong&gt;, though declining, remains relevant in industries requiring strict standards, security, and ACID-compliant transactions. Despite its complexity, it remains a dependable choice for specific use cases.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;WebSocket&lt;&#x2F;strong&gt; (25% usage) supports low-latency, bidirectional communication, making it suitable for real-time applications like chat systems. gRPC, a modern protocol by Google, is gaining traction due to its high performance, strong typing, and streaming support.&lt;&#x2F;p&gt;
+&lt;p&gt;The article concludes that while REST remains foundational, the increasing complexity of modern applications calls for a more diverse toolkit of API protocols to meet specific use cases. Developers are encouraged to adopt a multi-protocol approach to optimize performance and maintainability.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;(end of ChatGPT summary)&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>nice lightweight SOA implementation</title>
         <published>2008-05-18T00:00:00+00:00</published>

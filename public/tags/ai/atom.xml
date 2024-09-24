@@ -4,8 +4,53 @@
     <link href="https://bspace.us/tags/ai/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="https://bspace.us"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2023-10-26T00:00:00+00:00</updated>
+    <updated>2023-12-01T00:00:00+00:00</updated>
     <id>https://bspace.us/tags/ai/atom.xml</id>
+    <entry xml:lang="en">
+        <title>llm summarization</title>
+        <published>2023-12-01T00:00:00+00:00</published>
+        <updated>2023-12-01T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://bspace.us/posts/llm-summarization/" type="text/html"/>
+        <id>https://bspace.us/posts/llm-summarization/</id>
+        
+        <content type="html">&lt;h3 id=&quot;notes&quot;&gt;notes&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;I did a bunch of googling and found that most summarization seemed to involved extracting actual-text segments that were representative of the overall document. This is even with newer code using large-language-models trained to be good for extraction. &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;birkin&#x2F;llm_summarizer_code&quot;&gt;Some experimental work&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;I didn&#x27;t want that -- I instead wanted what we&#x27;d think of as summaries.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;I knew ChatGPT could do a fantastic job on this, and then remembered work some six-months ago I did on getting an open-source chat-oriented large-language-model running, for experimentation.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;I got that code running again, following a &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=-BidzsQYZM4&quot;&gt;video-tutorial&lt;&#x2F;a&gt;, and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;birkin&#x2F;ml_llama_python_code&quot;&gt;built on it&lt;&#x2F;a&gt; to experiment with using chat for summarization.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Interesting: when I tried that code six months ago, it worked pretty smoothly. But now, that model is old (the link 404ed). I had a hard time finding it, and the libraries that worked with it then no longer do (I had to downgrade to older versions). Shows how fast things are changing!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Though I did get the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;birkin&#x2F;ml_llama_python_code&#x2F;blob&#x2F;main&#x2F;06_explores_summary_of_summaries.py&quot;&gt;summary-of-summaries approach&lt;&#x2F;a&gt; working, for the demo I switched back to a simpler approach of just summarizing the first 1,000 words.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;for the demo, this produced good results, due to the maximum text often being handled due to everything being single-page scans.&lt;&#x2F;li&gt;
+&lt;li&gt;i keep hearing that newer models are both better, and faster, and handle larger numbers of tokens -- so for the Hall-Hoag project, I may not use the summary-of-summaries approach -- except to experiment with organization-as-a-whole summarization.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Note the prompt-experimentation for the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;birkin&#x2F;ml_llama_python_code&#x2F;blob&#x2F;762c0e2f27b39662b184c904249e217133ec11c4&#x2F;07_temp_reversion_to_1000_words.py#L106-L109&quot;&gt;description-text&lt;&#x2F;a&gt; -- and for &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;birkin&#x2F;ml_llama_python_code&#x2F;blob&#x2F;762c0e2f27b39662b184c904249e217133ec11c4&#x2F;07_temp_reversion_to_1000_words.py#L110-L112&quot;&gt;subtitle-text&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Note also meta experience of using a large-language-model to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;birkin&#x2F;ml_llama_python_code&#x2F;blob&#x2F;762c0e2f27b39662b184c904249e217133ec11c4&#x2F;07_temp_reversion_to_1000_words.py#L100&quot;&gt;explain the knobs&lt;&#x2F;a&gt; (parameters) for working with a large-language-model.  :)&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>ai4Libraries virtual-conference</title>
         <published>2023-10-26T00:00:00+00:00</published>

@@ -29,6 +29,8 @@ __WebSocket__ (25% usage) supports low-latency, bidirectional communication, mak
 
 The article concludes that while REST remains foundational, the increasing complexity of modern applications calls for a more diverse toolkit of API protocols to meet specific use cases. Developers are encouraged to adopt a multi-protocol approach to optimize performance and maintainability.
 
+_(end of ChatGPT summary)_
+
 ---
 
 [post]: <https://blog.postman.com/api-protocols-in-2023/>
