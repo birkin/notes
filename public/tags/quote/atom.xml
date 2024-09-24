@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - quote</title>
+    <link href="https://bspace.us/tags/quote/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://bspace.us"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-11-15T00:00:00+00:00</updated>
+    <id>https://bspace.us/tags/quote/atom.xml</id>
+    <entry xml:lang="en">
+        <title>baldwin</title>
+        <published>2023-11-15T00:00:00+00:00</published>
+        <updated>2023-11-15T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://bspace.us/posts/baldwin/" type="text/html"/>
+        <id>https://bspace.us/posts/baldwin/</id>
+        
+        <content type="html">&lt;p&gt;&lt;em&gt;You think your pain and your heartbreak are unprecedented in the history of the world, but then you read.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;It was books that taught me that the things that tormented me most were the very things that connected me with all the people who were alive, who had ever been alive.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;James Baldwin&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+</feed>
